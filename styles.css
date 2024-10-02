@@ -1,0 +1,143 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+}
+
+.product-item {
+    position: relative;
+    background-color: white;
+    border: 1px solid #ddd;
+    text-align: center;
+    transition: transform 0.3s ease;
+    border-top: none;
+    border-bottom: solid 1px #000;
+    border-right: solid 1px #000;
+    /* overflow: hidden; Add this line */
+}
+
+.product-item:hover {
+    transform: scale(1.05);
+}
+
+.product-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.product-info {
+    display: flex;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 20px;
+    z-index: 1; /* Add this line */
+}
+
+.product-info .left-info{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.product-name {
+    font-weight: bold;
+}
+
+.product-color {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+
+.color-options {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    margin-bottom: 10px;
+}
+
+.color {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+}
+
+.color.beige {
+    background-color: #f5f5dc;
+}
+
+.color.blue {
+    background-color: #0000ff;
+}
+
+.color.black {
+    background-color: #000000;
+}
+
+.color.white {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+}
+
+.color.brown {
+    background-color: #8b4513;
+}
+
+.product-price {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+@media (min-width: 600px) {
+    .product-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .product-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* Add these new styles */
+.image-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.image-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.3s ease;
+}
+
+.image-container .image2 {
+    opacity: 0;
+}
+
+.product-item:hover .image-container .image1 {
+    opacity: 0;
+}
+
+.product-item:hover .image-container .image2 {
+    opacity: 1;
+}

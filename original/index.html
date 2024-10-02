@@ -1,0 +1,270 @@
+<style>
+.card-product-collection .color-container {
+   height: 15px;
+	 margin-bottom: 8px;
+   padding: 0;
+   display: flex;
+}
+</style>
+
+
+<script>
+{% include 'load-variant-color' %}
+</script>
+
+<main class="wrapper main-content" role="main">
+	
+	
+	
+	<main id="main" role="main" class="main-index">
+		<div class="homepage section1">
+			{% if settings.slide_1 %}
+					<img src="{{ 'demo-slide-1.jpg' | asset_url }}" alt="{{ settings.demo-section-2_1-text }}" />
+			{% endif %}
+			{% if settings.slide_2 %}
+					<img src="{{ 'demo-slide-2.jpg' | asset_url }}" alt="{{ settings.demo-section-2_2-text }}" />
+			{% endif %}
+			
+		</div>
+		
+		
+		<div class="homepage section2">
+			<div class="section-flex">
+					<!-- check image-->
+				{% if settings.demo-section-2_1 %}
+					<div class="section2.1">		
+						<img src="{{ 'demo-section-2_1.jpg' | asset_url }}" alt="{{ settings.slide_1_text }}" />
+					</div>
+				{% endif %}
+				
+				<!-- check video-->
+				{% if settings.home_video_show_2 %}
+					<div class=" feature br0 i_xx section2.2">
+					
+											
+							<div id="bg_video_2">
+								<video  id="bg_video_2" autoplay loop muted playsinline src="{{ settings.home_link_video_2 }}" type="video/mp4">
+								</video>
+							</div>
+							<script>
+								$(document).ready(function(){
+									function getVideo(){
+										return $.get( "https://api.streamable.com/videos/{{settings.home_link_video_2}}", function(data){
+
+												/*return $.get( "https://cdn-cf-east.streamable.com/video/mp4/vra9cj.mp4?Expires=1655834280&Signature=eLSSoj-9s3QNZKZ~74ABa47QdKVHp8OOwNwgP4J3ODNUW9o5ZKpb3zix2-yETcwejz-J5BK9NR39Pc485nDDT8cuxPjTTDR90FQHdUh8DtQr68gWuLlW3BGLRNHFOvgSoxNH1xrg6zSRm5iS8g1r87yVZCdcfVoQDHX08RS6oGkCO6FylsUaq4v8BV5atrJ2~QYYjsTtu5Fk-VC06VTZ8a8nxVn16t1yBVxxkCfPqmD3NQ6s~fL6dYgmMx59VsJ0~SIHOq2nzTxcbSOta0arN10CXmP1BPzFcBL09i1D17ZZJ~tFe5GgYZBz0VSUstZXRVSielZ0ZKSq8KDAAcgzQA__&Key-Pair-Id=APKAIEYUVEN4EVB2OKEQ", function(data){*/	
+											window.shop_video = {
+												url: data.files.mp4.url
+											}
+										});
+									}
+									$.when(getVideo()).then(function () {
+									$('#bg_video_2').html('<video id="bg_video_2" autoplay loop muted playsinline src="'+shop_video.url+'" type="video/mp4"></video>');
+								});
+
+								});
+							</script>
+							{% comment %}
+							<div class="home-wrap-video">
+								<div class="title-text-video">{{ settings.home_text_video_2 }}</div>
+								<div class="title-text-link-video">
+											<span>{{ settings.home_text_video_2_1 }}</span>
+								</div>
+							</div>
+							{% endcomment %}
+			
+					</div>
+				{% endif %}
+			</div>
+			
+				<!-- check image thumb ngang-->
+		
+			{% if settings.demo-section-2_3 %}
+				<div class="section2.3">
+						<img src="{{ 'demo-section-2_3.jpg' | asset_url }}" alt="{{ settings.demo-section2_3-text }}" />
+				</div>
+			{% endif %}
+			
+			<div class="section2.4">
+					{%- if settings.display_home_collection_2 -%}
+					<section class="section-home-collection">
+							<div class="sectionContent">
+									{%- assign collection_two_size = settings.limit_home_collection_2 -%}
+								{%- if collections[settings.handle_home_collection_2].products.size > 0 -%}
+								<div class="row list-collection">
+									{%- for product in collections[settings.handle_home_collection_2].products limit: collection_two_size -%}
+									{%- include 'product-loop-homepage' with section:'section_two'  -%}
+									{%- endfor -%}
+								</div>
+								{%- else -%}
+								<div class="row list-collection no-product">
+									{%- for product in (1..collection_two_size) -%}
+									{%- include 'product-loop-no' -%}
+									{%- endfor -%}
+								</div>
+								{%- endif -%}
+							</div>
+					</section>
+				{%- endif -%}		
+			</div>
+			
+		
+		</div>
+				
+			<div class=" section3">
+					<!-- check image thumb ngang-->
+					{% if settings.check_home_link_video_block4 %}
+						<div class="section3-video">
+							<div class=" feature br0 i_xx section4">
+						<a href="{{ settings.home_linkto_video_block4 }}" style="width:100%;">
+							
+							<div id="bg_video_block4">
+								<video width="100%" height="100%" id="bg_video_block4" autoplay loop muted playsinline src="{{ settings.home_link_video_block4 }}" type="video/mp4">
+								</video>
+							</div>
+							<script>
+								$(document).ready(function(){
+									function getVideo(){
+										return $.get( "https://api.streamable.com/videos/{{settings.home_link_video_block4}}", function(data){
+
+												/*return $.get( "https://cdn-cf-east.streamable.com/video/mp4/vra9cj.mp4?Expires=1655834280&Signature=eLSSoj-9s3QNZKZ~74ABa47QdKVHp8OOwNwgP4J3ODNUW9o5ZKpb3zix2-yETcwejz-J5BK9NR39Pc485nDDT8cuxPjTTDR90FQHdUh8DtQr68gWuLlW3BGLRNHFOvgSoxNH1xrg6zSRm5iS8g1r87yVZCdcfVoQDHX08RS6oGkCO6FylsUaq4v8BV5atrJ2~QYYjsTtu5Fk-VC06VTZ8a8nxVn16t1yBVxxkCfPqmD3NQ6s~fL6dYgmMx59VsJ0~SIHOq2nzTxcbSOta0arN10CXmP1BPzFcBL09i1D17ZZJ~tFe5GgYZBz0VSUstZXRVSielZ0ZKSq8KDAAcgzQA__&Key-Pair-Id=APKAIEYUVEN4EVB2OKEQ", function(data){*/	
+											window.shop_video = {
+												url: data.files.mp4.url
+											}
+										});
+									}
+									$.when(getVideo()).then(function () {
+									$('#bg_video_block4').html('<video width="100%" height="100%" id="bg_video_block4" autoplay loop muted playsinline src="'+shop_video.url+'" type="video/mp4"></video>');
+								});
+
+								});
+							</script>
+							{% comment %}
+							<div class="home-wrap-video">
+								<div class="title-text-video">{{ settings.home_text_video_block4 }}</div>
+								<div class="title-text-link-video">
+											<span>{{ settings.home_text_video_block4 }}</span>
+								</div>
+							</div>
+							{% endcomment %}
+						</a>
+					</div>
+					</div>
+					{%- endif -%}
+				
+					<!-- check image thumb ngang-->
+					{% if settings.check_demo-section-4_1 %}
+						<div class="section3-image">
+							<img src="{{ 'demo-section-4_1.jpg' | asset_url }}" alt="{{ settings.demo-section-4_1-text }}" />
+						</div>
+					{%- endif -%}
+					
+			</div>
+		
+		
+		<div class="homepage section5">
+				
+			<!-- check image thumb ngang-->
+			{% if settings.check_handle_home_collection_5 %}
+			<section class="section-home-collection">
+							<div class="sectionContent">
+									{%- assign collection_five_size = settings.limit_home_collection_5 -%}
+								{%- if collections[settings.handle_home_collection_5].products.size > 0 -%}
+								<div class="row list-collection">
+									{%- for product in collections[settings.handle_home_collection_5].products limit: collection_five_size -%}
+									{%- include 'product-loop-homepage' with section:'section_two'  -%}
+									{%- endfor -%}
+								</div>
+								
+								{%- else -%}
+								<div class="row list-collection no-product">
+									{%- for product in (1..collection_five_size) -%}
+									{%- include 'product-loop-no' -%}
+									{%- endfor -%}
+								</div>
+								{%- endif -%}
+							</div>
+						<!-- check image thumb ngang-->
+						{% if settings.check_demo-section-5_7 %}
+							<div class="diff">
+								<div class="diff-title">
+									<h4>{{ settings.demo-section-5_7-text }}</h4>
+								</div>
+								<img src="{{ 'demo-section-5_7.jpg' | asset_url }}" alt="{{ settings.demo-section-5_7-text }}" />
+							</div>
+						{%- endif -%}
+					</section>
+			{%- endif -%}
+		</div>
+		
+		<div class="homepage section6">
+		
+					<!-- check video -->
+					{% if settings.check_home_link_video_block6 %}
+					<div class="section6-video">
+							<div class=" feature br0 i_xx section6">
+						<a href="{{ settings.home_linkto_video_block6 }}">
+							
+							<div id="bg_video_block6">
+								<video width="100%" height="100%" id="bg_video_block6" autoplay loop muted playsinline src="{{ settings.home_link_video_block6 }}" type="video/mp4">
+								</video>
+							</div>
+							<script>
+								$(document).ready(function(){
+									function getVideo(){
+										return $.get( "https://api.streamable.com/videos/{{settings.home_link_video_block6}}", function(data){
+
+												/*return $.get( "https://cdn-cf-east.streamable.com/video/mp4/vra9cj.mp4?Expires=1655834280&Signature=eLSSoj-9s3QNZKZ~74ABa47QdKVHp8OOwNwgP4J3ODNUW9o5ZKpb3zix2-yETcwejz-J5BK9NR39Pc485nDDT8cuxPjTTDR90FQHdUh8DtQr68gWuLlW3BGLRNHFOvgSoxNH1xrg6zSRm5iS8g1r87yVZCdcfVoQDHX08RS6oGkCO6FylsUaq4v8BV5atrJ2~QYYjsTtu5Fk-VC06VTZ8a8nxVn16t1yBVxxkCfPqmD3NQ6s~fL6dYgmMx59VsJ0~SIHOq2nzTxcbSOta0arN10CXmP1BPzFcBL09i1D17ZZJ~tFe5GgYZBz0VSUstZXRVSielZ0ZKSq8KDAAcgzQA__&Key-Pair-Id=APKAIEYUVEN4EVB2OKEQ", function(data){*/	
+											window.shop_video = {
+												url: data.files.mp4.url
+											}
+										});
+									}
+									$.when(getVideo()).then(function () {
+									$('#bg_video_block6').html('<video width="100%" height="100%" id="bg_video_block6" autoplay loop muted playsinline src="'+shop_video.url+'" type="video/mp4"></video>');
+								});
+
+								});
+							</script>
+							{% comment %}
+							<div class="home-wrap-video">
+								<div class="title-text-video">{{ settings.home_text_video_block6 }}</div>
+								<div class="title-text-link-video">
+											<span>{{ settings.home_text_video_block6 }}</span>
+								</div>
+							</div>
+							{% endcomment %}
+						</a>
+					</div>
+					</div>
+					{%- endif -%}
+			
+					<!-- check image -->
+					{% if settings.check_demo-section-6_1 %}
+					<div class="section5-image">
+					
+						<img src="{{ 'demo-section-6_1.jpg' | asset_url }}" alt="{{ settings.demo-section-6_1-text }}" />
+						
+					</div>
+					{%- endif -%}
+			</div>
+		{% comment %}
+		{%- for i in (1..5) -%}
+			{%- capture show -%}slide_{{i}}{%- endcapture -%}
+			{%- capture image -%}demo-slide-{{i}}{%- endcapture -%}
+			{%- capture link -%}slide_{{i}}_link{%- endcapture -%}
+			{%- capture title -%}slide_{{i}}_text{%- endcapture -%}	
+			{% if settings.[show] %}
+					<img src="{{ image| asset_url }}" alt="{{ settings.home_collection_3_text_3 }}" />
+			
+			{% endif %}
+		
+			{%- endfor -%}
+		{% endcomment %}
+	
+	</main>
+</main>
+
+
+
+
+
