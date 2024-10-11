@@ -23,11 +23,58 @@ body {
     border-top: none;
     border-bottom: solid 1px #000;
     border-right: solid 1px #000;
-    /* overflow: hidden; Add this line */
+    height: 85vh; 
 }
 
-.product-item:hover {
-    transform: scale(1.05);
+/* Sale badge */
+.product-item.sale .image-container {
+    position: relative;
+}
+
+.sale-badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: red;
+    color: white;
+    padding: 5px 10px;
+    font-size: 0.8em;
+    z-index: 2;
+}
+
+/* Sale price */
+.product-price.original {
+    text-decoration: line-through;
+    color: #999;
+    margin-right: 5px;
+}
+
+.product-price.sale {
+    color: red;
+}
+
+/* Out of stock overlay */
+.product-item.out-of-stock .image-container {
+    position: relative;
+}
+
+.out-of-stock-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+
+.out-of-stock-overlay span {
+    background-color: white;
+    padding: 10px 20px;
+    font-weight: bold;
 }
 
 .product-item img {
@@ -118,6 +165,7 @@ body {
     position: relative;
     width: 100%;
     height: 100%;
+    overflow: hidden;
 }
 
 .image-container img {
