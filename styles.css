@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 * {
     margin: 0;
     padding: 0;
@@ -5,8 +6,10 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
     background-color: #f8f8f8;
+    font-family: "Work Sans", sans-serif;
+    font-weight: 400;
+    color: #111111;
 }
 
 .product-grid {
@@ -110,6 +113,7 @@ body {
 .product-info {
     display: flex;
     width: 100%;
+    font-size: 1rem;
     position: absolute;
     bottom: 0;
     justify-content: space-between;
@@ -125,8 +129,28 @@ body {
 }
 
 .product-name {
-    font-size: 1.2rem;
-    font-weight: bold;
+    color: #111111 !important;
+    opacity: .7;
+    text-align: left;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    text-transform: uppercase;
+    display: -webkit-box;
+    overflow: hidden;
+    width: 80%;
+}
+
+.product-price {
+    color: #111111 !important;
+    font-weight: 500;
+    opacity: .7;
+    text-align: left;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    text-transform: uppercase;
+    display: -webkit-box;
+    text-transform: uppercase;
+    /* margin-top: 10px; */
 }
 
 .product-color {
@@ -168,14 +192,6 @@ body {
     background-color: #8b4513;
 }
 
-.product-price {
-    font-weight: bold;
-    /* margin-top: 10px; */
-}
-
-
-
-
 
 @media (max-width: 1024px) {
     .product-grid {
@@ -201,6 +217,8 @@ body {
    
     .product-info .product-name {
         font-size: 0.5rem;
+        -webkit-line-clamp: 2;
+
     }
 
     .product-info .product-price {
