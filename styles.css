@@ -23,8 +23,38 @@ body {
     border-top: none;
     border-bottom: solid 1px #000;
     border-right: solid 1px #000;
-    height: 85vh; 
+    height: 700px;
 }
+
+.image-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.image-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.3s ease;
+}
+
+.image-container .image2 {
+    opacity: 0;
+}
+
+.product-item:hover .image-container .image1 {
+    opacity: 0;
+}
+
+.product-item:hover .image-container .image2 {
+    opacity: 1;
+}
+
 
 /* Sale badge */
 .product-item.sale .image-container {
@@ -75,12 +105,6 @@ body {
     background-color: white;
     padding: 10px 20px;
     font-weight: bold;
-}
-
-.product-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
 }
 
 .product-info {
@@ -160,32 +184,4 @@ body {
     }
 }
 
-/* Add these new styles */
-.image-container {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-}
 
-.image-container img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: opacity 0.3s ease;
-}
-
-.image-container .image2 {
-    opacity: 0;
-}
-
-.product-item:hover .image-container .image1 {
-    opacity: 0;
-}
-
-.product-item:hover .image-container .image2 {
-    opacity: 1;
-}
