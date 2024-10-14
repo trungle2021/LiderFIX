@@ -64,7 +64,7 @@ body {
     position: relative;
 }
 
-.sale-badge {
+.sale-badge, .out-of-stock-badge {
     position: absolute;
     top: 10px;
     left: 10px;
@@ -75,11 +75,23 @@ body {
     z-index: 2;
 }
 
+.out-of-stock-badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: black;
+    color: white;
+    padding: 5px 10px;
+    font-size: 0.8em;
+    z-index: 2;
+}
+
+
 /* Sale price */
 .product-price.original {
     text-decoration: line-through;
-    color: #999;
-    margin-right: 5px;
+    color: #555555;
+    /* margin-bottom: 5px; */
 }
 
 .product-price.sale {
@@ -87,10 +99,6 @@ body {
 }
 
 /* Out of stock overlay */
-.product-item.out-of-stock .image-container {
-    position: relative;
-}
-
 .out-of-stock-overlay {
     position: absolute;
     top: 0;
@@ -104,10 +112,8 @@ body {
     z-index: 2;
 }
 
-.out-of-stock-overlay span {
-    background-color: white;
-    padding: 10px 20px;
-    font-weight: bold;
+.product-item.out-of-stock .image-container {
+    position: relative;
 }
 
 .product-info {
@@ -119,7 +125,7 @@ body {
     justify-content: space-between;
     align-items: flex-end;
     padding: 20px;
-    z-index: 1; /* Add this line */
+    z-index: 1;
 }
 
 .product-info .left-info{
@@ -133,36 +139,25 @@ body {
     opacity: .7;
     text-align: left;
     -webkit-line-clamp: 1;
+    line-clamp: 1;
     -webkit-box-orient: vertical;
     text-transform: uppercase;
     display: -webkit-box;
     overflow: hidden;
-    width: 80%;
+    margin-top: 10px;
 }
 
 .product-price {
-    color: #111111 !important;
     font-weight: 500;
-    opacity: .7;
     text-align: left;
-    -webkit-line-clamp: 1;
-    -webkit-box-orient: vertical;
     text-transform: uppercase;
-    display: -webkit-box;
-    text-transform: uppercase;
-    /* margin-top: 10px; */
-}
-
-.product-color {
-    font-size: 1.4rem;
-    margin-bottom: 10px;
 }
 
 .color-options {
     display: flex;
     justify-content: center;
     gap: 5px;
-    margin-bottom: 10px;
+    /* margin-bottom: 10px; */
 }
 
 .color {
@@ -193,19 +188,56 @@ body {
 }
 
 
-@media (max-width: 1024px) {
-    .product-grid {
-        grid-template-columns: repeat(1, 1fr);
-    }
-}
 
-@media (max-width: 600px) {
+@media (max-width: 1024px) {
     .product-grid {
         grid-template-columns: repeat(3, 1fr);
     }
+    .product-item{
+        height: 500px;
+    }
 }
 
-@media (max-width: 320px){
+@media (max-width: 768px) {
+    .product-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .product-item{
+        height: 400px;
+    }
+
+
+    .product-info {
+        padding: 10px 15px;
+        font-size: 0.8rem;
+    }
+
+    .product-info > *{
+        height: 35px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .product-info .right-info{
+        justify-content: flex-end;
+    }
+
+    .product-info .product-name{
+        margin-top: 0;
+    }
+
+    .product-info .product-price.sale {
+        margin-top: auto;
+    }
+
+    .color{
+        width: 12px;
+        height: 12px;
+    }
+}
+
+@media (max-width: 480px){
 
     .product-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -214,33 +246,49 @@ body {
     .product-info{
         padding: 10px;
     }
+
+    .product-info > *{
+        height: 20px;
+    }
+
+    .sale-badge, .out-of-stock-badge{
+        padding: 3px 6px;
+        font-size: 0.3em;
+    }
    
     .product-info .product-name {
         font-size: 0.5rem;
-        -webkit-line-clamp: 2;
-
+        
     }
 
     .product-info .product-price {
         font-size: 0.5rem;
     }
 
-    .product-info .product-price.original{
-        margin-bottom: 6px;
+    .product-item{
+        height: 300px;
     }
 
-    .product-info .right-info{
-        display: flex;
-        flex-direction: column;
+    .color-options .color{
+        width: 5px;
+        height: 5px;
+    }
+}
+
+@media (max-width: 320px){
+
+    .product-info{
+        padding: 8px;
+    }
+   
+    .product-info {
+        font-size: 0.5rem;
     }
 
     .product-item{
         height: 300px;
     }
 
-    .color-options{
-        margin-bottom: 6px;
-    }
 
     .color-options .color{
         width: 5px;
