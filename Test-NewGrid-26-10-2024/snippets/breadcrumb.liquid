@@ -1,0 +1,183 @@
+<div class="{%if article%}blog-breadcrumb{%endif%}" >
+	<ol class="breadcrumb breadcrumb-arrow">
+
+		{% comment %}<li><a href="/" target="_self">Trang chủ</a></li>{% endcomment %}
+
+		{% if template == "collection" %}
+
+		{% comment %}<li><a href="/collections" target="_self">Danh mục</a></li>{% endcomment %}
+
+		{% if current_tags %}
+
+		{% comment %}<li class="active">Tag: "{{ current_tags.first | capitalize }}"</li>{% endcomment %}
+
+		{% else %}
+
+		<!--<li class="active hidden-test"><span>{{ page_title }}</span></li>-->
+		<li class="breadcrumb-menu">
+			<div class="breadcrumb-has-submenu">	
+							{%comment%}
+							<div class="nav-columns-section-heading">
+									<a href="{{ settings.mainmenu_link_2 }}" title="{{ settings.mainmenu_name_2 }}"> 
+										{{ settings.mainmenu_name_2 }}		
+									</a>
+							</div>
+							{%endcomment%}
+							{% if settings.mainmenu_show_colone_2-1 %}
+							<div class="nav-columns-section-heading breadcrumb-menu-sale">
+								<a href="{{ settings.mainmenu_link_colone_2-1 }}" class="" data-blind="https://www.lider.vn{{ settings.mainmenu_link_colone_2-1 }}">
+									<p>{{ settings.mainmenu_name_colone_2-1 }}</p>
+								</a>
+							</div>
+							{% endif %}
+							<div class="nav-columns-section-heading">
+								<a href="{{ settings.mainmenu_link_coltwo_2-1 }}" class="" data-blind="https://www.lider.vn{{ settings.mainmenu_link_coltwo_2-1 }}">
+									<p>{{ settings.mainmenu_name_coltwo_2-1 }}</p>
+								</a>
+							</div>			
+							<div class="nav-columns-section-heading">
+								<a href="{{ settings.mainmenu_link_colone_2-2 }}" class="" data-blind="https://www.lider.vn{{ settings.mainmenu_link_colone_2-2 }}">
+									<p>{{ settings.mainmenu_name_colone_2-2 }}</p>
+								</a>
+							</div>
+							<div class="nav-columns-section-heading">
+								<a href="{{ settings.mainmenu_link_coltwo_2-2 }}" class="" data-blind="https://www.lider.vn{{ settings.mainmenu_link_coltwo_2-2 }}">
+									<p>{{ settings.mainmenu_name_coltwo_2-2 }}</p>
+								</a>
+							</div>
+							<div class="nav-columns-section-heading">
+								<a href="{{ settings.mainmenu_link_colone_2-3 }}" class="" data-blind="https://www.lider.vn{{ settings.mainmenu_link_colone_2-3 }}">
+									<p>{{ settings.mainmenu_name_colone_2-3 }}</p>
+								</a>
+							</div>
+							<div class="nav-columns-section-heading">
+								<a href="{{ settings.mainmenu_link_coltwo_2-3 }}" class="" data-blind="https://www.lider.vn{{ settings.mainmenu_link_coltwo_2-3 }}">
+									<p>{{ settings.mainmenu_name_coltwo_2-3 }}</p>
+								</a>
+							</div>			
+							<div class="nav-columns-section-heading">
+								<a href="{{ settings.mainmenu_link_colone_2-4 }}" class="" data-blind="https://www.lider.vn{{ settings.mainmenu_link_colone_2-4 }}">
+									<p>{{ settings.mainmenu_name_colone_2-4 }}</p>
+								</a>
+							</div>
+							<div class="nav-columns-section-heading">
+								<a href="{{ settings.mainmenu_link_coltwo_2-4 }}" class="" data-blind="https://www.lider.vn{{ settings.mainmenu_link_coltwo_2-4 }}">
+									<p>{{ settings.mainmenu_name_coltwo_2-4 }}</p>
+								</a>
+							</div>					
+							<div class="nav-columns-section-heading">
+								<a href="{{ settings.mainmenu_link_colone_2-5 }}" class="" data-blind="https://www.lider.vn{{ settings.mainmenu_link_colone_2-5 }}">
+									<p>{{ settings.mainmenu_name_colone_2-5 }}</p>
+								</a>
+							</div>
+							<div class="nav-columns-section-heading">
+								<a href="{{ settings.mainmenu_link_coltwo_2-5 }}" class="" data-blind="https://www.lider.vn{{ settings.mainmenu_link_coltwo_2-5 }}">
+									<p>{{ settings.mainmenu_name_coltwo_2-5 }}</p>
+								</a>
+							</div>	
+							<div class="nav-columns-section-heading">
+								<a href="{{ settings.mainmenu_link_coltwo_2-5 }}" class="" data-blind="https://www.lider.vn{{ settings.mainmenu_link_coltwo_2-5 }}">
+									<p>{{ settings.mainmenu_name_coltwo_2-6 }}</p>
+								</a>
+							</div>
+			</div>
+		</li>
+
+		{% endif %}
+
+		{% elsif template == "product" %}
+
+		<!--li><a href="/collections" target="_self">Danh mục</a></li-->
+
+		{% if collection %}
+
+		{% capture url %}/collections/{{ collection.handle }}{% endcapture %}
+
+		<li><a href="{{ url }}" target="_self">{{ collection.title }}</a></li>
+
+		{% endif %}
+
+		<li class="active"><span> {{ page_title }}</span></li>
+
+		{% elsif template == "search" %}
+
+		<li class="active"><span>
+
+			Tìm kiếm: "{% unless page_title == 'Search' %}{{ page_title }}{% endunless %}"
+
+			</span>
+
+		</li>
+
+		{% elsif template == "blog" %}
+
+		<li class="active"><span>Blog - {{ blog.title }}</span></li>
+
+		{% elsif template == "article" %}
+
+		<li><a href="{{ blog.url }}" target="_self">{{ blog.title }}</a> </li>
+
+		<li class="active"><span>{{ page_title }}</span></li>
+
+		{% elsif template == "cart" %}
+
+		<li class="active">Giỏ hàng: <span id="ajax-breadcrumb-cart-item-count">{{ cart.item_count }}</span>
+
+			<span id="ajax-breadcrumb-cart-item-text">{{ cart.item_count | pluralize: 'sản phẩm', 'sản phẩm' }}</span> -
+
+			<span id="ajax-breadcrumb-cart-total-price">{{ cart.total_price | money }}</span></li>
+
+		{% elsif template == "404" %}
+
+		<li class="active">Lỗi 404</li>
+
+		{% elsif template contains "customers" %}
+
+		<li><a href="/account" target="_self">Tài khoản</a></li>
+
+		{% if template contains "register" %}
+
+		<li class="active"><span>Đăng ký</span></li>
+
+		{% elsif template contains "login" %}
+
+		<li class="active">
+
+			<span id="customer-login-breadcrumb">Đăng nhập</span>
+
+			<span id="customer-recover-breadcrumb" class="no-display">Phục hồi</span>
+
+		</li>
+
+		{% elsif template contains "activate_account" %}
+
+		<li class="active"><span>Kích hoạt</span></li>
+
+		{% elsif template contains "reset_password" %}
+
+		<li class="active"><span>Thiết lập lại</span></li>
+
+		{% elsif template contains "addresses" %}
+
+		<li class="active"><span>Địa chỉ</span></li>
+
+		{% elsif template contains "order" %}
+
+		<li><a href="/account" target="_self">Lịch sử đơn hàng</a></li>
+
+		<li class="active"><span>{{ order.name }}</span></li>
+
+		{% else %}
+
+		<li class="active"><span>Lịch sử đơn hàng</span></li>
+
+		{% endif %}
+
+		{% else %}
+
+		<li class="active"><span>{{ page_title }}</span></li>
+
+		{% endif %}
+
+	</ol>
+</div>

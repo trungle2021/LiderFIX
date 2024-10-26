@@ -1,0 +1,89 @@
+{% layout settings.customer_layout %}
+<div  class="content-login">
+	<span class="header-contact header-page clearfix">
+		<h3>LOGIN</h3>
+	</span>
+
+	<div id="customer-login">
+		<div id="login" class="userbox">
+			<div class="accounttype">
+				<h2 class="title"></h2>
+			</div>
+			{% form 'customer_login' %}
+			{{ form.errors | default_errors }}
+
+			<div class="clearfix large_form">
+				<!--<label for="customer_email" class="icon-field"><i class="icon-login icon-envelope "></i></label>
+				<input required type="email" value="" name="customer[email]" id="customer_email" placeholder="Email Address" class="text" />-->
+				<div class="title-input">ID</div>
+				<input required type="email" value="" name="customer[email]" id="customer_email" placeholder="Email Address" class="text" />
+			</div>
+
+			{% if form.password_needed %}
+			<div class="clearfix large_form">
+				<!--<label for="customer_password" class="icon-field"><i class="icon-login icon-shield"></i></label>
+				<input required type="password" value="" name="customer[password]" id="customer_password" placeholder="Password" class="text" size="16" />  -->
+				<div class="title-input">PASSWORD</div>
+				<input required type="password" value="" name="customer[password]" id="customer_password" placeholder="Password" class="text" size="16" />
+			</div>
+			{% endif %}
+
+			<div class="action_bottom">
+				<input class="btn btn-signin" type="submit" value="LOGIN" />
+			</div>
+			<div class="req_pass">
+				<a href="#" onclick="showRecoverPasswordForm();return false;">Forgot Password?</a>
+
+				 <a href="/account/register" title="Đăng ký">Register</a>
+			</div>
+
+			{% endform %}
+		</div>
+
+		<div id="recover-password" style="display:none;" class="userbox">
+			<div class="accounttype">
+				<h4>Phục hồi mật khẩu</h4>
+			</div>		
+
+			{% form 'recover_customer_password' %}
+			{{ form.errors | default_errors }}
+
+			{% comment %}<label for="email" class="icon-field"><i class="icon-login icon-envelope "></i></label>{% endcomment %}
+			<label for="email">E-mail</label>
+			<input type="email" value="" size="30" name="email" placeholder="" id="recover-email" class="text" />
+
+			<div class="action_bottom">
+				<input class="btn" type="submit" value="Gửi" />
+			</div>
+			<div class="req_pass">
+				<a href="#" onclick="hideRecoverPasswordForm();return false;">Hủy</a>
+			</div>
+			{% endform %}
+		</div>
+
+		{% if shop.checkout.guest_login %}
+		<div id="guest" class="col-md-5">
+			<h2>Khách hàng đăng nhập</h2>
+			{% form 'guest_login' %}
+			<input class="btn" type="submit" value="Đăng nhập tài khoản khách" />
+			{% endform %}
+		</div>
+		{% endif %}
+	</div>
+</div>
+<script type="text/javascript">
+	function showRecoverPasswordForm() {
+	document.getElementById('recover-password').style.display = 'block';
+	document.getElementById('login').style.display='none';
+	}
+
+	function hideRecoverPasswordForm() {
+	document.getElementById('recover-password').style.display = 'none';
+	document.getElementById('login').style.display = 'block';
+	}
+
+	if (window.location.hash == '#recover') { showRecoverPasswordForm() }
+</script>
+<style>
+	
+</style>

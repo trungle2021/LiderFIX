@@ -1,0 +1,43 @@
+<main id="main" role="main" class="has-img">
+	<div class="wrapper" data-content-field="main-content">
+		<!--<div id="flowThumbnail">
+
+<img data-src="http://static1.squarespace.com/static/5252fc28e4b0ec71254bc248/526597cde4b0bc5cd29c55a2/526598d8e4b0265ce406b852/1382389978268/2003674.jpg" data-image="http://static1.squarespace.com/static/5252fc28e4b0ec71254bc248/526597cde4b0bc5cd29c55a2/526598d8e4b0265ce406b852/1382389978268/2003674.jpg" data-image-dimensions="900x600" data-image-focal-point="0.5,0.5" alt="2003674.jpg"  />
+
+
+</div>-->
+		<div id="flowContent" class="loading">
+			<a href="{{collection.url}}" class="flow-back loading">{{collection.title}}</a>
+
+			<h1 class="product-title">{{product.title}}</h1>
+
+			<div class="product-price"><span class="sqs-money-native">{{product.price}}</span></div>
+
+			<div class="product-excerpt"><p>{{product.description}}</p></div>
+
+			<div class="product-quantity-input" >
+				<div class="quantity-label">Quantity:</div>
+				<input size="4" max="9999" min="1" value="1" type="number" step="1"/>
+			</div>
+			<div class="sqs-add-to-cart-button-wrapper">
+				<div class="sqs-add-to-cart-button sqs-suppress-edit-mode sqs-editable-button"data-original-label="Add To Cart">
+					<div class="sqs-add-to-cart-button-inner">Add To Cart</div>
+				</div>
+			</div>
+			<span class="squarespace-social-buttons inline-style" data-asset-url="http://static1.squarespace.com/static/5252fc28e4b0ec71254bc248/526597cde4b0bc5cd29c55a2/526598d8e4b0b7e2644d4bd6/1382390034664/" data-record-type="11" data-full-url="/mens/haus-in-black" data-title="Haus in Black"></span>
+		</div>
+		<div id="flowItems">
+			<div id="flowScrollPrompt"></div>
+			{% for image in product.images %}
+			<article class="flow-item">
+				<img data-src="{{image.src}}" data-image="{{image.src}}" data-image-dimensions="900x600" data-image-focal-point="0.5,0.5" alt=""  />
+			</article>
+			{%endfor%}
+
+		</div>
+		<footer id="footer"><div class="sqs-layout sqs-grid-12 columns-12" data-layout-label="Footer Content" data-type="block-field" data-updated-on="1385049770914" id="pageFooter"><div class="row sqs-row"><div class="col sqs-col-12 span-12"><div class="sqs-block html-block sqs-block-html" data-block-type="2" id="block-44308fdc07882be6746e">
+			<div class="sqs-block-content"><p class="text-align-center">Powered by <a href="http://www.squarespace.com">Squarespace</a>.
+				</p></div></div></div></div></div></footer>
+	</div>
+
+</main>

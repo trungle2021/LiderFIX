@@ -1,0 +1,18 @@
+
+  <div class="color-container-{{section | replace: ' ', ''}}" data-product-id="{{ product.id }}">	</div>
+<script>
+  {% assign color_options = product.options %}
+  {% for option in color_options %}
+    {% if option.name == 'Màu sắc' %}
+      {% assign color_values = option.values %}
+      productColors[{{ product.id }}] = [];
+      {% for value in color_values %}
+        productColors[{{ product.id }}].push({{ value | json }});
+      {% endfor %}
+    {% endif %}
+  {% endfor %}
+
+
+  // Make sure to load colors after setting up the object
+  loadAllVariantColor(`{{product.url}}`, productColors[{{ product.id }}], document.querySelector('.color-container-{{section | replace: ' ', ''}}[data-product-id="' + "{{ product.id }}" + '"]'));
+</script>

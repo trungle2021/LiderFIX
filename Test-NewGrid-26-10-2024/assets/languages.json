@@ -1,0 +1,46 @@
+{
+    "languages": {
+        "vi": {
+            "Login": "Đăng nhập",
+            "Logout": "Đăng xuất",
+            "Size": "Kích Thước",
+            "Color": "Màu Sắc",
+            "Description": "Mô Tả Sản Phẩm",
+            "Buy now": "Mua ngay",
+            "Add to cart": "Thêm vào giỏ",
+            "Total": "Tổng tiền",
+            "Delete": "Xóa",
+            "Quantity": "Số lượng",
+            "Price": "Giá Tiền",
+            "Update": "Cập nhật",
+            "Cancel": "Hủy",
+            "Check out": "Thanh toán",
+            "Cart": "Giỏ hàng",
+            "Option":"Loại",
+            "Phone number": "Số điện thoại",
+            "Your order": "Đơn hàng của bạn",
+						"Related Products" :"Sản phẩm liên quan"
+        },
+        "en": {
+            "Login": "Login",
+            "Logout": "Logout",
+            "Size": "Size",
+            "Color": "Color",
+            "Description": "Description",
+            "Buy now": "Buy now",
+            "Add to cart": "Add to cart",
+            "Total": "Total",
+            "Delete": "Delete",
+            "Quantity": "Quantity",
+            "Price": "Price",
+            "Update": "Update",
+            "Cancel": "Cancel",
+            "Check out": "Check out",
+            "Cart": "Shopping Bag",
+            "Option":"Option",
+            "Phone number": "Phone number",
+            "Your order": "Your order",
+						"Related Products" :"Related Products"
+        }
+    }
+}

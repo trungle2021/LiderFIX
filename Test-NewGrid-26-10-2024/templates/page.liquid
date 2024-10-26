@@ -1,0 +1,63 @@
+<main id="main" role="main" class="" style="background:{{settings.about_backcolor}}; margin-top: 66px;">
+	<div class="wrapper" data-content-field="main-content">
+		<div class="sqs-layout sqs-grid-12 columns-12" data-type="page" id="page-5252fda3e4b06da77027e5dd">
+			<div class="row sqs-row">
+				<div class="col sqs-col-12 span-12">
+					<div class="sqs-block html-block sqs-block-html" data-block-type="2" id="block-dd553bc1ebee7076111f">
+						<div class="sqs-block-content">
+							<h1 style="color:{{settings.about_title_color}}; font-size: 36px;"></h1> <!-- Title will be dynamically inserted here -->
+							<p style="color:{{settings.about_content_color}}; font-size: {{settings.about_content_fontsize}}px" class="content-page"></p> <!-- Content will be dynamically inserted here -->
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Footer (optional, as per Block 1) -->
+		<footer id="footer">
+			<div class="sqs-layout sqs-grid-12 columns-12" data-layout-label="Footer Content" data-type="block-field" id="pageFooter">
+				<div class="row sqs-row">
+					<div class="col sqs-col-12 span-12">
+						<div class="sqs-block html-block sqs-block-html" data-block-type="2" id="block-44308fdc07882be6746e">
+							<div class="sqs-block-content">
+								<p class="text-align-center">{{settings.footer_contact}}</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+</main>
+
+
+<script>
+$(document).ready(function(){
+    const translateText = () => {
+        let currentLocale = localStorage.getItem("locale");
+
+        // Vietnamese content
+        const _vi_title = `{{ page.metafields.hrvmultilang_vi.title }}`;
+        const _vi_content = `{{ page.metafields.hrvmultilang_vi.content }}`;
+  
+        // English content
+        const _en_title = `{{ page.metafields.hrvmultilang_en.title }}`;
+        const _en_content = `{{ page.metafields.hrvmultilang_en.content }}`;
+
+        // Choose title and content based on the current locale
+        let title = currentLocale === 'vi' ? _vi_title : _en_title;
+        let content = currentLocale === 'vi' ? _vi_content : _en_content;
+
+        // Insert content into the page
+        document.querySelector('h1').innerText = title;
+        document.querySelector('.content-page').innerHTML = content;
+    }
+
+    // Translate content initially
+    translateText();
+
+    // Add event listeners for language toggle (optional)
+    languageToggleCheckbox.addEventListener("change", translateText);
+    languageToggleCheckboxMobile.addEventListener("change", translateText);
+});
+</script>

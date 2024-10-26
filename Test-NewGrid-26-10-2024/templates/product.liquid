@@ -1,0 +1,718 @@
+{% assign _vi_product_description = product.description %}
+{% assign _en_product_description = product.metafields.hrvmultilang_en.description %}
+
+{% if _vi_product_description contains '"' %}
+   {% assign _vi_product_description = _vi_product_description | replace: '"', "'" %}
+{% endif %}
+
+{% if _en_product_description contains '"' %}
+   {% assign _en_product_description = _en_product_description | replace: '"', "'" %}
+{% endif %}
+  
+
+<script>
+    const productColors = {};
+		{% include 'load-variant-color' %}
+</script>
+{% for tag in product.tags %}
+	{% if tag contains 'material' %}
+	{% assign Materials = tag | split : 'material_'  %}
+	{% endif %}
+{% endfor %}
+<main id="main" role="main" class="main-product has-img" style="background: {{settings.product_backcolor}}" >
+
+	<div class="wrapper wrapper-product" data-content-field="main-content" style="padding: 0;">
+		<div id="flowThumbnail">
+			<div class="container img_feature " style="margin-left:0px;padding:10px">
+				<div class="row">
+					<!-- Swiper -->
+					<div class="">
+						<div class="">
+							{% for image in product.images %}
+							<div class="" style="text-align:center">
+								<img  alt="{{image.title}}" data-image="{{ image.src | product_img_url : 'master' }}" src="{{ image.src | product_img_url : 'master' }}" >
+							</div>
+							{%endfor%}
+						</div>
+						{%if product.images.size > 100%}
+						<div class="swiper-button-next"></div>
+						<div class="swiper-button-prev"></div>
+						{%endif%}
+					</div>
+					<!-- Swiper JS -->
+					<!-- Initialize Swiper -->
+					{%comment%}
+					<script>
+						var swiper = new Swiper('.img_feature .swiper-container', {
+							pagination: '.img_feature .swiper-pagination',
+							paginationClickable: true,
+
+							nextButton: '.img_feature .swiper-button-next',
+							prevButton: '.img_feature .swiper-button-prev'
+						});
+					</script>
+					{%endcomment%}
+				</div>
+			</div>
+			<div class="container img_thumbnail mobile hidden">
+				<!-- Swiper -->
+				<div class="product-featured-image">
+						{% for image in product.images %}
+						<div class="" style="text-align:center">
+							<img style="cursor:pointer;width:100%;max-width:100px;" alt="{{image.title}}" data-image="{{ image.src | product_img_url : 'master' }}" src="{{ image.src | product_img_url : 'medium' }}" >
+						</div>
+
+						{%endfor%}
+					<!-- Add Pagination -->
+				
+				</div>
+
+				<!-- Swiper JS -->
+
+{%comment%}
+				<!-- Initialize Swiper -->
+				<script>
+					var swiper = new Swiper('.mobile.img_thumbnail .swiper-container', {
+						nextButton: '.img_thumbnail.mobile .swiper-button-next',
+						prevButton: '.img_thumbnail.mobile .swiper-button-prev',
+						slidesPerView: 3,
+						paginationClickable: true,
+						spaceBetween: 10,
+					})
+				</script>
+				{%endcomment%}
+			</div>
+
+		</div>
+		<div id="fix-content-sidebar">
+			<div class="fix-div" id="sidebar_product">
+				<div id="flowContent">
+					<a href="{{ collection.url }}" class="flow-back">{{ collection.title }}</a>
+					<div class="wrap-info-title_price">
+							<h1 class="product-title" style="color:{{settings.product_title_color}}; font-size:{{settings.product_title_fontsize}}px;font-family: 'WorkSans-Medium';">{{product.title}}</h1>
+							<h2 id="product-price" itemprop="offers" itemscope itemtype="http://schema.org/Offer" style="color:{{settings.product_price_color}}; font-size:{{settings.product_price_fontsize}}px">
+								<meta itemprop="priceCurrency" content="{{ shop.currency }}" />
+								{% if product.available %}
+								<link itemprop="availability" href="http://schema.org/InStock" />
+								{% else %}
+								<link itemprop="availability" href="http://schema.org/OutOfStock" />
+								{% endif %}
+								{% if product.compare_at_price > product.price %}
+								<span class="product-price on-sale" itemprop="price" >{{ product.price | money }}</span>&nbsp;
+								<del class="product-compare-price" >{{ product.compare_at_price_max | money }}</del>
+								{% else %}
+								<span class="product-price" itemprop="price" >{{ product.price | money }}</span>
+								{% endif %}
+							</h2>
+					</div>
+
+
+					{% assign hide_default_title = false %}
+					{% if product.variants.size == 1 and product.variants.first.title contains 'Default' and product.options.size == 1%}
+					{% assign hide_default_title = true %}
+					{% endif %}
+
+          {% assign product_price = product.price | divided_by : 100 %}
+          <script>var price = `{{product_price}}`;</script>
+					 <script id="product-detail" src="https://assets.fundiin.vn/merchant/product-detail.js"></script>
+          <div id="script-product-detail"></div>
+					<form id="add-item-form" action="/cart/add" method="post" class="variants clearfix">	
+
+						
+						{%comment%}
+						<div class="product-quantity-input" >
+							<div class="quantity-label">Số lượng</div>
+							<input style="border: 1px solid #a19b9b;height: 30px;" size="4" max="9999" min="1" value="1" type="number" name="quantity" id="quantity"step="1"/>
+						</div>
+						{%endcomment%}
+						<div class="product-wrap_form product-color-label">
+  							<div class="product-wrap_form-left">
+  								<h5 class="product-color-title">								
+  									Màu sắc
+  								</h5>
+  							</div>
+							
+							<div class="product-wrap_form-right color-container">		
+            
+  						</div>
+							
+  					</div>
+						<div class="product-wrap_form">
+							<div class="product-wrap_form-left">
+								<h5 class="product-size-title">								
+									Kích thước
+								</h5>
+							</div>
+							<div class="product-wrap_form-right">
+								<div class="select clearfix"{% if hide_default_title %} style="display:none;padding: 10px 0;border-top: 1px solid #e8e8e8;border-bottom: 1px solid #e8e8e8;margin-bottom: 20px;"{% endif %}>
+								
+									<select id="product-select" name="id" style="display:none">
+										{% for variant in product.variants %}
+										<option data-available="{{ variant.available }}" value="{{ variant.id }}">{{ variant.title }} - {{ variant.price | money }}</option>
+										{% endfor %}
+									</select>
+								
+								
+								</div>
+									<div class="sqs-add-to-cart-button-wrapper" style="margin-top:10px;">
+									<button id="buy-now" {%unless product.available%}disabled{%endunless%}  class="product-buy-now-title {%unless product.available%}disabled{%endunless%} btn-detail btn-color-buy btn-min-width btn-mgt" name="buy" style="border: none; background: {{settings.btn_buy}}; color: #FFFFFF;height: 30px;width: 120px;"> 
+										Mua ngay
+									</button>
+									<button id="add-to-cart" {%unless product.available%}disabled{%endunless%}  class="product-add-to-cart-title {%unless product.available%}disabled{%endunless%} btn-detail addtocart btn-color-add btn-min-width btn-mgt btn-test" name="add" style="border: none; background: {{settings.btn_add}}; color: #FFFFFF;height: 30px;width: 120px;"> 
+										Thêm vào giỏ
+									</button>
+
+
+								</div>
+									
+						</div>
+						</div>
+						<div class="ss-social-button"><span class="ss-social-button-icon"></span>Share</div>
+						<!-- Go to www.addthis.com/dashboard to customize your tools 
+	 <div class="addthis_native_toolbox hidden"></div> -->
+						{%if settings.show_size%}
+						<div class="size-guide">
+							<div class="sizing"><span class="off">size guide</span></div>
+							<div class="size-detail"><a id="clos">close</a>
+								<div class="inner">
+									{{pages[settings.page_size].content}}
+								</div>		
+							</div>
+						</div>
+						{%endif%}
+					</form>
+
+					<div class="product-excerpt">
+            {%comment%}
+						<!-- <p >
+							{{product.description}}
+						</p>
+						<div class="product-excerpt-content">
+								<div class="product-excerpt-button-dropdown active">
+								<a href="javascript:void(0)" class="dropdown-toggle">
+									<span>></span> Chất liệu 
+								</a>
+								<div class="product-excerpt_descrip" style="height:auto;overflow-y: none;">
+										Coming Soon...
+								</div>
+							</div>
+							<div class="product-excerpt-button-dropdown">
+								<a href="javascript:void(0)" class="dropdown-toggle">
+									<span>></span> Mô tả sản phẩm 
+								</a>
+								<div class="product-excerpt_descrip">
+										{{product.description}}
+								</div>
+							</div>
+							<div class="product-excerpt-button-dropdown">
+								<a href="javascript:void(0)" class="dropdown-toggle">
+									<span>></span> Quan tâm 
+								</a>
+								<div class="product-excerpt_descrip" style="height:auto;    overflow-y: none;">
+										Coming Soon...
+								</div>
+							</div>
+							<div class="product-excerpt-button-dropdown">
+								<a href="javascript:void(0)" class="dropdown-toggle">
+									<span>></span> Thông tin kích thước 
+								</a>
+								<div class="product-excerpt_descrip" style="height:auto; overflow-y: none;">
+										Coming Soon...
+								</div>
+							</div>
+						</div> -->
+						{%endcomment%}
+						<div class="accordionWrapper">
+							{% comment %}
+									<div class="accordionItem close">
+										<h2 class="accordionItemHeading"><span>></span>Chất liệu</h2>
+										<div class="accordionItemContent">										
+											{% for tag in product.tags %}
+												{% if tag contains 'material' %}
+												{% assign result = tag | split : 'material_'  %}
+												<span>{{ result}}</span>,
+												{% else %}
+													
+												{% endif %}
+												{% endfor %}
+										</div>
+									</div>
+									<div class="accordionItem close">
+										<h2 class="accordionItemHeading"><span>></span> Quan tâm </h2>
+										<div class="accordionItemContent">
+												Coming Soon...
+										</div>
+									</div>				
+									<div class="accordionItem close">
+												<h2 class="accordionItemHeading"><span>></span> Thông tin kích thước  </h2>
+												<div class="accordionItemContent">
+													<div class="Click-here">Hướng dẫn kích thước</div> 
+													<!--<div class="custom-model-main">
+														<div class="custom-model-inner">        
+															<div class="close-btn">×</div>
+																	<div class="custom-model-wrap">
+																			<div class="pop-up-content-wrap">
+																				 Content Here
+																			</div>
+																	</div>  
+															</div>  
+															<div class="bg-overlay"></div>
+													</div> -->
+														<!--<img src="{{ 'shoppinggif.gif' | asset_url }}"/>-->
+												</div>
+									</div>
+								{% endcomment %}
+								<div id="accordionItemDetail" class="accordionItem open">
+										<h2 class="accordionItemHeading product-description-title"> Mô tả sản phẩm </h2>
+										<div class="accordionItemContent product-description-content">
+												
+										</div>
+									</div>
+							</div>
+					</div>
+					<span class="squarespace-social-buttons inline-style" data-asset-url="http://static1.squarespace.com/static/5252fc28e4b0ec71254bc248/526597cde4b0bc5cd29c55a2/526598d8e4b0b7e2644d4bd6/1382390034664/" data-record-type="11" data-full-url="/mens/haus-in-black" data-title="Haus in Black"></span>
+				</div>
+			</div>
+		</div>
+		
+
+
+		<div id="flowItems" class="hidden-xstd">
+
+			<div class="container img_feature">
+				<div class="row" style="margin:0 !important;">
+					<!-- Swiper -->
+					<div class="">
+						<div class="">
+							{% for image in product.images %}
+							<div class="" style="text-align:center">
+								<img style="max-width:420px" alt="{{image.title}}" data-image="{{ image.src | product_img_url : 'master' }}" src="{{ image.src | product_img_url : 'master' }}" >
+							</div>
+							{%endfor%}
+						</div>
+						{%if product.images.size > 100%}
+						<div class="swiper-button-next"></div>
+						<div class="swiper-button-prev"></div>
+						{%endif%}
+					</div>
+
+					<!-- Swiper JS -->
+
+
+					<!-- Initialize Swiper -->
+					{%comment%}
+					<script>
+						var swiper = new Swiper('.img_feature .swiper-container', {
+							pagination: '.img_feature .swiper-pagination',
+							paginationClickable: true,
+							autoHeight:true,
+							nextButton: '.img_feature .swiper-button-next',
+							prevButton: '.img_feature .swiper-button-prev'
+						});
+					</script>
+					{%endcomment%}
+				</div>
+			</div>
+			{%comment%}
+			<div class="container img_thumbnail treo" style="position:relative">
+				<!-- Add Pagination -->
+				{%if product.images.size > 4%}
+				<div class="swiper-button-next"></div>
+				<div class="swiper-button-prev"></div>
+				{%endif%}
+				<!-- Swiper -->
+				<div class="swiper-container">
+					<div class="swiper-wrapper">
+						{% for image in product.images %}
+						<div class="swiper-slide" style="text-align:center">
+							<img style="cursor:pointer;width:100%;max-width:100px;" alt="{{image.title}}" data-image="{{ image.src | product_img_url : 'master' }}" src="{{ image.src | product_img_url : 'medium' }}" >
+						</div>
+
+						{%endfor%}
+					</div>
+
+				</div>
+
+				<!-- Swiper JS -->
+
+
+				<!-- Initialize Swiper -->
+				<script>
+					var swiper = new Swiper('.img_thumbnail.treo .swiper-container', {
+						nextButton: '.img_thumbnail.treo .swiper-button-next',
+						prevButton: '.img_thumbnail.treo .swiper-button-prev',
+						slidesPerView: 4,
+						paginationClickable: true,
+
+
+					})
+				</script>
+			</div>
+			{%endcomment%}
+		</div>
+
+		<footer id="footer">
+			<div class="sqs-layout sqs-grid-12 columns-12" data-layout-label="Footer Content" data-type="block-field" data-updated-on="1385049770914" id="pageFooter">
+				<div class="row sqs-row">
+
+
+					<div class="sqs-block-content">
+						<p class="text-align-center">{{settings.footer_contact}}</p>
+					</div>
+
+				</div>
+			</div>
+		</footer>
+	</div>
+	<div class="clearfix"></div>
+	<div class="product_related-tags" id="product_related-tags">
+		<div class="recomment product-related">
+		<h3 class="related-product-title">SẢN PHẨM LIÊN QUAN</h3>
+				{%- assign cp = product -%}
+	{%- assign number_of_related_products_to_show = settings.productspg_featured_quantity -%}
+	{%- assign number_of_related_products_to_fetch = number_of_related_products_to_show -%}
+	{%- if collection == null or collection.handle == 'frontpage' or collection.handle == 'all' -%}
+		{%- assign found_a_collection = false -%}
+			{%- for c in product.collections -%}
+				{%- if found_a_collection == false and c.handle != 'frontpage' and c.handle != 'all' and c.all_products_count > 1 -%}
+				{%- assign found_a_collection = true -%}
+				{%- assign collection = c -%}
+				{%- endif -%}
+			{%- endfor -%}
+	{%- endif -%}
+	{%- if collections.all.products.size > 0 -%}
+		<div class="row">
+			<div class="col-md-12">
+
+				<!-- Swiper -->
+				<div class="swiper-container">
+					<div class="swiper-wrapper">
+						     
+					{%- for product in collection.products -%} 
+						{%- if counter_p >= number_of_related_products_to_show -%}
+							{%- break -%}
+						{%- endif -%}
+							{%- if cp.handle != product.handle -%}
+						<div class="swiper-slide">
+							{% include 'product-loop-recommend' %}
+						</div>
+							{%- assign counter_p =counter_p | plus : 1 -%}
+							{%- endif -%}
+					{%- endfor -%}
+					</div>
+					<!-- Add Pagination -->
+
+				</div>
+
+				<!-- Swiper JS -->
+
+
+				<!-- Initialize Swiper -->
+				<script>
+					var swiper = new Swiper('.recomment .swiper-container', {
+						nextButton: '.recomment .swiper-button-next',
+						prevButton: '.recomment .swiper-button-prev',
+						slidesPerView: 4,
+						paginationClickable: true,
+						spaceBetween: 0,
+
+					});
+				</script>
+			</div>
+		</div>
+	{%- endif -%}	
+	</div>
+	</div>
+	{% comment %}
+	<div class="custom-model-main">
+		<div class="custom-model-inner">        
+			<div class="close-btn">×</div>
+			<div class="custom-model-wrap">
+				<div class="pop-up-content-wrap">
+					The product is One size.
+				</div>
+			</div>  
+			<img src="{{ 'shoppinggif.gif' | asset_url }}"/>
+		</div>  
+		<div class="bg-overlay"></div>
+	</div> 
+	{% endcomment %}
+</main>
+<div class="clearfix"></div>
+
+<!-- Go to www.addthis.com/dashboard to customize your tools 
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-556429027cfac952" async="async"></script> -->
+<script>
+
+	$(document).ready(function(){
+		
+		$('#add-to-cart').click(function(){	
+			var params = {
+				type: 'POST',
+				url: '/cart/add.js',
+				async : false,
+				data: jQuery('#add-item-form-2').serialize(),
+				dataType: 'json',
+				success: function(line_item) {
+					if ((typeof callback) === 'function') {
+						callback(line_item);
+					} else {
+
+						getCartAjax();
+						$('#myCart').modal('show');
+						$('.modal-backdrop').css({'height':$(document).height(),'z-index':'99'});
+						
+
+					}
+				},
+				error: function(XMLHttpRequest, textStatus) {
+
+				}
+			};
+			jQuery.ajax(params);
+		});
+		$('#buy-now').click(function(e){	
+			e.preventDefault() ;
+			var params = {
+				type: 'POST',
+				url: '/cart/add.js',
+				async : false,
+				data: jQuery('#add-item-form').serialize(),
+				dataType: 'json',
+				success: function(line_item) {
+					window.location = '/checkout';
+				},
+				error: function(XMLHttpRequest, textStatus) {
+					Haravan.onError(XMLHttpRequest, textStatus);
+				}
+			};
+			jQuery.ajax(params);
+		});
+		$(".Click-here").on('click', function() {
+				$(".custom-model-main").addClass('model-open');
+			}); 
+			$(".close-btn, .bg-overlay").click(function(){
+				$(".custom-model-main").removeClass('model-open');
+			});
+				});
+</script>
+
+
+<!--XVNet-->
+
+<script>
+	$(document).ready(function(){
+		/*
+		$(".img_thumbnail img").click(function(){
+			var imgdata = $(this).data("image");
+			$(".img_feature .swiper-slide.swiper-slide-active img").attr("src",imgdata);
+			var swiper = new Swiper('.img_feature .swiper-container', {
+				pagination: '.img_feature .swiper-pagination',
+				paginationClickable: true,
+				autoHeight:true,
+				nextButton: '.img_feature .swiper-button-next',
+				prevButton: '.img_feature .swiper-button-prev'
+			});
+		})
+*/
+
+/* page product dropdown in sidebar info product*/		 
+				const itemsInfo = document.querySelectorAll('.product-excerpt-button-dropdown');
+		$( ".product-excerpt-button-dropdown" ).on( "click", function() {
+			$( itemsInfo ).removeClass( "active" );
+			$( this ).addClass( "active" );
+		});
+		$("body").removeClass().addClass("site-vertical-alignment-middle full-width-homepage  use-site-title-in-mobile-header folder-links-always-show index-links-parent-link-only product-category-links-show-both show-social-icons social-icon-style-square product-list-style-showroom product-aspect-ratio-auto product-item-single-image-fill  index-list-title-style-overlay index-aspect-ratio-auto gallery-single-image-fill  hide-blog-author  event-show-past-events event-thumbnails event-thumbnail-size-32-standard event-date-label  event-list-show-cats event-list-date event-list-time event-list-address   event-icalgcal-links  event-excerpts    event-list-compact-view   hide-opentable-icons opentable-style-dark newsletter-style-dark small-button-style-solid small-button-shape-square medium-button-style-solid medium-button-shape-square large-button-style-solid large-button-shape-square button-style-default button-corner-style-square native-currency-code-usd collection-526597cde4b0bc5cd29c55a2 collection-layout-default collection-type-products view-list mobile-style-available logo-image");
+		/*$('.ss-social-button').click(function(){
+		$('.addthis_native_toolbox').removeClass("hidden");
+
+	});*/
+
+	});
+
+</script>
+
+
+<!--SELECT CALLBACK-->
+<script>
+	var selectCallback = function(variant, selector) {
+		if (variant) {
+			if (variant.available) {
+				// Selected a valid variant that is available.
+				jQuery('#add').removeClass('disabled').removeAttr('disabled').val('Thêm giỏ hàng').fadeTo(200,1);
+			} else {
+				// Variant is sold out.
+				jQuery('#add').val('Hết hàng').addClass('disabled').attr('disabled', 'disabled').fadeTo(200,0.5);        
+			}
+			// Whether the variant is in stock or not, we can update the price and compare at price.
+			if ( variant.compare_at_price > variant.price ) {
+				jQuery('#product-price').html('<span class="product-price on-sale">'+ Haravan.formatMoney(variant.price, "{{ shop.money_format }}") +'</span>'+'&nbsp;<del class="product-compare-price">'+Haravan.formatMoney(variant.compare_at_price, "{{ shop.money_format }}")+ '</del>');
+			} else {
+				jQuery('#product-price').html('<span class="product-price">'+ Haravan.formatMoney(variant.price, "{{ shop.money_format }}") + '</span>' );
+			}        
+		} else {
+			// variant doesn't exist.
+			jQuery('#add').val('Không kinh doanh').addClass('disabled').attr('disabled', 'disabled').fadeTo(200,0.5);
+		}
+	};
+	jQuery(function($) {
+
+
+		new Haravan.OptionSelectors('product-select', { product: {{ product | json }}, onVariantSelected: selectCallback });
+	 // Auto-select first available variant on page load.
+	 {% assign found_one_in_stock = false %}
+	 	// Check if color option of variant is active then add to SET.
+	 // By default, I use color option is at index 1 so variant.options[1] for color. In product settings, the user must place Color after Size. (in variant section)
+	 // If SET is empty, then hide label and all color variants.
+	 {% for variant in product.variants %}
+			
+	 {% if variant.available and found_one_in_stock == false %}
+	 {% assign found_one_in_stock = true %}
+	 {% for option in product.options %}
+	 $('.single-option-selector:eq({{ forloop.index0 }})').val({{ variant.options[forloop.index0] | json }}).trigger('click');
+		{% endfor %}
+		{% endif %}
+		{% endfor %}
+	});
+		 
+
+</script>
+<!--TRANSLATE SCRIPT-->
+<script>
+$(document).ready(function(){
+		const productColorTitle = $(".product-color-title");
+    const productSizeTitle = $(".product-size-title");
+    const productDescriptionTitle = $(".product-description-title");
+    const productBuyNowTitle = $(".product-buy-now-title");
+    const productAddToCartTitle = $(".product-add-to-cart-title");
+    const productDescriptionContentElement = $(".product-description-content");
+		const relatedProducts = $(".related-product-title");
+		const translateText = () => {
+			let currentLocale = localStorage.getItem("locale");
+			const _vi_product_description = `{{_vi_product_description}}`
+			const _en_product_description = `{{_en_product_description}}`
+			let productDescription = currentLocale === 'vi' ? _vi_product_description: _en_product_description
+			let lang = JSON.parse(localStorage.getItem("lang"))
+			productColorTitle.text(lang["languages"][currentLocale]["Color"])
+			productSizeTitle.text(lang["languages"][currentLocale]["Size"])
+			productDescriptionTitle.text(lang["languages"][currentLocale]["Description"])
+			productBuyNowTitle.text(lang["languages"][currentLocale]["Buy now"])
+			productAddToCartTitle.text(lang["languages"][currentLocale]["Add to cart"])
+			relatedProducts.text(lang["languages"][currentLocale]["Related Products"].toUpperCase())
+			productDescriptionContentElement.html(productDescription)
+		}
+
+			validLocaleAndLangFromLocalStorage
+      .then(lastModifiedLang => {
+          if (!langFetchTime || !storedLang || fileIsModified(lastModifiedLang)){
+              return setMultiLangToLocalStorage;
+          }else{
+						translateText();
+					}
+      })
+      .then(response => {
+        if(response !== undefined){
+						response.lang.then(lang => {
+                localStorage.setItem("lang", JSON.stringify(lang));
+                localStorage.setItem("langFetchTime", response.lastModified);
+								translateText();
+              })				
+					}
+      });
+		
+		languageToggleCheckbox.addEventListener("change",translateText);
+		languageToggleCheckboxMobile.addEventListener("change",translateText);
+});
+</script>
+<!--COLOR VARIANT-->
+<script>
+	$(document).ready(function(){
+    const colorContainerDiv = $(".color-container");
+		const labelSize = $('label[for="product-select-option-0"]');
+		const labelColor =  $('label[for="product-select-option-1"]');
+		const selectColorTag = $("#product-select-option-1");
+		const productColorLabel = $(".product-color-label");
+		const currentVariantUrl = `{{product.url}}`;
+		const variantColors = [];
+
+  
+    
+		const getProductColorsToArray = () => {
+    {% assign color_options = product.options %}
+    {% for option in color_options %}
+        {% if option.name == 'Màu sắc' %}
+            {% assign color_values = option.values %}
+                 {% for value in color_values %}
+                    variantColors.push({{ value | json }})
+                 {% endfor %}
+         {% endif %}
+     {% endfor %}
+};				
+		const hideDefaultSizeAndColorSelectOfVariant = (labelSize, labelColor, selectColorTag) => {
+        //disable kich thuoc label
+        labelSize.hide();
+        //disable mau sac label
+       labelColor.hide();
+        //disable select color default
+        selectColorTag.hide();
+    }		
+    
+		hideDefaultSizeAndColorSelectOfVariant(labelSize, labelColor, selectColorTag);
+					getProductColorsToArray();
+		if(variantColors.length == 0){
+				productColorLabel.hide();
+		}else{
+			// call this function from 'load-variant-color.liquid' file
+        loadAllVariantColor(currentVariantUrl, variantColors, colorContainerDiv);
+		}
+});
+</script>
+
+<!--XVNet-->
+<script>
+	$(document).ready(function(){
+		$("body").removeClass().addClass("site-vertical-alignment-middle full-width-homepage  use-site-title-in-mobile-header folder-links-always-show index-links-parent-link-only product-category-links-show-both show-social-icons social-icon-style-square product-list-style-showroom product-aspect-ratio-auto product-item-single-image-fill  index-list-title-style-overlay index-aspect-ratio-auto gallery-single-image-fill  hide-blog-author  event-show-past-events event-thumbnails event-thumbnail-size-32-standard event-date-label  event-list-show-cats event-list-date event-list-time event-list-address   event-icalgcal-links  event-excerpts    event-list-compact-view   hide-opentable-icons opentable-style-dark newsletter-style-dark small-button-style-solid small-button-shape-square medium-button-style-solid medium-button-shape-square large-button-style-solid large-button-shape-square button-style-default button-corner-style-square native-currency-code-usd view-item collection-526597cde4b0bc5cd29c55a2 collection-layout-default collection-type-products mobile-style-available logo-image force-vertical-alignment-top");
+		$('#product-select').val($('#product-select option[data-available="true"]').eq(0).attr('value'))	
+
+});
+</script>
+
+
+
+<style>
+	@media screen and (min-width: 1000px){
+		.container.img_feature .swiper-button-next{
+			right:120px;
+		}
+		.container.img_feature .swiper-button-prev{
+			left:120px;
+		}
+		.container.img_thumbnail{
+			max-width:390px;
+			margin:0px auto;
+			margin-top:15px;
+			margin-bottom:40px;
+		}
+		.container.img_thumbnail .swiper-slide{
+			max-width:100px;
+			margin-right:10px !important;
+		}
+	}
+	.img_thumbnail.treo .swiper-button-next {
+
+		right: -35px;
+
+	}
+	.img_thumbnail.treo .swiper-button-prev {
+
+		left: -35px;
+
+	}
+
+	@media screen and (max-width: 660px) {
+		.hidden-xstd {
+			display:none;
+		}
+	}
+</style>
+

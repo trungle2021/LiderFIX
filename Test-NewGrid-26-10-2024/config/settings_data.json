@@ -1,0 +1,4968 @@
+{
+
+"current": {
+
+
+"newsblog_title": "Bài viết mới",
+
+
+"show_contact_form": true,
+
+
+"footer_display_newsletter_title": true,
+
+
+"footer_newsletter_title": "Đăng ký nhận email",
+
+
+"contact_form_title": "THÔNG TIN LIÊN HỆ",
+
+
+"lbl_success_contact_msg": "Cám ơn bạn đã liên hệ! Chúng tôi sẽ liên hệ lại khi có thể.",
+
+
+"lbl_fail_contact_msg_1": "Xin lỗi, chúng tôi không thể thực hiện yêu cầu của bạn vì có lỗi",
+
+
+"lbl_fail_contact_msg_2": "Vui lòng nhập lại và gửi đăng lại:",
+
+
+"lbl_name": "Tên đầy đủ",
+
+
+"lbl_enter_mail": "Nhập email*",
+
+
+"show_google_maps": true,
+
+
+"google_maps_code": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3919.1002874613655!2d106.6639852!3d10.8036306!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3175293ac91a2f9b%3A0xd75c965212390aed!2zNjUgVHLhuqduIFF14buRYyBIb8OgbiwgNCwgVMOibiBCw6xuaCwgSOG7kyBDaMOtIE1pbmgsIFZp4buHdCBOYW0!5e0!3m2!1svi!2s!4v1422245977374\" width=\"800\" height=\"350\" frameborder=\"0\" style=\"border:0\"></iframe>",
+
+
+"partner_1_link": "/collections/all",
+
+
+"partner_2_link": "/collections/all",
+
+
+"partner_3_link": "/collections/all",
+
+
+"partner_4_link": "/collections/all",
+
+
+"partner_5_link": "/collections/all",
+
+
+"partner_6_link": "/collections/all",
+
+
+"partner_7_link": "/collections/all",
+
+
+"partner_8_link": "/collections/all",
+
+
+"partner_9_link": "/collections/all",
+
+
+"partner_10_link": "/collections/all",
+
+
+"partner_11_link": "/collections/all",
+
+
+"partner_12_link": "/collections/all",
+
+
+"info-us-content-info": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ut nulla sapien, at aliquam erat.  \tSed vitae massa tellus. Aliquam commodo aliquam metus, sed iaculis nibh tempus id.  \tLorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ante ipsum primis in faucibus orci luctus  \tet ultrices posuere cubilia Curae; Etiam nec nisi in nisl euismod fringilla.  ",
+
+
+"info-us-content-write": "Admin, Haravan.com",
+
+
+"caption1": "Tuyển dụng",
+
+
+"caption2": "Thông cáo báo chí",
+
+
+"caption3": "Điều khoản sử dụng",
+
+
+"caption4": "Liên hệ",
+
+
+"page1": "/pages/about-us",
+
+
+"page2": "/pages/about-us",
+
+
+"page3": "/pages/about-us",
+
+
+"page4": "/pages/lien-he",
+
+
+"footer_intro": "Haravan - Cung cấp công cụ xây dựng website và thông tin hướng dẫn kinh doanh online.",
+
+
+"footer_company": "Twenty Co.Ltd",
+
+
+"footer_phone": "1900.636.099",
+
+
+"footer_email": "hi@haravan.com",
+
+
+"footer_address": "65 Trần Quốc Hoàn, Q. Tân Bình, Tp.HCM",
+
+
+"admin_name": "Admin",
+
+
+"admin_phone": "123456789",
+
+
+"id_yahoo": "haravan.com",
+
+
+"id_skype": "haravan.com",
+
+
+"customer_layout": "theme",
+
+
+"shop_bg_color": "#b31212",
+
+
+"toolbar_bg_color": "#000000",
+
+
+"toolbar_text_color": "#bbbbbb",
+
+
+"link_color": "#e01212",
+
+
+"nav_link_color": "#888888",
+
+
+"body_font_color": "#000000",
+
+
+"header_color": "#333333",
+
+
+"shop_btn_color": "#f45b4f",
+
+
+"border_color": "#dddddd",
+
+
+"slide_1_link": "http://www.lider.vn/collections/new-arrival",
+
+
+"slide_1_alt": "2323123",
+
+
+"slide_2_link": "http://www.lider.vn/collections/new-arrival",
+
+
+"slide_2_alt": "",
+
+
+"slide_3_link": "http://www.lider.vn/collections/new-arrival",
+
+
+"slide_3_alt": "",
+
+
+"slide_4_link": "",
+
+
+"javacriptvoid": "javascript:void(0)",
+
+
+"slide_4_alt": "",
+
+
+"footer_linklist_title": "Liên kết nhanh",
+
+
+"footer_blog_post_header": "Tin tức",
+
+
+"mailing_list_form_action": "",
+
+
+"twitter_link": "http://twitter.com/haravanvn",
+
+
+"facebook_link": "http://twitter.com/haravanvn",
+
+
+"google_link": "http://twitter.com/haravanvn",
+
+
+"youtube_link": "http://twitter.com/haravanvn",
+
+
+"vimeo_link": "http://twitter.com/haravanvn",
+
+
+"pinterest_link": "http://twitter.com/haravanvn",
+
+
+"instagram_link": "",
+
+
+"tumblr_link": "",
+
+
+"atom_link": "",
+
+
+"base_font": "Noto Sans",
+
+
+"header_font": "Arial, 'Helvetica Neue', Helvetica, sans-serif",
+
+
+"pagination_limit": "50",
+
+
+"use_logo": true,
+
+
+"enable_featuredproduct": false,
+
+
+"slide_1": true,
+
+
+"slide_2": true,
+
+
+"slide_3": false,
+
+
+"slide_4": false,
+
+
+"enable_product_image_zoom": false,
+
+
+"display_quantity_dropdown": false,
+
+
+"show_related_products": false,
+
+
+"collection_tags": false,
+
+
+"collection_sort": true,
+
+
+"footer_display_newsletter": true,
+
+
+"display_slide_1": "false",
+
+
+"display_slide_2": "false",
+
+
+"display_slide_3": "false",
+
+
+"display_slide_4": "false",
+
+
+"enable_slideshowbanner": "true",
+
+
+"frontpage_collection": "onsale",
+
+
+"homepage": "about-us",
+
+
+"footer_blog_post": "news",
+
+
+"footer_linklist": "main-menu",
+
+
+"show_payment_options": true,
+
+
+"show_paypal": true,
+
+
+"show_visa": "1",
+
+
+"show_mastercard": "1",
+
+
+"show_amex": true,
+
+
+"show_discover": true,
+
+
+"show_cirrus": true,
+
+
+"show_maestro": true,
+
+
+"show_google_wallet": true,
+
+
+"use_parallax_banner": true,
+
+
+"parallax_image_text": "Tạo Website cho riêng bạn!",
+
+
+"parallax_button_text": "Shop Now",
+
+
+"parallax_link": "https://hrvplus.myharavan.com/",
+
+
+"show_facebook_widget": true,
+
+
+"facebook_widget_title": "Kết nối với chúng tôi",
+
+
+"facebook_username": "pages/Haravan-Official/587413281356045",
+
+
+"show_home_ad": true,
+
+
+"promo_link": "#",
+
+
+"collection_show": false,
+
+
+"show_side_main_menu": true,
+
+
+"side_main_menu": "cat-index",
+
+
+"collection_name": "Danh mục sản phẩm 1",
+
+
+"show_sidebar_sale": true,
+
+
+"sidebar_sale_title": "Sản phẩm khuyến mãi",
+
+
+"sidebar_blog_sale_title": "",
+
+
+"sidebar_sale_collection": "men",
+
+
+"sidebar_blog_sale_collection": "sale",
+
+
+"sidebar_product_count": "2",
+
+
+"use_ad_banners": true,
+
+
+"ad_banner_1_small_text": "Extreme abc",
+
+
+"ad_banner_1_link": "",
+
+
+"ad_banner_top_text": "banner topđasad",
+
+
+"use_featured_products": true,
+
+
+"use_tags_products": true,
+
+
+"featured_products_title": "Sản phẩm nổi bật",
+
+
+"featured_collection": "hot-products",
+
+
+"product_grid_layout": "3-col",
+
+
+"collection_pagination_limit": "24",
+
+
+"show_grid_vendor": false,
+
+
+"trans_collection_show": "Show",
+
+
+"use_avatar-answ": true,
+
+
+"avatar-answ_title": "Hỗ trợ trực tuyến",
+
+
+"hotline_title": "Số hotline",
+
+
+"hotline_phone_1": "1900.636.099",
+
+
+"hotline_phone_2": "1900.636.099",
+
+
+"time_title": "Thời gian làm việc",
+
+
+"time_text": "Bất kể khi nào bạn cần, hỗ trợ 24/7, 7 ngày trong tuần",
+
+
+"show_left_ad": true,
+
+
+"promo_link_left": "/pages/about-us",
+
+
+"hotline_phone": "1900.636.099",
+
+
+"show_counter_widget": true,
+
+
+"counter_widget_title": "Thống kê truy cập",
+
+
+"script_counter": "<!-- Histats.com  START  (standard)--> <script type=\"text/javascript\">document.write(unescape(\"%3Cscript src=%27http://s10.histats.com/js15.js%27 type=%27text/javascript%27%3E%3C/script%3E\"));</script> <a href=\"http://www.histats.com\" target=\"_blank\" title=\"\" ><script  type=\"text/javascript\" > try {Histats.start(1,2933859,4,100,103,48,\"00011111\"); Histats.track_hits();} catch(err){}; </script></a> <noscript><a href=\"http://www.histats.com\" target=\"_blank\"><img  src=\"http://sstatic1.histats.com/0.gif?2933859&101\" alt=\"\" border=\"0\"></a></noscript> <!-- Histats.com  END  -->",
+
+
+"link_1": "/pages/lien-he",
+
+
+"tit_link_1": "Hướng dẫn đặt hàng",
+
+
+"link_2": "/pages/lien-he",
+
+
+"tit_link_2": "Cam kết giao nhận",
+
+
+"link_3": "/pages/lien-he",
+
+
+"tit_link_3": "Chính sách đổi - trả hàng",
+
+
+"show_pro_new": true,
+
+
+"pro_new_title": "Sản phẩm mới",
+
+
+"pro_new_collection": "san-pham-moi",
+
+
+"pro_new_count": "3",
+
+
+"footer_info": "1Giải pháp bán hàng toàn diện từ website đến cửa hàng",
+
+
+"footer_text": "Giải pháp bán hàng toàn diện từ website đến cửa hàng",
+
+
+"scroll_top_show": true,
+
+
+"footer_link": "left",
+
+
+"footer_contact": "\n\n\n\n",
+
+
+"use_info_products": "1",
+
+
+"share_prod_on_facebook": true,
+
+
+"share_prod_on_twitter": true,
+
+
+"share_prod_on_googleplus": true,
+
+
+"share_prod_on_pinterest": "1",
+
+
+"share_prod_on_sharemore": "1",
+
+
+"use_comment_products": true,
+
+
+"productspg_related_products": true,
+
+
+"productspg_featured_collection": "",
+
+
+"blog_recent_title": "Danh mục blog",
+
+
+"news_recent_show": true,
+
+
+"news_recent_title": "Bài viết mới nhất",
+
+
+"blog_recent_show": true,
+
+
+"use_check_quantity": true,
+
+
+"productspg_featured_quantity": "3",
+
+
+"use_sale_products": true,
+
+
+"sale_products_title": "Sản phẩm khuyến mãi",
+
+
+"sale_collection": "onsale",
+
+
+"use_new_products": true,
+
+
+"new_products_title": "Sản phẩm mới",
+
+
+"new_collection": "frontpage",
+
+
+"blog_recent_menu": "",
+
+
+"btn_add": "#000000",
+
+
+"btn_buy": "#b0b0b0",
+
+
+"border_button_color": "#ff6517",
+
+
+"border_left_button_add": "#ce4735",
+
+
+"border_right_button_add": "#ee7465",
+
+
+"border_left_button_buy": "#ff8b3d",
+
+
+"border_right_button_buy": "#f4680b",
+
+
+"border_left_button_more": "#66a6cc",
+
+
+"border_right_button_more": "#348ec2",
+
+
+"show_fanpage_faceook": "1",
+
+
+"fanpage_faceook": "https://www.facebook.com/pages/Haravan-Official/587413281356045",
+
+
+"readmore_color": "#53a1cc",
+
+
+"side_extra_menu": "",
+
+
+"colletion_visible": true,
+
+
+"about_visible": false,
+
+
+"cart_color": "#000000",
+
+
+"currency": "VNĐ",
+
+
+"collection_back_color": "#ffffff",
+
+
+"breadcum_visible": false,
+
+
+"product_title_color": "#000000",
+
+
+"product_title_fontsize": "24",
+
+
+"product_price_color": "#000000",
+
+
+"product_price_fontsize": "16",
+
+
+"product_des_color": "#000000",
+
+
+"product_des_fontsize": "13",
+
+
+"btn_add_color": "#ffffff",
+
+
+"btn_add_backcolor": "#000000",
+
+
+"btn_buy_color": "#ffffff",
+
+
+"btn_adbtn_buy_backcolord_backcolor": "#000000",
+
+
+"blog_backcolor": "#ffffff",
+
+
+"blog_title_color": "#000000",
+
+
+"blog_content_color": "#000000",
+
+
+"about_backcolor": "#ffffff",
+
+
+"about_title_color": "#000000",
+
+
+"about_content_color": "#000000",
+
+
+"product_backcolor": "#ffffff",
+
+
+"blog_title_fontsize": "24",
+
+
+"blog_content_fontsize": "14",
+
+
+"article_backcolor": "#ffffff",
+
+
+"article_title_color": "#000000",
+
+
+"article_title_fontsize": "24",
+
+
+"article_content_color": "#000000",
+
+
+"article_content_fontsize": "14",
+
+
+"about_title_fontsize": "24",
+
+
+"about_content_fontsize": "14",
+
+
+"upper_case_menu": "main-menu",
+
+
+"is_string_menu1": false,
+
+
+"is_string_menu2": true,
+
+
+"is_strong_menu1": true,
+
+
+"is_strong_menu2": false,
+
+
+"featured_link": "jacket",
+
+
+"blog_link": "",
+
+
+"menu1_link": "main-menu",
+
+
+"menu2_link": "footer",
+
+
+"collection_col_num": "5",
+
+
+"auto_column": false,
+
+
+"auto_col_desktop": "2",
+
+
+"auto_col_mobile": "1",
+
+
+"collection_col_num_mobile": "2",
+
+
+"product_des_fixed": true,
+
+
+"price_below": false,
+
+
+"collection_pro_title_color": "#000000",
+
+
+"linkfacebook": "https://facebook.com/lider.closet",
+
+
+"linkin": "https://instagram.com/lider.closet",
+
+
+"link_banner_index_1": "http://www.lider.vn/collections/new-arrival",
+
+
+"link_banner_index_2": "http://www.lider.vn/pages/forescence",
+
+
+"link_banner_index_3": "http://www.lider.vn/collections/new-arrival",
+
+
+"text_banner_index_1": "",
+
+
+"text_banner_index_2": "",
+
+
+"text_banner_index_3": "",
+
+
+"header_banner_index_2": "",
+
+
+"header_banner_index_2_bot": "",
+
+
+"link_banner_index_1_bot": "#444",
+
+
+"link_banner_index_2_bot": "#555",
+
+
+"use2banner": false,
+
+
+"logo.png": "",
+
+
+"logo_mobile.png": "",
+
+
+"favicon.png": "",
+
+
+"demo-slide-1.jpg": "",
+
+
+"demo-slide-2.jpg": "",
+
+
+"demo-slide-3.jpg": "",
+
+
+"icon_face.png": "",
+
+
+"icon_in.png": "",
+
+
+"banner_index_1.png": "",
+
+
+"banner_index_2.png": "",
+
+
+"banner_index_3.png": "",
+
+
+"banner_index_1_bot.png": "",
+
+
+"banner_index_2_bot.png": "",
+
+
+"topbar_show_1": true,
+
+
+"topbar_1": "<p style=\"color:red;\">OMG SALE</p>",
+
+
+"topbar_1_link": "https://www.lider.vn/collections/new-arrivals",
+
+
+"topbar_show_2": true,
+
+
+"topbar_2": "<p style=\"color:red;\">15% Off Everything</p>",
+
+
+"topbar_2_link": "https://www.lider.vn/collections/onsale",
+
+
+"topbar_show_3": false,
+
+
+"topbar_3": "SALE<p style=\"color:red;\"> Black Friday </p>SAME PRICE FROM 99.000VND",
+
+
+"topbar_3_link": "/",
+
+
+"home_video_visible": true,
+
+
+"home_link_video": "vra9cj",
+
+
+"home_text_video": "",
+
+
+"home_collection_1_show": true,
+
+
+"i_11.jpg": "",
+
+
+"home_collection_1_text_1": "",
+
+
+"home_collection_1_link_1": "https://www.lider.vn/collections/jacket",
+
+
+"i_12.jpg": "",
+
+
+"home_collection_1_text_2": "",
+
+
+"home_collection_1_link_2": "https://www.lider.vn/pages/lider-no-33-collection-2021",
+
+
+"i_13.jpg": "",
+
+
+"home_collection_1_text_3": "",
+
+
+"home_collection_1_link_3": "https://www.lider.vn/collections/tanktop",
+
+
+"home_collection_2_show": true,
+
+
+"i_21.jpg": "",
+
+
+"home_collection_2_text_1": "",
+
+
+"home_collection_2_link_1": "https://www.lider.vn/collections/shirt",
+
+
+"i_22.jpg": "",
+
+
+"home_collection_2_text_2": "",
+
+
+"home_collection_2_link_2": "https://www.lider.vn/collections/jacket",
+
+
+"home_collection_3_show": true,
+
+
+"i_31.jpg": "",
+
+
+"home_collection_3_text_1": "",
+
+
+"home_collection_3_link_1": "https://www.lider.vn/collections/accessories",
+
+
+"i_32.jpg": "",
+
+
+"home_collection_3_text_2": "",
+
+
+"home_collection_3_link_2": "https://www.lider.vn/collections/trousers",
+
+
+"i_33.jpg": "",
+
+
+"home_collection_3_text_3": "",
+
+
+"home_collection_3_link_3": "https://www.lider.vn/collections/accessories",
+
+
+"image_11.jpg": "",
+
+
+"image_12.jpg": "",
+
+
+"image_13.jpg": "",
+
+
+"image_1_1.jpg": "",
+
+
+"image_1_2.jpg": "",
+
+
+"image_1_3.jpg": "",
+
+
+"image_2_1.jpg": "",
+
+
+"image_2_2.jpg": "",
+
+
+"image_3_1.jpg": "",
+
+
+"image_3_2.jpg": "",
+
+
+"image_3_3.jpg": "",
+
+
+"linkyt": "",
+
+
+"footer_link_1": "main-menu",
+
+
+"footer_social": "footer-social",
+
+
+"footer_link_2": "footer",
+
+
+"home_linkto_video": "https://www.lider.vn/collections/new-arrivals",
+
+
+"search_color": "#000000",
+
+
+"title_list_col": "Shop",
+
+
+"collection_sidebar": "san-pham",
+
+
+"show_size": false,
+
+
+"page_size": "sizeguide",
+
+
+"footer_link_3": "left",
+
+
+"textarea_footer": "",
+
+
+"bct.png": "",
+
+
+"link_logo_bct": "http://online.gov.vn/Home/WebDetails/68641?AspxAutoDetectCookieSupport=1",
+
+
+"image_2_3.jpg": "",
+
+
+"home_collection_2_text_3": "",
+
+
+"home_collection_2_link_3": "https://www.lider.vn/pages/lider-no-33-collection-2021",
+
+
+"mainmenu_show_1": false,
+
+
+"mainmenu_name_1": "Home",
+
+
+"mainmenu_link_1": "/",
+
+
+"mainmenu_show_1-1": false,
+
+
+"mainmenu_show_colone_1-1": false,
+
+
+"mainmenu_name_colone_1-1": "",
+
+
+"mainmenu_link_colone_1-1": "",
+
+
+"mainmenu_href_colone_1-1": "",
+
+
+"mainmenu_show_coltwo_1-1": false,
+
+
+"mainmenu_name_coltwo_1-1": "",
+
+
+"mainmenu_link_coltwo_1-1": "",
+
+
+"mainmenu_href_coltwo_1-1": "",
+
+
+"mainmenu_show_1-2": false,
+
+
+"mainmenu_show_colone_1-2": false,
+
+
+"mainmenu_name_colone_1-2": "",
+
+
+"mainmenu_link_colone_1-2": "",
+
+
+"mainmenu_href_colone_1-2": "",
+
+
+"mainmenu_show_coltwo_1-2": false,
+
+
+"mainmenu_name_coltwo_1-2": "",
+
+
+"mainmenu_link_coltwo_1-2": "",
+
+
+"mainmenu_href_coltwo_1-2": "",
+
+
+"mainmenu_show_1-3": false,
+
+
+"mainmenu_show_colone_1-3": false,
+
+
+"mainmenu_name_colone_1-3": "",
+
+
+"mainmenu_link_colone_1-3": "",
+
+
+"mainmenu_href_colone_1-3": "",
+
+
+"mainmenu_show_coltwo_1-3": false,
+
+
+"mainmenu_name_coltwo_1-3": "",
+
+
+"mainmenu_link_coltwo_1-3": "",
+
+
+"mainmenu_href_coltwo_1-3": "",
+
+
+"mainmenu_show_1-4": false,
+
+
+"mainmenu_show_colone_1-4": false,
+
+
+"mainmenu_name_colone_1-4": "",
+
+
+"mainmenu_link_colone_1-4": "",
+
+
+"mainmenu_href_colone_1-4": "",
+
+
+"mainmenu_show_coltwo_1-4": false,
+
+
+"mainmenu_name_coltwo_1-4": "",
+
+
+"mainmenu_link_coltwo_1-4": "",
+
+
+"mainmenu_href_coltwo_1-4": "",
+
+
+"mainmenu_show_1-5": false,
+
+
+"mainmenu_banner_colone_1-5": "",
+
+
+"mainmenu_banner_link_colone_1-5": "",
+
+
+"mainmenu_name_colone_1-5": "",
+
+
+"mainmenu_link_colone_1-5": "",
+
+
+"mainmenu_show_2": true,
+
+
+"mainmenu_name_2": "Shop",
+
+
+"mainmenu_link_2": "#",
+
+
+"mainmenu_show_2-1": true,
+
+
+"mainmenu_show_colone_2-1": true,
+
+
+"mainmenu_name_colone_2-1": "NEW",
+
+
+"mainmenu_link_colone_2-1": "/collections/lider-new-arrivals",
+
+
+"mainmenu_href_colone_2-1": "",
+
+
+"mainmenu_show_coltwo_2-1": true,
+
+
+"mainmenu_name_coltwo_2-1": "SKIRTS",
+
+
+"mainmenu_link_coltwo_2-1": "/collections/lider-all-about-skirts",
+
+
+"mainmenu_href_coltwo_2-1": "",
+
+
+"mainmenu_show_2-2": true,
+
+
+"mainmenu_show_colone_2-2": true,
+
+
+"mainmenu_name_colone_2-2": "T-SHIRT",
+
+
+"mainmenu_link_colone_2-2": "/collections/lider-t-shirt",
+
+
+"mainmenu_href_colone_2-2": "",
+
+
+"mainmenu_show_coltwo_2-2": true,
+
+
+"mainmenu_name_coltwo_2-2": "HOODIE",
+
+
+"mainmenu_link_coltwo_2-2": "/collections/hoodie",
+
+
+"mainmenu_href_coltwo_2-2": "",
+
+
+"mainmenu_show_2-3": true,
+
+
+"mainmenu_show_colone_2-3": true,
+
+
+"mainmenu_name_colone_2-3": "SHIRT",
+
+
+"mainmenu_link_colone_2-3": "/collections/lider-shirt-1",
+
+
+"mainmenu_href_colone_2-3": "",
+
+
+"mainmenu_show_coltwo_2-3": true,
+
+
+"mainmenu_name_coltwo_2-3": "SHORTS",
+
+
+"mainmenu_link_coltwo_2-3": "/collections/lider-shorts",
+
+
+"mainmenu_href_coltwo_2-3": "",
+
+
+"mainmenu_show_2-4": true,
+
+
+"mainmenu_show_colone_2-4": true,
+
+
+"mainmenu_name_colone_2-4": "TANK TOP",
+
+
+"mainmenu_link_colone_2-4": "/collections/lider-tank-top",
+
+
+"mainmenu_href_colone_2-4": "",
+
+
+"mainmenu_show_coltwo_2-4": true,
+
+
+"mainmenu_name_coltwo_2-4": "TROUSERS",
+
+
+"mainmenu_link_coltwo_2-4": "/collections/lider-trousers",
+
+
+"mainmenu_href_coltwo_2-4": "",
+
+
+"mainmenu_show_2-5": true,
+
+
+"mainmenu_banner_colone_2-5": "https://file.hstatic.net/200000264467/file/cs-trang-lop-chong-dinh-064631_efa894af55ac44f5a3de1d638164db46_master_d4f7e964829740588847748c283b681a.jpeg",
+
+
+"mainmenu_banner_link_colone_2-5": "",
+
+
+"mainmenu_name_colone_2-5": "JACKET",
+
+
+"mainmenu_link_colone_2-5": "/collections/lider-jacket",
+
+
+"mainmenu_show_3": true,
+
+
+"mainmenu_name_3": "Collections ",
+
+
+"mainmenu_link_3": "",
+
+
+"mainmenu_show_3-1": true,
+
+
+"mainmenu_show_colone_3-1": true,
+
+
+"mainmenu_name_colone_3-1": "THE TIFF DRACO",
+
+
+"mainmenu_link_colone_3-1": "/pages/lider-the-tiff-draco",
+
+
+"mainmenu_href_colone_3-1": "",
+
+
+"mainmenu_show_coltwo_3-1": true,
+
+
+"mainmenu_name_coltwo_3-1": "9TH ANNIVERSARY",
+
+
+"mainmenu_link_coltwo_3-1": "/pages/lider-9th-anniversary",
+
+
+"mainmenu_href_coltwo_3-1": "",
+
+
+"mainmenu_show_3-2": true,
+
+
+"mainmenu_show_colone_3-2": true,
+
+
+"mainmenu_name_colone_3-2": "ỦA IN THEIR FANCY WORLD",
+
+
+"mainmenu_link_colone_3-2": "/pages/lider-ua-in-their-fancy-world",
+
+
+"mainmenu_href_colone_3-2": "",
+
+
+"mainmenu_show_coltwo_3-2": true,
+
+
+"mainmenu_name_coltwo_3-2": "LIDER x LOCO #LESSSTRESSMORELOCO",
+
+
+"mainmenu_link_coltwo_3-2": "/pages/lider-loco-collaboration-less-stress-more-loco",
+
+
+"mainmenu_href_coltwo_3-2": "",
+
+
+"mainmenu_show_3-3": true,
+
+
+"mainmenu_show_colone_3-3": true,
+
+
+"mainmenu_name_colone_3-3": "LIDER Summer 2023 Collection",
+
+
+"mainmenu_link_colone_3-3": "lider-summer-2023-collection",
+
+
+"mainmenu_href_colone_3-3": "",
+
+
+"mainmenu_show_coltwo_3-3": false,
+
+
+"mainmenu_name_coltwo_3-3": "",
+
+
+"mainmenu_link_coltwo_3-3": "",
+
+
+"mainmenu_href_coltwo_3-3": "",
+
+
+"mainmenu_show_3-4": true,
+
+
+"mainmenu_show_colone_3-4": true,
+
+
+"mainmenu_name_colone_3-4": "LIDER JEANS - 'Hit your G-Spot'",
+
+
+"mainmenu_link_colone_3-4": "/pages/lider-jeans-2023-collection",
+
+
+"mainmenu_href_colone_3-4": "",
+
+
+"mainmenu_show_coltwo_3-4": false,
+
+
+"mainmenu_name_coltwo_3-4": "",
+
+
+"mainmenu_link_coltwo_3-4": "",
+
+
+"mainmenu_href_coltwo_3-4": "",
+
+
+"mainmenu_show_3-5": true,
+
+
+"mainmenu_show_3-6": true,
+
+
+"mainmenu_banner_colone_3-5": "https://assets.wsimgs.com/wsimgs/rk/images/dp/ecm/202205/1819/001/001.jpg",
+
+
+"mainmenu_banner_link_colone_3-5": "",
+
+
+"mainmenu_name_colone_3-5": "",
+
+
+"mainmenu_link_colone_3-5": "/pages/ps-381-valentine-capsule-2021-lider",
+
+
+"mainmenu_show_4": false,
+
+
+"mainmenu_name_4": "COLLABORATION",
+
+
+"mainmenu_link_4": "",
+
+
+"mainmenu_show_4-1": true,
+
+
+"mainmenu_show_colone_4-1": true,
+
+
+"mainmenu_name_colone_4-1": "Lider x Biti's Hunter",
+
+
+"mainmenu_link_colone_4-1": "/pages/bitis-hunter-street-lider-collaboration",
+
+
+"mainmenu_href_colone_4-1": "",
+
+
+"mainmenu_show_coltwo_4-1": false,
+
+
+"mainmenu_name_coltwo_4-1": "",
+
+
+"mainmenu_link_coltwo_4-1": "",
+
+
+"mainmenu_href_coltwo_4-1": "",
+
+
+"mainmenu_show_4-2": true,
+
+
+"mainmenu_show_colone_4-2": true,
+
+
+"mainmenu_name_colone_4-2": "LIDER x PEPSI",
+
+
+"mainmenu_link_colone_4-2": "/pages/pepsi-lider-collaboration-kool-aid-capsule-2020",
+
+
+"mainmenu_href_colone_4-2": "",
+
+
+"mainmenu_show_coltwo_4-2": false,
+
+
+"mainmenu_name_coltwo_4-2": "",
+
+
+"mainmenu_link_coltwo_4-2": "",
+
+
+"mainmenu_href_coltwo_4-2": "",
+
+
+"mainmenu_show_4-3": true,
+
+
+"mainmenu_show_colone_4-3": true,
+
+
+"mainmenu_name_colone_4-3": "LIDER x CHEESE COFFEE",
+
+
+"mainmenu_link_colone_4-3": "/pages/cheese-coffee-x-lider-collaboration",
+
+
+"mainmenu_href_colone_4-3": "",
+
+
+"mainmenu_show_coltwo_4-3": false,
+
+
+"mainmenu_name_coltwo_4-3": "",
+
+
+"mainmenu_link_coltwo_4-3": "",
+
+
+"mainmenu_href_coltwo_4-3": "",
+
+
+"mainmenu_show_4-4": true,
+
+
+"mainmenu_show_colone_4-4": true,
+
+
+"mainmenu_name_colone_4-4": "LIDER FIRST RUNWAY",
+
+
+"mainmenu_link_colone_4-4": "/pages/lider-first-runway-cheese-coffee-candybar-collection",
+
+
+"mainmenu_href_colone_4-4": "",
+
+
+"mainmenu_show_coltwo_4-4": false,
+
+
+"mainmenu_name_coltwo_4-4": "",
+
+
+"mainmenu_link_coltwo_4-4": "",
+
+
+"mainmenu_href_coltwo_4-4": "",
+
+
+"mainmenu_show_4-5": true,
+
+
+"mainmenu_banner_colone_4-5": "https://file.hstatic.net/200000264467/file/cs-trang-lop-chong-dinh-064631_efa894af55ac44f5a3de1d638164db46_master_d4f7e964829740588847748c283b681a.jpeg",
+
+
+"mainmenu_banner_link_colone_4-5": "",
+
+
+"mainmenu_name_colone_4-5": "LIDER x CHEESE COFFEE",
+
+
+"mainmenu_link_colone_4-5": "/pages/cheese-coffee-x-lider-collaboration",
+
+
+"mainmenu_show_5": false,
+
+
+"mainmenu_name_5": "Runway",
+
+
+"mainmenu_link_5": "/",
+
+
+"mainmenu_show_5-1": false,
+
+
+"mainmenu_show_colone_5-1": false,
+
+
+"mainmenu_name_colone_5-1": "LIDER FIRST RUNWAY",
+
+
+"mainmenu_link_colone_5-1": "/pages/lider-first-runway-cheese-coffee-candybar-collection",
+
+
+"mainmenu_href_colone_5-1": "",
+
+
+"mainmenu_show_coltwo_5-1": false,
+
+
+"mainmenu_name_coltwo_5-1": "",
+
+
+"mainmenu_link_coltwo_5-1": "",
+
+
+"mainmenu_href_coltwo_5-1": "",
+
+
+"mainmenu_show_5-2": true,
+
+
+"mainmenu_show_colone_5-2": false,
+
+
+"mainmenu_name_colone_5-2": "LIDER FIRST RUNWAY",
+
+
+"mainmenu_link_colone_5-2": "/pages/lider-first-runway-cheese-coffee-candybar-collection",
+
+
+"mainmenu_href_colone_5-2": "",
+
+
+"mainmenu_show_coltwo_5-2": false,
+
+
+"mainmenu_name_coltwo_5-2": "",
+
+
+"mainmenu_link_coltwo_5-2": "",
+
+
+"mainmenu_href_coltwo_5-2": "",
+
+
+"mainmenu_show_5-3": true,
+
+
+"mainmenu_show_colone_5-3": false,
+
+
+"mainmenu_name_colone_5-3": "LIDER FIRST RUNWAY",
+
+
+"mainmenu_link_colone_5-3": "/pages/lider-first-runway-cheese-coffee-candybar-collection",
+
+
+"mainmenu_href_colone_5-3": "",
+
+
+"mainmenu_show_coltwo_5-3": false,
+
+
+"mainmenu_name_coltwo_5-3": "",
+
+
+"mainmenu_link_coltwo_5-3": "",
+
+
+"mainmenu_href_coltwo_5-3": "",
+
+
+"mainmenu_show_5-4": true,
+
+
+"mainmenu_show_colone_5-4": false,
+
+
+"mainmenu_name_colone_5-4": "LIDER FIRST RUNWAY",
+
+
+"mainmenu_link_colone_5-4": "/pages/lider-first-runway-cheese-coffee-candybar-collection",
+
+
+"mainmenu_href_colone_5-4": "",
+
+
+"mainmenu_show_coltwo_5-4": false,
+
+
+"mainmenu_name_coltwo_5-4": "",
+
+
+"mainmenu_link_coltwo_5-4": "",
+
+
+"mainmenu_href_coltwo_5-4": "",
+
+
+"mainmenu_show_5-5": true,
+
+
+"mainmenu_banner_colone_5-5": "https://assets.wsimgs.com/wsimgs/rk/images/dp/ecm/202205/1819/001/001.jpg",
+
+
+"mainmenu_banner_link_colone_5-5": "",
+
+
+"mainmenu_name_colone_5-5": "LIDER FIRST RUNWAY",
+
+
+"mainmenu_link_colone_5-5": "/pages/lider-first-runway-cheese-coffee-candybar-collection",
+
+
+"mainmenu_show_6": true,
+
+
+"mainmenu_name_6": "OUTLET",
+
+
+"mainmenu_link_6": "/collections/lider-outlet-sale",
+
+
+"mainmenu_show_6-1": true,
+
+
+"mainmenu_show_colone_6-1": true,
+
+
+"mainmenu_name_colone_6-1": "OUTLET SALE",
+
+
+"mainmenu_link_colone_6-1": "https://www.lider.vn/collections/lider-outlet-sale",
+
+
+"mainmenu_href_colone_6-1": "",
+
+
+"mainmenu_show_coltwo_6-1": false,
+
+
+"mainmenu_name_coltwo_6-1": "OUTLET SALE",
+
+
+"mainmenu_link_coltwo_6-1": "https://www.lider.vn/collections/lider-outlet-sale",
+
+
+"mainmenu_href_coltwo_6-1": "",
+
+
+"mainmenu_show_6-2": false,
+
+
+"mainmenu_show_colone_6-2": false,
+
+
+"mainmenu_name_colone_6-2": "UNDER 499K",
+
+
+"mainmenu_link_colone_6-2": "/collections/lider-black-friday-under-499k",
+
+
+"mainmenu_href_colone_6-2": "",
+
+
+"mainmenu_show_coltwo_6-2": false,
+
+
+"mainmenu_name_coltwo_6-2": "",
+
+
+"mainmenu_link_coltwo_6-2": "",
+
+
+"mainmenu_href_coltwo_6-2": "",
+
+
+"mainmenu_show_6-3": false,
+
+
+"mainmenu_show_colone_6-3": false,
+
+
+"mainmenu_name_colone_6-3": "BLACK FRIDAY SALE",
+
+
+"mainmenu_link_colone_6-3": "/collections/lider-black-friday-sale",
+
+
+"mainmenu_href_colone_6-3": "",
+
+
+"mainmenu_show_coltwo_6-3": false,
+
+
+"mainmenu_name_coltwo_6-3": "",
+
+
+"mainmenu_link_coltwo_6-3": "",
+
+
+"mainmenu_href_coltwo_6-3": "",
+
+
+"mainmenu_show_6-4": true,
+
+
+"mainmenu_show_colone_6-4": false,
+
+
+"mainmenu_name_colone_6-4": "",
+
+
+"mainmenu_link_colone_6-4": "",
+
+
+"mainmenu_href_colone_6-4": "",
+
+
+"mainmenu_show_coltwo_6-4": false,
+
+
+"mainmenu_name_coltwo_6-4": "",
+
+
+"mainmenu_link_coltwo_6-4": "",
+
+
+"mainmenu_href_coltwo_6-4": "",
+
+
+"mainmenu_show_6-5": true,
+
+
+"mainmenu_banner_colone_6-5": "",
+
+
+"mainmenu_banner_link_colone_6-5": "",
+
+
+"mainmenu_name_colone_6-5": "",
+
+
+"mainmenu_link_colone_6-5": "",
+
+
+"mainmenu_show_7": true,
+
+
+"mainmenu_name_7": "INTERNATIONAL SHIPPING",
+
+
+"mainmenu_link_7": "/pages/international-shipping",
+
+
+"mainmenu_show_7-1": false,
+
+
+"mainmenu_show_colone_7-1": false,
+
+
+"mainmenu_name_colone_7-1": "",
+
+
+"mainmenu_link_colone_7-1": "",
+
+
+"mainmenu_href_colone_7-1": "",
+
+
+"mainmenu_show_coltwo_7-1": false,
+
+
+"mainmenu_name_coltwo_7-1": "",
+
+
+"mainmenu_link_coltwo_7-1": "",
+
+
+"mainmenu_href_coltwo_7-1": "",
+
+
+"mainmenu_show_7-2": false,
+
+
+"mainmenu_show_colone_7-2": false,
+
+
+"mainmenu_name_colone_7-2": "",
+
+
+"mainmenu_link_colone_7-2": "",
+
+
+"mainmenu_href_colone_7-2": "",
+
+
+"mainmenu_show_coltwo_7-2": false,
+
+
+"mainmenu_name_coltwo_7-2": "",
+
+
+"mainmenu_link_coltwo_7-2": "",
+
+
+"mainmenu_href_coltwo_7-2": "",
+
+
+"mainmenu_show_7-3": false,
+
+
+"mainmenu_show_colone_7-3": false,
+
+
+"mainmenu_name_colone_7-3": "",
+
+
+"mainmenu_link_colone_7-3": "",
+
+
+"mainmenu_href_colone_7-3": "",
+
+
+"mainmenu_show_coltwo_7-3": false,
+
+
+"mainmenu_name_coltwo_7-3": "",
+
+
+"mainmenu_link_coltwo_7-3": "",
+
+
+"mainmenu_href_coltwo_7-3": "",
+
+
+"mainmenu_show_7-4": false,
+
+
+"mainmenu_show_colone_7-4": false,
+
+
+"mainmenu_name_colone_7-4": "",
+
+
+"mainmenu_link_colone_7-4": "",
+
+
+"mainmenu_href_colone_7-4": "",
+
+
+"mainmenu_show_coltwo_7-4": false,
+
+
+"mainmenu_name_coltwo_7-4": "",
+
+
+"mainmenu_link_coltwo_7-4": "",
+
+
+"mainmenu_href_coltwo_7-4": "",
+
+
+"mainmenu_show_7-5": false,
+
+
+"mainmenu_banner_colone_7-5": "",
+
+
+"mainmenu_banner_link_colone_7-5": "",
+
+
+"mainmenu_name_colone_7-5": "",
+
+
+"mainmenu_link_colone_7-5": "",
+
+
+"mainmenu_show_8": false,
+
+
+"mainmenu_name_8": "SALE",
+
+
+"mainmenu_link_8": "/collections/lider-end-of-season-sale",
+
+
+"mainmenu_show_8-1": false,
+
+
+"mainmenu_show_colone_8-1": false,
+
+
+"mainmenu_name_colone_8-1": "",
+
+
+"mainmenu_link_colone_8-1": "",
+
+
+"mainmenu_href_colone_8-1": "",
+
+
+"mainmenu_show_coltwo_8-1": false,
+
+
+"mainmenu_name_coltwo_8-1": "",
+
+
+"mainmenu_link_coltwo_8-1": "",
+
+
+"mainmenu_href_coltwo_8-1": "",
+
+
+"mainmenu_show_8-2": false,
+
+
+"mainmenu_show_colone_8-2": false,
+
+
+"mainmenu_name_colone_8-2": "",
+
+
+"mainmenu_link_colone_8-2": "",
+
+
+"mainmenu_href_colone_8-2": "",
+
+
+"mainmenu_show_coltwo_8-2": false,
+
+
+"mainmenu_name_coltwo_8-2": "",
+
+
+"mainmenu_link_coltwo_8-2": "",
+
+
+"mainmenu_href_coltwo_8-2": "",
+
+
+"mainmenu_show_8-3": false,
+
+
+"mainmenu_show_colone_8-3": false,
+
+
+"mainmenu_name_colone_8-3": "",
+
+
+"mainmenu_link_colone_8-3": "",
+
+
+"mainmenu_href_colone_8-3": "",
+
+
+"mainmenu_show_coltwo_8-3": false,
+
+
+"mainmenu_name_coltwo_8-3": "",
+
+
+"mainmenu_link_coltwo_8-3": "",
+
+
+"mainmenu_href_coltwo_8-3": "",
+
+
+"mainmenu_show_8-4": false,
+
+
+"mainmenu_show_colone_8-4": false,
+
+
+"mainmenu_name_colone_8-4": "",
+
+
+"mainmenu_link_colone_8-4": "",
+
+
+"mainmenu_href_colone_8-4": "",
+
+
+"mainmenu_show_coltwo_8-4": false,
+
+
+"mainmenu_name_coltwo_8-4": "",
+
+
+"mainmenu_link_coltwo_8-4": "",
+
+
+"mainmenu_href_coltwo_8-4": "",
+
+
+"mainmenu_show_8-5": false,
+
+
+"mainmenu_banner_colone_8-5": "",
+
+
+"mainmenu_banner_link_colone_8-5": "",
+
+
+"mainmenu_name_colone_8-5": "",
+
+
+"mainmenu_link_colone_8-5": "",
+
+
+"mainmenu_show_9": false,
+
+
+"mainmenu_name_9": "",
+
+
+"mainmenu_link_9": "",
+
+
+"mainmenu_show_9-1": false,
+
+
+"mainmenu_show_colone_9-1": false,
+
+
+"mainmenu_name_colone_9-1": "",
+
+
+"mainmenu_link_colone_9-1": "",
+
+
+"mainmenu_href_colone_9-1": "",
+
+
+"mainmenu_show_coltwo_9-1": false,
+
+
+"mainmenu_name_coltwo_9-1": "",
+
+
+"mainmenu_link_coltwo_9-1": "",
+
+
+"mainmenu_href_coltwo_9-1": "",
+
+
+"mainmenu_show_9-2": false,
+
+
+"mainmenu_show_colone_9-2": false,
+
+
+"mainmenu_name_colone_9-2": "",
+
+
+"mainmenu_link_colone_9-2": "",
+
+
+"mainmenu_href_colone_9-2": "",
+
+
+"mainmenu_show_coltwo_9-2": false,
+
+
+"mainmenu_name_coltwo_9-2": "",
+
+
+"mainmenu_link_coltwo_9-2": "",
+
+
+"mainmenu_href_coltwo_9-2": "",
+
+
+"mainmenu_show_9-3": false,
+
+
+"mainmenu_show_colone_9-3": false,
+
+
+"mainmenu_name_colone_9-3": "",
+
+
+"mainmenu_link_colone_9-3": "",
+
+
+"mainmenu_href_colone_9-3": "",
+
+
+"mainmenu_show_coltwo_9-3": false,
+
+
+"mainmenu_name_coltwo_9-3": "",
+
+
+"mainmenu_link_coltwo_9-3": "",
+
+
+"mainmenu_href_coltwo_9-3": "",
+
+
+"mainmenu_show_9-4": false,
+
+
+"mainmenu_show_colone_9-4": false,
+
+
+"mainmenu_name_colone_9-4": "",
+
+
+"mainmenu_link_colone_9-4": "",
+
+
+"mainmenu_href_colone_9-4": "",
+
+
+"mainmenu_show_coltwo_9-4": false,
+
+
+"mainmenu_name_coltwo_9-4": "",
+
+
+"mainmenu_link_coltwo_9-4": "",
+
+
+"mainmenu_href_coltwo_9-4": "",
+
+
+"mainmenu_show_9-5": false,
+
+
+"mainmenu_banner_colone_9-5": "",
+
+
+"mainmenu_banner_link_colone_9-5": "",
+
+
+"mainmenu_name_colone_9-5": "",
+
+
+"mainmenu_link_colone_9-5": "",
+
+
+"mainmenu_show_10": false,
+
+
+"mainmenu_name_10": "",
+
+
+"mainmenu_link_10": "",
+
+
+"mainmenu_show_10-1": false,
+
+
+"mainmenu_show_colone_10-1": false,
+
+
+"mainmenu_name_colone_10-1": "",
+
+
+"mainmenu_link_colone_10-1": "",
+
+
+"mainmenu_href_colone_10-1": "",
+
+
+"mainmenu_show_coltwo_10-1": false,
+
+
+"mainmenu_name_coltwo_10-1": "",
+
+
+"mainmenu_link_coltwo_10-1": "",
+
+
+"mainmenu_href_coltwo_10-1": "",
+
+
+"mainmenu_show_10-2": false,
+
+
+"mainmenu_show_colone_10-2": false,
+
+
+"mainmenu_name_colone_10-2": "",
+
+
+"mainmenu_link_colone_10-2": "",
+
+
+"mainmenu_href_colone_10-2": "",
+
+
+"mainmenu_show_coltwo_10-2": false,
+
+
+"mainmenu_name_coltwo_10-2": "",
+
+
+"mainmenu_link_coltwo_10-2": "",
+
+
+"mainmenu_href_coltwo_10-2": "",
+
+
+"mainmenu_show_10-3": false,
+
+
+"mainmenu_show_colone_10-3": false,
+
+
+"mainmenu_name_colone_10-3": "",
+
+
+"mainmenu_link_colone_10-3": "",
+
+
+"mainmenu_href_colone_10-3": "",
+
+
+"mainmenu_show_coltwo_10-3": false,
+
+
+"mainmenu_name_coltwo_10-3": "",
+
+
+"mainmenu_link_coltwo_10-3": "",
+
+
+"mainmenu_href_coltwo_10-3": "",
+
+
+"mainmenu_show_10-4": false,
+
+
+"mainmenu_show_colone_10-4": false,
+
+
+"mainmenu_name_colone_10-4": "",
+
+
+"mainmenu_link_colone_10-4": "",
+
+
+"mainmenu_href_colone_10-4": "",
+
+
+"mainmenu_show_coltwo_10-4": false,
+
+
+"mainmenu_name_coltwo_10-4": "",
+
+
+"mainmenu_link_coltwo_10-4": "",
+
+
+"mainmenu_href_coltwo_10-4": "",
+
+
+"mainmenu_show_10-5": false,
+
+
+"mainmenu_banner_colone_10-5": "",
+
+
+"mainmenu_banner_link_colone_10-5": "",
+
+
+"mainmenu_name_colone_10-5": "",
+
+
+"mainmenu_link_colone_10-5": "",
+
+
+"mainmenu_show_11": false,
+
+
+"mainmenu_name_11": "",
+
+
+"mainmenu_link_11": "",
+
+
+"mainmenu_show_11-1": false,
+
+
+"mainmenu_show_colone_11-1": false,
+
+
+"mainmenu_name_colone_11-1": "",
+
+
+"mainmenu_link_colone_11-1": "",
+
+
+"mainmenu_href_colone_11-1": "",
+
+
+"mainmenu_show_coltwo_11-1": false,
+
+
+"mainmenu_name_coltwo_11-1": "",
+
+
+"mainmenu_link_coltwo_11-1": "",
+
+
+"mainmenu_href_coltwo_11-1": "",
+
+
+"mainmenu_show_11-2": false,
+
+
+"mainmenu_show_colone_11-2": false,
+
+
+"mainmenu_name_colone_11-2": "",
+
+
+"mainmenu_link_colone_11-2": "",
+
+
+"mainmenu_href_colone_11-2": "",
+
+
+"mainmenu_show_coltwo_11-2": false,
+
+
+"mainmenu_name_coltwo_11-2": "",
+
+
+"mainmenu_link_coltwo_11-2": "",
+
+
+"mainmenu_href_coltwo_11-2": "",
+
+
+"mainmenu_show_11-3": false,
+
+
+"mainmenu_show_colone_11-3": false,
+
+
+"mainmenu_name_colone_11-3": "",
+
+
+"mainmenu_link_colone_11-3": "",
+
+
+"mainmenu_href_colone_11-3": "",
+
+
+"mainmenu_show_coltwo_11-3": false,
+
+
+"mainmenu_name_coltwo_11-3": "",
+
+
+"mainmenu_link_coltwo_11-3": "",
+
+
+"mainmenu_href_coltwo_11-3": "",
+
+
+"mainmenu_show_11-4": false,
+
+
+"mainmenu_show_colone_11-4": false,
+
+
+"mainmenu_name_colone_11-4": "",
+
+
+"mainmenu_link_colone_11-4": "",
+
+
+"mainmenu_href_colone_11-4": "",
+
+
+"mainmenu_show_coltwo_11-4": false,
+
+
+"mainmenu_name_coltwo_11-4": "",
+
+
+"mainmenu_link_coltwo_11-4": "",
+
+
+"mainmenu_href_coltwo_11-4": "",
+
+
+"mainmenu_show_11-5": false,
+
+
+"mainmenu_banner_colone_11-5": "",
+
+
+"mainmenu_banner_link_colone_11-5": "",
+
+
+"mainmenu_name_colone_11-5": "",
+
+
+"mainmenu_link_colone_11-5": "",
+
+
+"mainmenu_show_12": false,
+
+
+"mainmenu_name_12": "",
+
+
+"mainmenu_link_12": "",
+
+
+"mainmenu_show_12-1": false,
+
+
+"mainmenu_show_colone_12-1": false,
+
+
+"mainmenu_name_colone_12-1": "",
+
+
+"mainmenu_link_colone_12-1": "",
+
+
+"mainmenu_href_colone_12-1": "",
+
+
+"mainmenu_show_coltwo_12-1": false,
+
+
+"mainmenu_name_coltwo_12-1": "",
+
+
+"mainmenu_link_coltwo_12-1": "",
+
+
+"mainmenu_href_coltwo_12-1": "",
+
+
+"mainmenu_show_12-2": false,
+
+
+"mainmenu_show_colone_12-2": false,
+
+
+"mainmenu_name_colone_12-2": "",
+
+
+"mainmenu_link_colone_12-2": "",
+
+
+"mainmenu_href_colone_12-2": "",
+
+
+"mainmenu_show_coltwo_12-2": false,
+
+
+"mainmenu_name_coltwo_12-2": "",
+
+
+"mainmenu_link_coltwo_12-2": "",
+
+
+"mainmenu_href_coltwo_12-2": "",
+
+
+"mainmenu_show_12-3": false,
+
+
+"mainmenu_show_colone_12-3": false,
+
+
+"mainmenu_name_colone_12-3": "",
+
+
+"mainmenu_link_colone_12-3": "",
+
+
+"mainmenu_href_colone_12-3": "",
+
+
+"mainmenu_show_coltwo_12-3": false,
+
+
+"mainmenu_name_coltwo_12-3": "",
+
+
+"mainmenu_link_coltwo_12-3": "",
+
+
+"mainmenu_href_coltwo_12-3": "",
+
+
+"mainmenu_show_12-4": false,
+
+
+"mainmenu_show_colone_12-4": false,
+
+
+"mainmenu_name_colone_12-4": "",
+
+
+"mainmenu_link_colone_12-4": "",
+
+
+"mainmenu_href_colone_12-4": "",
+
+
+"mainmenu_show_coltwo_12-4": false,
+
+
+"mainmenu_name_coltwo_12-4": "",
+
+
+"mainmenu_link_coltwo_12-4": "",
+
+
+"mainmenu_href_coltwo_12-4": "",
+
+
+"mainmenu_show_12-5": false,
+
+
+"mainmenu_banner_colone_12-5": "",
+
+
+"mainmenu_banner_link_colone_12-5": "",
+
+
+"mainmenu_name_colone_12-5": "",
+
+
+"mainmenu_link_colone_12-5": "",
+
+
+"mainmenu_show_13": false,
+
+
+"mainmenu_name_13": "",
+
+
+"mainmenu_link_13": "",
+
+
+"mainmenu_show_13-1": false,
+
+
+"mainmenu_show_colone_13-1": false,
+
+
+"mainmenu_name_colone_13-1": "",
+
+
+"mainmenu_link_colone_13-1": "",
+
+
+"mainmenu_href_colone_13-1": "",
+
+
+"mainmenu_show_coltwo_13-1": false,
+
+
+"mainmenu_name_coltwo_13-1": "",
+
+
+"mainmenu_link_coltwo_13-1": "",
+
+
+"mainmenu_href_coltwo_13-1": "",
+
+
+"mainmenu_show_13-2": false,
+
+
+"mainmenu_show_colone_13-2": false,
+
+
+"mainmenu_name_colone_13-2": "",
+
+
+"mainmenu_link_colone_13-2": "",
+
+
+"mainmenu_href_colone_13-2": "",
+
+
+"mainmenu_show_coltwo_13-2": false,
+
+
+"mainmenu_name_coltwo_13-2": "",
+
+
+"mainmenu_link_coltwo_13-2": "",
+
+
+"mainmenu_href_coltwo_13-2": "",
+
+
+"mainmenu_show_13-3": false,
+
+
+"mainmenu_show_colone_13-3": false,
+
+
+"mainmenu_name_colone_13-3": "",
+
+
+"mainmenu_link_colone_13-3": "",
+
+
+"mainmenu_href_colone_13-3": "",
+
+
+"mainmenu_show_coltwo_13-3": false,
+
+
+"mainmenu_name_coltwo_13-3": "",
+
+
+"mainmenu_link_coltwo_13-3": "",
+
+
+"mainmenu_href_coltwo_13-3": "",
+
+
+"mainmenu_show_13-4": false,
+
+
+"mainmenu_show_colone_13-4": false,
+
+
+"mainmenu_name_colone_13-4": "",
+
+
+"mainmenu_link_colone_13-4": "",
+
+
+"mainmenu_href_colone_13-4": "",
+
+
+"mainmenu_show_coltwo_13-4": false,
+
+
+"mainmenu_name_coltwo_13-4": "",
+
+
+"mainmenu_link_coltwo_13-4": "",
+
+
+"mainmenu_href_coltwo_13-4": "",
+
+
+"mainmenu_show_13-5": false,
+
+
+"mainmenu_banner_colone_13-5": "",
+
+
+"mainmenu_banner_link_colone_13-5": "",
+
+
+"mainmenu_name_colone_13-5": "",
+
+
+"mainmenu_link_colone_13-5": "",
+
+
+"menu_links": "menu-mega-main",
+
+
+"mainmenu_show_colone_1-5": false,
+
+
+"mainmenu_href_colone_1-5": "",
+
+
+"mainmenu_show_coltwo_1-5": false,
+
+
+"mainmenu_name_coltwo_1-5": "",
+
+
+"mainmenu_link_coltwo_1-5": "",
+
+
+"mainmenu_href_coltwo_1-5": "",
+
+
+"mainmenu_show_1-6": false,
+
+
+"mainmenu_banner_colone_1-6": "",
+
+
+"mainmenu_banner_link_colone_1-6": "",
+
+
+"mainmenu_name_colone_1-6": "",
+
+
+"mainmenu_link_colone_1-6": "",
+
+
+"mainmenu_show_colone_2-5": true,
+
+
+"mainmenu_href_colone_2-5": "",
+
+
+"mainmenu_show_coltwo_2-5": true,
+
+
+"mainmenu_name_coltwo_2-5": "ACCESSORIES",
+
+
+"mainmenu_link_coltwo_2-5": "/collections/lider-accessories",
+
+
+"mainmenu_href_coltwo_2-5": "",
+
+
+"mainmenu_show_2-6": false,
+
+
+"mainmenu_show_colone_2-6": false,
+
+
+"mainmenu_name_colone_2-6-1": "HOTLINE <span style=\"text-decoration:underline\">+84 982 062 442</span>",
+
+
+"mainmenu_name_colone_text-2-6-1": "Mon-Sun 9.30am-10pm",
+
+
+"mainmenu_name_colone_2-6-2": "Customer Service",
+
+
+"mainmenu_name_colone_text-2-6-2": "support@lider.vn",
+
+
+"mainmenu_show_2-7": false,
+
+
+"mainmenu_banner_colone_2-7": "",
+
+
+"mainmenu_banner_link_colone_2-7": "",
+
+
+"mainmenu_name_colone_2-7": "",
+
+
+"mainmenu_link_colone_2-7": "",
+
+
+"mainmenu_show_colone_3-5": false,
+
+
+"mainmenu_href_colone_3-5": "",
+
+
+"mainmenu_show_coltwo_3-5": false,
+
+
+"mainmenu_name_coltwo_3-5": "",
+
+
+"mainmenu_link_coltwo_3-5": "",
+
+
+"mainmenu_href_coltwo_3-5": "",
+
+
+"mainmenu_name_colone_3-6-1": "Call us <span style=\"text-decoration:underline\">+44 20 33 18 60 32</span>",
+
+
+"mainmenu_name_colone_text-3-6-1": "Mon-Sat 9am-6.30pm",
+
+
+"mainmenu_name_colone_3-6-2": "EMAIL",
+
+
+"mainmenu_name_colone_text-3-6-2": "support@lider.vn",
+
+
+"mainmenu_show_3-7": false,
+
+
+"mainmenu_banner_colone_3-7": "",
+
+
+"mainmenu_banner_link_colone_3-7": "",
+
+
+"mainmenu_name_colone_3-7": "",
+
+
+"mainmenu_link_colone_3-7": "",
+
+
+"mainmenu_show_colone_4-5": false,
+
+
+"mainmenu_href_colone_4-5": "",
+
+
+"mainmenu_show_coltwo_4-5": false,
+
+
+"mainmenu_name_coltwo_4-5": "",
+
+
+"mainmenu_link_coltwo_4-5": "",
+
+
+"mainmenu_href_coltwo_4-5": "",
+
+
+"mainmenu_show_4-6": true,
+
+
+"mainmenu_show_colone_4-6": false,
+
+
+"mainmenu_name_colone_4-6-1": "Call us <span style=\"text-decoration:underline\">+44 20 33 18 60 32</span>",
+
+
+"mainmenu_name_colone_text-4-6-1": "Mon-Sat 9am-6.30pm",
+
+
+"mainmenu_name_colone_4-6-2": "Mon-Sat 9am-6.30pm",
+
+
+"mainmenu_name_colone_text-4-6-2": "We will reply within 24 hours",
+
+
+"mainmenu_show_4-7": false,
+
+
+"mainmenu_banner_colone_4-7": "",
+
+
+"mainmenu_banner_link_colone_4-7": "",
+
+
+"mainmenu_name_colone_4-7": "",
+
+
+"mainmenu_link_colone_4-7": "",
+
+
+"mainmenu_show_colone_5-5": false,
+
+
+"mainmenu_href_colone_5-5": "",
+
+
+"mainmenu_show_coltwo_5-5": false,
+
+
+"mainmenu_name_coltwo_5-5": "",
+
+
+"mainmenu_link_coltwo_5-5": "",
+
+
+"mainmenu_href_coltwo_5-5": "",
+
+
+"mainmenu_show_5-6": true,
+
+
+"mainmenu_show_colone_5-6": false,
+
+
+"mainmenu_name_colone_5-6-1": "Call us <span style=\"text-decoration:underline\">+44 20 33 18 60 32</span>",
+
+
+"mainmenu_name_colone_text-5-6-1": "Mon-Sat 9am-6.30pm",
+
+
+"mainmenu_name_colone_5-6-2": "Mon-Sat 9am-6.30pm",
+
+
+"mainmenu_name_colone_text-5-6-2": "We will reply within 24 hours",
+
+
+"mainmenu_show_5-7": false,
+
+
+"mainmenu_banner_colone_5-7": "",
+
+
+"mainmenu_banner_link_colone_5-7": "",
+
+
+"mainmenu_name_colone_5-7": "",
+
+
+"mainmenu_link_colone_5-7": "",
+
+
+"mainmenu_show_colone_6-5": false,
+
+
+"mainmenu_href_colone_6-5": "",
+
+
+"mainmenu_show_coltwo_6-5": false,
+
+
+"mainmenu_name_coltwo_6-5": "",
+
+
+"mainmenu_link_coltwo_6-5": "",
+
+
+"mainmenu_href_coltwo_6-5": "",
+
+
+"mainmenu_show_6-6": true,
+
+
+"mainmenu_show_colone_6-6": false,
+
+
+"mainmenu_name_colone_6-6-1": "",
+
+
+"mainmenu_name_colone_text-6-6-1": "",
+
+
+"mainmenu_name_colone_6-6-2": "",
+
+
+"mainmenu_name_colone_text-6-6-2": "",
+
+
+"mainmenu_show_6-7": false,
+
+
+"mainmenu_banner_colone_6-7": "",
+
+
+"mainmenu_banner_link_colone_6-7": "",
+
+
+"mainmenu_name_colone_6-7": "",
+
+
+"mainmenu_link_colone_6-7": "",
+
+
+"mainmenu_show_colone_7-5": false,
+
+
+"mainmenu_href_colone_7-5": "",
+
+
+"mainmenu_show_coltwo_7-5": false,
+
+
+"mainmenu_name_coltwo_7-5": "",
+
+
+"mainmenu_link_coltwo_7-5": "",
+
+
+"mainmenu_href_coltwo_7-5": "",
+
+
+"mainmenu_show_7-6": false,
+
+
+"mainmenu_show_colone_7-6": false,
+
+
+"mainmenu_name_colone_7-6-1": "",
+
+
+"mainmenu_name_colone_text-7-6-1": "",
+
+
+"mainmenu_name_colone_7-6-2": "",
+
+
+"mainmenu_name_colone_text-7-6-2": "",
+
+
+"mainmenu_show_7-7": false,
+
+
+"mainmenu_banner_colone_7-7": "",
+
+
+"mainmenu_banner_link_colone_7-7": "",
+
+
+"mainmenu_name_colone_7-7": "",
+
+
+"mainmenu_link_colone_7-7": "",
+
+
+"mainmenu_show_colone_8-5": false,
+
+
+"mainmenu_href_colone_8-5": "",
+
+
+"mainmenu_show_coltwo_8-5": false,
+
+
+"mainmenu_name_coltwo_8-5": "",
+
+
+"mainmenu_link_coltwo_8-5": "",
+
+
+"mainmenu_href_coltwo_8-5": "",
+
+
+"mainmenu_show_8-6": false,
+
+
+"mainmenu_show_colone_8-6": false,
+
+
+"mainmenu_name_colone_8-6-1": "",
+
+
+"mainmenu_name_colone_text-8-6-1": "",
+
+
+"mainmenu_name_colone_8-6-2": "",
+
+
+"mainmenu_name_colone_text-8-6-2": "",
+
+
+"mainmenu_show_8-7": false,
+
+
+"mainmenu_banner_colone_8-7": "",
+
+
+"mainmenu_banner_link_colone_8-7": "",
+
+
+"mainmenu_name_colone_8-7": "",
+
+
+"mainmenu_link_colone_8-7": "",
+
+
+"mainmenu_show_colone_9-5": false,
+
+
+"mainmenu_href_colone_9-5": "",
+
+
+"mainmenu_show_coltwo_9-5": false,
+
+
+"mainmenu_name_coltwo_9-5": "",
+
+
+"mainmenu_link_coltwo_9-5": "",
+
+
+"mainmenu_href_coltwo_9-5": "",
+
+
+"mainmenu_show_9-6": false,
+
+
+"mainmenu_show_colone_9-6": false,
+
+
+"mainmenu_name_colone_9-6-1": "",
+
+
+"mainmenu_name_colone_text-9-6-1": "",
+
+
+"mainmenu_name_colone_9-6-2": "",
+
+
+"mainmenu_name_colone_text-9-6-2": "",
+
+
+"mainmenu_show_9-7": false,
+
+
+"mainmenu_banner_colone_9-7": "",
+
+
+"mainmenu_banner_link_colone_9-7": "",
+
+
+"mainmenu_name_colone_9-7": "",
+
+
+"mainmenu_link_colone_9-7": "",
+
+
+"mainmenu_show_colone_10-5": false,
+
+
+"mainmenu_href_colone_10-5": "",
+
+
+"mainmenu_show_coltwo_10-5": false,
+
+
+"mainmenu_name_coltwo_10-5": "",
+
+
+"mainmenu_link_coltwo_10-5": "",
+
+
+"mainmenu_href_coltwo_10-5": "",
+
+
+"mainmenu_show_10-6": false,
+
+
+"mainmenu_show_colone_10-6": false,
+
+
+"mainmenu_name_colone_10-6-1": "",
+
+
+"mainmenu_name_colone_text-10-6-1": "",
+
+
+"mainmenu_name_colone_10-6-2": "",
+
+
+"mainmenu_name_colone_text-10-6-2": "",
+
+
+"mainmenu_show_10-7": false,
+
+
+"mainmenu_banner_colone_10-7": "",
+
+
+"mainmenu_banner_link_colone_10-7": "",
+
+
+"mainmenu_name_colone_10-7": "",
+
+
+"mainmenu_link_colone_10-7": "",
+
+
+"mainmenu_show_colone_11-5": false,
+
+
+"mainmenu_href_colone_11-5": "",
+
+
+"mainmenu_show_coltwo_11-5": false,
+
+
+"mainmenu_name_coltwo_11-5": "",
+
+
+"mainmenu_link_coltwo_11-5": "",
+
+
+"mainmenu_href_coltwo_11-5": "",
+
+
+"mainmenu_show_11-6": false,
+
+
+"mainmenu_show_colone_11-6": false,
+
+
+"mainmenu_name_colone_11-6-1": "",
+
+
+"mainmenu_name_colone_text-11-6-1": "",
+
+
+"mainmenu_name_colone_11-6-2": "",
+
+
+"mainmenu_name_colone_text-11-6-2": "",
+
+
+"mainmenu_show_11-7": false,
+
+
+"mainmenu_banner_colone_11-7": "",
+
+
+"mainmenu_banner_link_colone_11-7": "",
+
+
+"mainmenu_name_colone_11-7": "",
+
+
+"mainmenu_link_colone_11-7": "",
+
+
+"mainmenu_show_colone_12-5": false,
+
+
+"mainmenu_href_colone_12-5": "",
+
+
+"mainmenu_show_coltwo_12-5": false,
+
+
+"mainmenu_name_coltwo_12-5": "",
+
+
+"mainmenu_link_coltwo_12-5": "",
+
+
+"mainmenu_href_coltwo_12-5": "",
+
+
+"mainmenu_show_12-6": false,
+
+
+"mainmenu_show_colone_12-6": false,
+
+
+"mainmenu_name_colone_12-6-1": "",
+
+
+"mainmenu_name_colone_text-12-6-1": "",
+
+
+"mainmenu_name_colone_12-6-2": "",
+
+
+"mainmenu_name_colone_text-12-6-2": "",
+
+
+"mainmenu_show_12-7": false,
+
+
+"mainmenu_banner_colone_12-7": "",
+
+
+"mainmenu_banner_link_colone_12-7": "",
+
+
+"mainmenu_name_colone_12-7": "",
+
+
+"mainmenu_link_colone_12-7": "",
+
+
+"mainmenu_show_colone_13-5": false,
+
+
+"mainmenu_href_colone_13-5": "",
+
+
+"mainmenu_show_coltwo_13-5": false,
+
+
+"mainmenu_name_coltwo_13-5": "",
+
+
+"mainmenu_link_coltwo_13-5": "",
+
+
+"mainmenu_href_coltwo_13-5": "",
+
+
+"mainmenu_show_13-6": false,
+
+
+"mainmenu_show_colone_13-6": false,
+
+
+"mainmenu_name_colone_13-6-1": "",
+
+
+"mainmenu_name_colone_text-13-6-1": "",
+
+
+"mainmenu_name_colone_13-6-2": "",
+
+
+"mainmenu_name_colone_text-13-6-2": "",
+
+
+"mainmenu_banner_colone_13-6": "",
+
+
+"mainmenu_banner_link_colone_13-6": "",
+
+
+"mainmenu_name_colone_13-6": "",
+
+
+"mainmenu_link_colone_13-6": "",
+
+
+"mainmenu_show_colone_3-6": false,
+
+
+"mainmenu_show_colone_1-6": false,
+
+
+"mainmenu_name_colone_1-6-1": "",
+
+
+"mainmenu_name_colone_text-1-6-1": "",
+
+
+"mainmenu_name_colone_1-6-2": "",
+
+
+"mainmenu_name_colone_text-1-6-2": "",
+
+
+"mainmenu_show_1-7": false,
+
+
+"mainmenu_banner_colone_1-7": "",
+
+
+"mainmenu_banner_link_colone_1-7": "",
+
+
+"mainmenu_name_colone_1-7": "",
+
+
+"mainmenu_link_colone_1-7": "",
+
+
+"home_link_video_1": "99fkzg",
+
+
+"home_text_video_1": "",
+
+
+"home_linkto_video_1": "https://www.lider.vn/collections/lider-new-arrivals",
+
+
+"home_link_video_2": "b3jxdi",
+
+
+"home_text_video_2": "",
+
+
+"home_linkto_video_2": "https://www.lider.vn/collections/lider-new-arrivals",
+
+
+"home_link_video_3": "hwf4zw",
+
+
+"home_text_video_3": "",
+
+
+"home_linkto_video_3": "https://www.lider.vn/collections/lider-new-arrivals",
+
+
+"home_link_video_4": "1zf3xl",
+
+
+"home_text_video_4": "test video",
+
+
+"home_linkto_video_4": "https://www.lider.vn/collections/all",
+
+
+"home_link_video_5": "ar7p30",
+
+
+"home_text_video_5": "",
+
+
+"home_linkto_video_5": "",
+
+
+"home_video_show_1": true,
+
+
+"home_video_show_2": false,
+
+
+"home_video_show_3": true,
+
+
+"home_video_show_4": true,
+
+
+"home_video_show_5": false,
+
+
+"home_text_video_1_1": "SHOP NOW",
+
+
+"home_text_video_2_1": "SHOP NOW",
+
+
+"home_text_video_3_1": "SHOP NOW",
+
+
+"home_text_video_4_1": "SHOP NOW video",
+
+
+"home_text_video_5_1": "",
+
+
+"textarea_footer_4": "",
+
+
+"textarea_footer_5": "Công ty TNHH 2TV LIDER</br>\n\nMST: 0313746491</br>\n\nĐịa chỉ: 7 Tôn Thất Thiệp, Phường Bến Nghé, Quận 1, TPHCM.</br>\n\nEmail: support@lider.vn",
+
+
+"textarea_footer_6": "7 Tôn Thất Thiệp, Dist 1, HCMC</br>\nContact 0982 062 442</br>\nMon-Sun 9.30am-10pm</br>",
+
+
+"textarea_footer_title_6": "Store",
+
+
+"textarea_footer_title_4": "",
+
+
+"textarea_footer_title_5": "Company",
+
+
+"text-bottom-copyright": "© 2024 LIDER",
+
+
+"slide_1_text": "",
+
+
+"slide_2_text": "",
+
+
+"slide_3_text": "",
+
+
+"display_home_collection_2": true,
+
+
+"title_home_collection_2": "LIDER JEANS Collection",
+
+
+"handle_home_collection_2": "lider-jeans-1",
+
+
+"limit_home_collection_2": "15",
+
+
+"handle_home_collection_5": "lider-new-arrivals",
+
+
+"limit_home_collection_5": "20",
+
+
+"demo-section-2_1.jpg": "",
+
+
+"demo-section-2_1-text": "",
+
+
+"demo-section-2_1-link": "",
+
+
+"demo-section-2_3.jpg": "",
+
+
+"demo-section2_3-text": "",
+
+
+"demo-section-2_3-link": "",
+
+
+"demo-section-4_1.jpg": "",
+
+
+"demo-section-4_1-text": "",
+
+
+"demo-section-4_1-link": "",
+
+
+"home_link_video_block4": "7ssa16",
+
+
+"home_text_video_block4": "",
+
+
+"home_linkto_video_block4": "",
+
+
+"demo-section-5_1.jpg": "",
+
+
+"demo-section-5_1-text": "",
+
+
+"demo-section-5_1-link": "",
+
+
+"demo-section-5_2.jpg": "",
+
+
+"demo-section-5_2-text": "",
+
+
+"demo-section-5_2-link": "",
+
+
+"demo-section-5_3.jpg": "",
+
+
+"demo-section-5_3-text": "",
+
+
+"demo-section-5_3-link": "",
+
+
+"demo-section-5_4.jpg": "",
+
+
+"demo-section-5_4-text": "",
+
+
+"demo-section-5_4-link": "",
+
+
+"demo-section-5_5.jpg": "",
+
+
+"demo-section-5_5-text": "",
+
+
+"demo-section-5_5-link": "",
+
+
+"demo-section-5_6.jpg": "",
+
+
+"demo-section-5_6-text": "",
+
+
+"demo-section-5_6-link": "",
+
+
+"demo-section-5_7.jpg": "",
+
+
+"demo-section-5_7-text": "",
+
+
+"demo-section-5_7-link": "",
+
+
+"home_link_video_block6": "gmxfci",
+
+
+"home_text_video_block6": "128tb2",
+
+
+"home_linkto_video_block6": "128tb2_6",
+
+
+"demo-section-6_1.jpg": "",
+
+
+"demo-section-6_1-text": "livinroom",
+
+
+"demo-section-6_1-link": "livinroom",
+
+
+"demo-section-2_1": true,
+
+
+"demo-section-2_3": true,
+
+
+"check_home_link_video_block4": false,
+
+
+"check_demo-section-4_1": true,
+
+
+"check_handle_home_collection_5": true,
+
+
+"check_demo-section-5_7": true,
+
+
+"check_home_link_video_block6": false,
+
+
+"check_demo-section-6_1": true,
+
+
+"unreal_display_home_collection_2": false,
+
+
+"unreal_title_home_collection_2": "UNREAL collection",
+
+
+"unreal_handle_home_collection_2": "unreal-surreal",
+
+
+"unreal_limit_home_collection_2": "15",
+
+
+"article_unreal-1.jpg": "",
+
+
+"article_unreal_1_text": "",
+
+
+"article_unreal-2.jpg": "",
+
+
+"article_unreal_2_text": "ảnh 2",
+
+
+"article_unreal-3.jpg": "",
+
+
+"article_unreal_3_text": "",
+
+
+"article_unreal-4.jpg": "",
+
+
+"article_unreal_4_text": "",
+
+
+"article_unreal-5.jpg": "",
+
+
+"article_unreal_5_text": "",
+
+
+"article_unreal-6.jpg": "",
+
+
+"article_unreal_6_text": "",
+
+
+"article_unreal-7.jpg": "",
+
+
+"article_unreal_7_text": "",
+
+
+"article_unreal-8.jpg": "",
+
+
+"article_unreal_8_text": "",
+
+
+"article_unreal-9.jpg": "",
+
+
+"article_unreal_9_text": "",
+
+
+"article_unreal-10.jpg": "",
+
+
+"article_unreal_10_text": "",
+
+
+"article_unreal-11.jpg": "",
+
+
+"article_unreal_11_text": "",
+
+
+"article_unreal-12.jpg": "",
+
+
+"article_unreal_12_text": "",
+
+
+"article_unreal-13.jpg": "",
+
+
+"article_unreal_13_text": "",
+
+
+"article_unreal-14.jpg": "",
+
+
+"article_unreal_14_text": "",
+
+
+"article_unreal-15.jpg": "",
+
+
+"article_unreal_15_text": "",
+
+
+"article_unreal-16.jpg": "",
+
+
+"article_unreal_16_text": "",
+
+
+"article_unreal_text_title": "LIDER Jeans Collection",
+
+
+"article_unreal_text_time": "15.07.2023",
+
+
+"article_unreal_text_descript": "𝐋𝐈𝐃𝐄𝐑 𝐉𝐄𝐀𝐍𝐒 𝐂𝐀𝐌𝐏𝐀𝐈𝐆𝐍 - '𝐇𝐢𝐭 𝐲𝐨𝐮𝐫 𝐆-𝐬𝐩𝐨𝐭'\n\nLIDER Jeans is the area where LIDER constantly apply new technique in denim and keep pace with the latest trend in order to hit the untouched G-Spot of wearers. \nWith the official release of the LIDER Jeans line, we at LIDER hope to offer the ultimate pleasure to wearers who style, hang out, work, live, and love in denim.\nExperience the pleasure yourself with LIDER Jeans. All gender welcome at #LIDERCLUB.",
+
+
+"article_unreal_text_footer_name": "SHOP LIDER Jeans Collection",
+
+
+"article_unreal_text_footer_link": "/",
+
+
+"article_concop-spring_text_title": "LIDER Summer 2023",
+
+
+"article_concop-spring_text_time": "08.08.2023",
+
+
+"article_concop-spring_text_descript": "🍌 Tan skin, messy hair, and a carefree spirit.\n90% tan, 10% sunburnt, #absolutelylider",
+
+
+"article_concop-spring_text_footer_name": "",
+
+
+"article_concop-spring_text_footer_link": "/",
+
+
+"article_concop-spring-1.jpg": "",
+
+
+"article_concop-spring_1_text": "",
+
+
+"article_concop-spring-2.jpg": "",
+
+
+"article_concop-spring_2_text": "",
+
+
+"article_concop-spring-3.jpg": "",
+
+
+"article_concop-spring_3_text": "",
+
+
+"article_concop-spring-4.jpg": "",
+
+
+"article_concop-spring_4_text": "",
+
+
+"article_concop-spring-5.jpg": "",
+
+
+"article_concop-spring_5_text": "",
+
+
+"article_concop-spring-6.jpg": "",
+
+
+"article_concop-spring_6_text": "",
+
+
+"article_concop-spring-7.jpg": "",
+
+
+"article_concop-spring_7_text": "",
+
+
+"article_concop-spring-8.jpg": "",
+
+
+"article_concop-spring_8_text": "",
+
+
+"article_concop-spring-9.jpg": "",
+
+
+"article_concop-spring_9_text": "",
+
+
+"article_concop-spring-10.jpg": "",
+
+
+"article_concop-spring_10_text": "",
+
+
+"article_concop-spring-11.jpg": "",
+
+
+"article_concop-spring_11_text": "",
+
+
+"article_concop-spring-12.jpg": "",
+
+
+"article_concop-spring_12_text": "",
+
+
+"article_concop-spring-13.jpg": "",
+
+
+"article_concop-spring_13_text": "",
+
+
+"article_concop-spring-14.jpg": "",
+
+
+"article_concop-spring_14_text": "",
+
+
+"article_concop-spring-15.jpg": "",
+
+
+"article_concop-spring_15_text": "",
+
+
+"article_concop-spring-16.jpg": "",
+
+
+"article_concop-spring_16_text": "",
+
+
+"article_no33-fall_text_title": "ỦA IN THEIR FANCY WORLD",
+
+
+"article_no33-fall_text_time": "11.11.2023",
+
+
+"article_no33-fall_text_descript": "Bước vào thế giới quan của 'ỦA'  | Step into the 'ỦA' worldview\nIntroducing the 'ỦA' (meaning: Huhh?) worldview, from its humble beginnings to its present fancy world.\nFrom its inception, ỦA has evolved into four distinct versions, each with its unique treatment:\n✨ ỦA TEE in candy grey (grey and blush) \n✨ ỦA TEE in polka dot (red and white) \n✨ ỦA TEE in black leather (all black) \n✨ ỦA TEE in caramel blue (blue and beige)\n",
+
+
+"article_no33-fall_text_footer_name": "Get your Ủa style",
+
+
+"article_no33-fall_text_footer_link": "/collections/lider-t-shirt",
+
+
+"article_no33-fall-1.jpg": "",
+
+
+"article_no33-fall_1_text": "",
+
+
+"article_no33-fall-2.jpg": "",
+
+
+"article_no33-fall_2_text": "",
+
+
+"article_no33-fall-3.jpg": "",
+
+
+"article_no33-fall_3_text": "",
+
+
+"article_no33-fall-4.jpg": "",
+
+
+"article_no33-fall_4_text": "",
+
+
+"article_no33-fall-5.jpg": "",
+
+
+"article_no33-fall_5_text": "",
+
+
+"article_no33-fall-6.jpg": "",
+
+
+"article_no33-fall_6_text": "",
+
+
+"article_no33-fall-7.jpg": "",
+
+
+"article_no33-fall_7_text": "",
+
+
+"article_no33-fall-8.jpg": "",
+
+
+"article_no33-fall_8_text": "",
+
+
+"article_no33-fall-9.jpg": "",
+
+
+"article_no33-fall_9_text": "",
+
+
+"article_no33-fall-10.jpg": "",
+
+
+"article_no33-fall_10_text": "",
+
+
+"article_no33-fall-11.jpg": "",
+
+
+"article_no33-fall_11_text": "",
+
+
+"article_no33-fall-12.jpg": "",
+
+
+"article_no33-fall_12_text": "",
+
+
+"article_no33-fall-13.jpg": "",
+
+
+"article_no33-fall_13_text": "",
+
+
+"article_no33-fall-14.jpg": "",
+
+
+"article_no33-fall_14_text": "",
+
+
+"article_no33-fall-15.jpg": "",
+
+
+"article_no33-fall_15_text": "",
+
+
+"article_no33-fall-16.jpg": "",
+
+
+"article_no33-fall_16_text": "",
+
+
+"article_your-new-fitted_text_title": "9th Anniversary",
+
+
+"article_your-new-fitted_text_time": "30.12.2023",
+
+
+"article_your-new-fitted_text_descript": "For the 9th milestone, we recreated artworks from the past 9 years. So 𝒏𝒊𝒏𝒆 to meet them all again!\n-\n𝑵𝒊𝒏𝒆 to meet them though it was a bit 𝒍𝒆𝒊𝒈𝒉𝒕\nToo many thoughts so many days\nThree thousand two hundred and eighty five\nLike I sometimes find\nSomething blooming\nbetween black and white\nfrom LIDERISM to\n9th-year rewind.",
+
+
+"article_your-new-fitted_text_footer_name": "Nine to meet them all again! Shop Now.",
+
+
+"article_your-new-fitted_text_footer_link": "/",
+
+
+"article_your-new-fitted-1.jpg": "",
+
+
+"article_your-new-fitted_1_text": "",
+
+
+"article_your-new-fitted-2.jpg": "",
+
+
+"article_your-new-fitted_2_text": "",
+
+
+"article_your-new-fitted-3.jpg": "",
+
+
+"article_your-new-fitted_3_text": "",
+
+
+"article_your-new-fitted-4.jpg": "",
+
+
+"article_your-new-fitted_4_text": "",
+
+
+"article_your-new-fitted-5.jpg": "",
+
+
+"article_your-new-fitted_5_text": "",
+
+
+"article_your-new-fitted-6.jpg": "",
+
+
+"article_your-new-fitted_6_text": "",
+
+
+"article_your-new-fitted-7.jpg": "",
+
+
+"article_your-new-fitted_7_text": "",
+
+
+"article_your-new-fitted-8.jpg": "",
+
+
+"article_your-new-fitted_8_text": "",
+
+
+"article_your-new-fitted-9.jpg": "",
+
+
+"article_your-new-fitted_9_text": "",
+
+
+"article_your-new-fitted-10.jpg": "",
+
+
+"article_your-new-fitted_10_text": "",
+
+
+"article_your-new-fitted-11.jpg": "",
+
+
+"article_your-new-fitted_11_text": "",
+
+
+"article_your-new-fitted-12.jpg": "",
+
+
+"article_your-new-fitted_12_text": "",
+
+
+"article_your-new-fitted-13.jpg": "",
+
+
+"article_your-new-fitted_13_text": "",
+
+
+"article_your-new-fitted-14.jpg": "",
+
+
+"article_your-new-fitted_14_text": "",
+
+
+"article_your-new-fitted-15.jpg": "",
+
+
+"article_your-new-fitted_15_text": "",
+
+
+"article_your-new-fitted-16.jpg": "",
+
+
+"article_your-new-fitted_16_text": "",
+
+
+"article_ps_381_valentine_text_title": "The Tiff Draco",
+
+
+"article_ps_381_valentine_text_time": "01.02.2024",
+
+
+"article_ps_381_valentine_text_descript": "CAPTURED IN SEVERAL YEARS LATER, THE POWER COUPLE HAS GIVEN BIRTH TO THE CHILD NAMED THE TIFF DRACO, FIRST APPEARED IN LIDER IN 2024.",
+
+
+"article_ps_381_valentine_text_footer_name": "Meet The Tiff Draco",
+
+
+"article_ps_381_valentine_text_footer_link": "/collections/lider-t-shirt",
+
+
+"article_ps_381_valentine-1.jpg": "",
+
+
+"article_ps_381_valentine_1_text": "",
+
+
+"article_ps_381_valentine-2.jpg": "",
+
+
+"article_ps_381_valentine_2_text": "",
+
+
+"article_ps_381_valentine-3.jpg": "",
+
+
+"article_ps_381_valentine_3_text": "",
+
+
+"article_ps_381_valentine-4.jpg": "",
+
+
+"article_ps_381_valentine_4_text": "",
+
+
+"article_ps_381_valentine-5.jpg": "",
+
+
+"article_ps_381_valentine_5_text": "",
+
+
+"article_ps_381_valentine-6.jpg": "",
+
+
+"article_ps_381_valentine_6_text": "",
+
+
+"article_ps_381_valentine-7.jpg": "",
+
+
+"article_ps_381_valentine_7_text": "",
+
+
+"article_ps_381_valentine-8.jpg": "",
+
+
+"article_ps_381_valentine_8_text": "",
+
+
+"article_ps_381_valentine-9.jpg": "",
+
+
+"article_ps_381_valentine_9_text": "",
+
+
+"article_ps_381_valentine-10.jpg": "",
+
+
+"article_ps_381_valentine_10_text": "",
+
+
+"article_ps_381_valentine-11.jpg": "",
+
+
+"article_ps_381_valentine_11_text": "",
+
+
+"article_ps_381_valentine-12.jpg": "",
+
+
+"article_ps_381_valentine_12_text": "",
+
+
+"article_ps_381_valentine-13.jpg": "",
+
+
+"article_ps_381_valentine_13_text": "",
+
+
+"article_ps_381_valentine-14.jpg": "",
+
+
+"article_ps_381_valentine_14_text": "",
+
+
+"article_ps_381_valentine-15.jpg": "",
+
+
+"article_ps_381_valentine_15_text": "",
+
+
+"article_ps_381_valentine-16.jpg": "",
+
+
+"article_ps_381_valentine_16_text": "",
+
+
+"article_aophat-ra-tieng_text_title": "LIDER X LOCO - Less Stress More LOCO Campaign ",
+
+
+"article_aophat-ra-tieng_text_time": "14.05.2024",
+
+
+"article_aophat-ra-tieng_text_descript": "☞ Chỉ định: Phù hợp với các anh chị em một lòng một dạ với tư bản, có hiếu với khách hàng và mang nợ nghiệp với đồng nghiệp.\n☞ HDSD: Buổi sáng một liều mặc đẹp từ LIDER, tan ca một liều nhạc cực sung từ LOCO.\n\nNhanh tay giải nhiệt ngay hè này bằng liệu pháp chữa lành từ LIDER X LOCO, để thưởng thức trọn vẹn những ngày hè thoải mái và vui vẻ.",
+
+
+"article_aophat-ra-tieng_text_footer_name": "LESS STRESS MORE LOCO",
+
+
+"article_aophat-ra-tieng_text_footer_link": "/collections/lider-new-arrivals",
+
+
+"article_aophat-ra-tieng-1.jpg": "",
+
+
+"article_aophat-ra-tieng_1_text": "",
+
+
+"article_aophat-ra-tieng-2.jpg": "",
+
+
+"article_aophat-ra-tieng_2_text": "",
+
+
+"article_aophat-ra-tieng-3.jpg": "",
+
+
+"article_aophat-ra-tieng_3_text": "",
+
+
+"article_aophat-ra-tieng-4.jpg": "",
+
+
+"article_aophat-ra-tieng_4_text": "",
+
+
+"article_aophat-ra-tieng-5.jpg": "",
+
+
+"article_aophat-ra-tieng_5_text": "",
+
+
+"article_aophat-ra-tieng-6.jpg": "",
+
+
+"article_aophat-ra-tieng_6_text": "",
+
+
+"article_aophat-ra-tieng-7.jpg": "",
+
+
+"article_aophat-ra-tieng_7_text": "",
+
+
+"article_aophat-ra-tieng-8.jpg": "",
+
+
+"article_aophat-ra-tieng_8_text": "",
+
+
+"article_aophat-ra-tieng-9.jpg": "",
+
+
+"article_aophat-ra-tieng_9_text": "",
+
+
+"article_aophat-ra-tieng-10.jpg": "",
+
+
+"article_aophat-ra-tieng_10_text": "",
+
+
+"article_aophat-ra-tieng-11.jpg": "",
+
+
+"article_aophat-ra-tieng_11_text": "",
+
+
+"article_aophat-ra-tieng-12.jpg": "",
+
+
+"article_aophat-ra-tieng_12_text": "",
+
+
+"article_aophat-ra-tieng-13.jpg": "",
+
+
+"article_aophat-ra-tieng_13_text": "",
+
+
+"article_aophat-ra-tieng-14.jpg": "",
+
+
+"article_aophat-ra-tieng_14_text": "",
+
+
+"article_aophat-ra-tieng-15.jpg": "",
+
+
+"article_aophat-ra-tieng_15_text": "",
+
+
+"article_aophat-ra-tieng-16.jpg": "",
+
+
+"article_aophat-ra-tieng_16_text": "",
+
+
+"article_candybar-spring_text_title": "LIDER® × CANDYBAR SPRING 2021",
+
+
+"article_candybar-spring_text_time": "01. 13. 2023",
+
+
+"article_candybar-spring_text_descript": "",
+
+
+"article_candybar-spring_text_footer_name": "SHOP FELIX THE CAT COLLECTION  CANDYBAR SPRING 2021",
+
+
+"article_candybar-spring_text_footer_link": "/",
+
+
+"article_candybar-spring-1.jpg": "",
+
+
+"article_candybar-spring_1_text": "",
+
+
+"article_candybar-spring-2.jpg": "",
+
+
+"article_candybar-spring_2_text": "",
+
+
+"article_candybar-spring-3.jpg": "",
+
+
+"article_candybar-spring_3_text": "",
+
+
+"article_candybar-spring-4.jpg": "",
+
+
+"article_candybar-spring_4_text": "",
+
+
+"article_candybar-spring-5.jpg": "",
+
+
+"article_candybar-spring_5_text": "",
+
+
+"article_candybar-spring-6.jpg": "",
+
+
+"article_candybar-spring_6_text": "",
+
+
+"article_candybar-spring-7.jpg": "",
+
+
+"article_candybar-spring_7_text": "",
+
+
+"article_candybar-spring-8.jpg": "",
+
+
+"article_candybar-spring_8_text": "",
+
+
+"article_candybar-spring-9.jpg": "",
+
+
+"article_candybar-spring_9_text": "",
+
+
+"article_candybar-spring-10.jpg": "",
+
+
+"article_candybar-spring_10_text": "",
+
+
+"article_candybar-spring-11.jpg": "",
+
+
+"article_candybar-spring_11_text": "",
+
+
+"article_candybar-spring-12.jpg": "",
+
+
+"article_candybar-spring_12_text": "",
+
+
+"article_candybar-spring-13.jpg": "",
+
+
+"article_candybar-spring_13_text": "",
+
+
+"article_candybar-spring-14.jpg": "",
+
+
+"article_candybar-spring_14_text": "",
+
+
+"article_candybar-spring-15.jpg": "",
+
+
+"article_candybar-spring_15_text": "",
+
+
+"article_candybar-spring-16.jpg": "",
+
+
+"article_candybar-spring_16_text": "",
+
+
+"article_palmand-fw_text_title": "LIDER® × PALMAND FW COLLECTION 2020",
+
+
+"article_palmand-fw_text_time": "01. 13. 2023",
+
+
+"article_palmand-fw_text_descript": "",
+
+
+"article_palmand-fw_text_footer_name": "SHOP FELIX THE CAT COLLECTION PALMAND FW COLLECTION 2020",
+
+
+"article_palmand-fw_text_footer_link": "/",
+
+
+"article_palmand-fw-1.jpg": "",
+
+
+"article_palmand-fw_1_text": "",
+
+
+"article_palmand-fw-2.jpg": "",
+
+
+"article_palmand-fw_2_text": "",
+
+
+"article_palmand-fw-3.jpg": "",
+
+
+"article_palmand-fw_3_text": "",
+
+
+"article_palmand-fw-4.jpg": "",
+
+
+"article_palmand-fw_4_text": "",
+
+
+"article_palmand-fw-5.jpg": "",
+
+
+"article_palmand-fw_5_text": "",
+
+
+"article_palmand-fw-6.jpg": "",
+
+
+"article_palmand-fw_6_text": "",
+
+
+"article_palmand-fw-7.jpg": "",
+
+
+"article_palmand-fw_7_text": "",
+
+
+"article_palmand-fw-8.jpg": "",
+
+
+"article_palmand-fw_8_text": "",
+
+
+"article_palmand-fw-9.jpg": "",
+
+
+"article_palmand-fw_9_text": "",
+
+
+"article_palmand-fw-10.jpg": "",
+
+
+"article_palmand-fw_10_text": "",
+
+
+"article_palmand-fw-11.jpg": "",
+
+
+"article_palmand-fw_11_text": "",
+
+
+"article_palmand-fw-12.jpg": "",
+
+
+"article_palmand-fw_12_text": "",
+
+
+"article_palmand-fw-13.jpg": "",
+
+
+"article_palmand-fw_13_text": "",
+
+
+"article_palmand-fw-14.jpg": "",
+
+
+"article_palmand-fw_14_text": "",
+
+
+"article_palmand-fw-15.jpg": "",
+
+
+"article_palmand-fw_15_text": "",
+
+
+"article_palmand-fw-16.jpg": "",
+
+
+"article_palmand-fw_16_text": ""
+
+},
+
+"presets": {
+
+
+"Red and black": {
+
+
+
+"customer_layout": "theme",
+
+
+
+"shop_bg_color": "#ffffff",
+
+
+
+"toolbar_bg_color": "#000000",
+
+
+
+"toolbar_text_color": "#bbbbbb",
+
+
+
+"link_color": "#f45b4f",
+
+
+
+"nav_link_color": "#888888",
+
+
+
+"body_font_color": "#555555",
+
+
+
+"header_color": "#333333",
+
+
+
+"shop_btn_color": "#f45b4f",
+
+
+
+"border_color": "#dddddd",
+
+
+
+"slide_1_link": "/collections/all",
+
+
+
+"slide_1_alt": "",
+
+
+
+"slide_2_link": "/collections/all",
+
+
+
+"slide_2_alt": "",
+
+
+
+"slide_3_link": "",
+
+
+
+"slide_3_alt": "",
+
+
+
+"slide_4_link": "",
+
+
+
+"slide_4_alt": "",
+
+
+
+"footer_linklist_title": "Quick Links",
+
+
+
+"footer_blog_post_header": "News",
+
+
+
+"mailing_list_form_action": "",
+
+
+
+"twitter_link": "http://twitter.com/haravan",
+
+
+
+"facebook_link": "http://facebook.com/haravan",
+
+
+
+"google_link": "",
+
+
+
+"youtube_link": "",
+
+
+
+"vimeo_link": "",
+
+
+
+"pinterest_link": "",
+
+
+
+"instagram_link": "",
+
+
+
+"tumblr_link": "",
+
+
+
+"atom_link": "",
+
+
+
+"base_font": "Open Sans, Arial, sans-serif",
+
+
+
+"header_font": "Open Sans",
+
+
+
+"pagination_limit": "24",
+
+
+
+"use_logo": false,
+
+
+
+"enable_featuredproduct": true,
+
+
+
+"slide_1": true,
+
+
+
+"slide_2": false,
+
+
+
+"slide_3": false,
+
+
+
+"slide_4": false,
+
+
+
+"enable_product_image_zoom": false,
+
+
+
+"display_quantity_dropdown": true,
+
+
+
+"show_related_products": true,
+
+
+
+"collection_tags": true,
+
+
+
+"collection_sort": true,
+
+
+
+"footer_display_newsletter": false,
+
+
+
+"display_slide_1": "false",
+
+
+
+"display_slide_2": "false",
+
+
+
+"display_slide_3": "false",
+
+
+
+"display_slide_4": "false",
+
+
+
+"enable_slideshowbanner": "true",
+
+
+
+"frontpage_collection": "frontpage",
+
+
+
+"homepage": "frontpage",
+
+
+
+"footer_blog_post": "news",
+
+
+
+"footer_linklist": "footer",
+
+
+
+"show_sidebar_video": true,
+
+
+
+"show_facebook_widget": true,
+
+
+
+"facebook_widget_title": "Facebook",
+
+
+
+"facebook_username": "haravan",
+
+
+
+"show_side_main_menu": true,
+
+
+
+"side_main_menu": "main-menu",
+
+
+
+"collection_name": "Danh mục sản phẩm",
+
+
+
+"show_sidebar_sale": true,
+
+
+
+"sidebar_sale_title": "",
+
+
+
+"sidebar_blog_sale_title": "",
+
+
+
+"sidebar_sale_collection": "sale",
+
+
+
+"sidebar_blog_sale_collection": "sale",
+
+
+
+"sidebar_product_count": "4",
+
+
+
+"use_featured_products": true,
+
+
+
+"use_tags_products": true,
+
+
+
+"featured_products_title": "Sản phẩm nổi bật",
+
+
+
+"featured_collection": "hot-products",
+
+
+
+"product_grid_layout": "4-col",
+
+
+
+"collection_pagination_limit": "24",
+
+
+
+"show_grid_vendor": "0",
+
+
+
+"trans_collection_show": "Show",
+
+
+
+"show_home_ad": false,
+
+
+
+"promo_link": "",
+
+
+
+"use_avatar-answ": "1",
+
+
+
+"avatar-answ_title": "Hỗ trợ trực tuyến",
+
+
+
+"hotline_title": "Số hotline",
+
+
+
+"hotline_phone_1": "1900.636.099",
+
+
+
+"hotline_phone_2": "1900.636.099",
+
+
+
+"time_title": "Thời gian làm việc",
+
+
+
+"time_text": "Bất kể khi nào bạn cần, hỗ trợ 24/7, 7 ngày trong tuần",
+
+
+
+"scroll_top_show": true,
+
+
+
+"blog_recent_title": "Bài viết mới nhất",
+
+
+
+"news_recent_show": true,
+
+
+
+"news_recent_title": "Danh mục tin tức",
+
+
+
+"display_home_collection_2": true,
+
+
+
+"title_home_collection_2": "",
+
+
+
+"handle_home_collection_2": "",
+
+
+
+"limit_home_collection_2": ""
+
+
+}
+
+}
+}

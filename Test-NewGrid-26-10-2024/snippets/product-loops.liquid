@@ -1,0 +1,20 @@
+<div id="{{product.handle}}" class="myani col-md-3 {% if product.available and  product.compare_at_price > product.price %}block-info{%endif%} " style="overflow:hidden; display:inline-block;{%unless product.available%} opacity: .25;{%endunless%}">
+	<a href="{{product.url}}" >
+		<img src="{%if product.images.size > 0%}{{ product.featured_image.src | product_img_url: 'large' }}{%else%}//hstatic.net/0/0/global/design/theme-default/no-image.png{%endif%}" style="z-index:-1;{%if product.images.size > 0%}{%else%}width:300px;max-width:100%{%endif%}" >
+		<div style="height:15px">
+			{%if product.available %}
+			{%comment%}
+			<div class="sale-now">SALE</div>
+			{%endcomment%}
+			{%else%}		
+			<div class="sold-out">SOLD OUT</div>  
+			{%endif%}
+		</div>
+		<div class="ani ">
+			<h1 class="product-title">{{product.title | strip_html| truncatewords: 10}}</h1>
+			<div class="product-price">
+				<span class="sqs-money-native">{% if product.available and product.compare_at_price > product.price %} <del>{{product.compare_at_price|money}}</del> {%endif%}{{product.price|money}} </span>
+			</div>
+		</div>
+	</a>
+</div>

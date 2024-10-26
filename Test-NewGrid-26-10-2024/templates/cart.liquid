@@ -1,0 +1,214 @@
+<main id="main" role="main" class="">
+	<div class="wrapper" data-content-field="main-content">
+		<form action="/cart" method="post" id="cartformpage">
+			{% if cart.item_count == 0 %}
+			<h2>Shopping Cart</h2>
+			<div class="empty-message">
+				You have nothing in your shopping cart.&nbsp;
+				<a href="/">Continue Shopping</a>
+
+			</div>
+			{% else %}
+			<div  class="yui3-widget sqs-widget yui3-tableshoppingcart sqs-fullpage-shopping-cart">
+				<div  class="sqs-fullpage-shopping-cart-content"><div class="loading-spinner">
+					<div  class="yui3-widget sqs-spin dark" style="height: 50px; width: 50px;">
+						<div  class="sqs-spin-content yui3-widget-content-expanded">
+						</div></div></div>
+
+
+
+					{% comment %}	<div class="cart-container cart-container-desktop">
+					<div class="cart-container-title">
+						<h5>
+							SHOPPING BAG
+						</h5>
+					</div>
+					<table>
+						{% comment %}
+						<thead> 
+							<tr>
+								<td class="item">Ảnh sản phẩm</td>
+								<td>Tên sản phẩm</td>
+								<td class="quantity">Số lượng</td>
+								<td class="price">Giá</td>
+								<td></td>
+							</tr>
+						</thead>
+						{% endcomment %}
+						<tbody>
+							{% for item in cart.items %}
+							<tr  data-chosen-variant-sku="SQ3771489" id="yui_3_17_2_1_1430892589245_414">
+
+								<td class="item">
+									<div class="item-image"><img src="{{ item | img_url: 'small' }}"></div>
+								</td>
+
+								<td class="item-desc">
+									<div class="wrap-item-desc">
+										<div class="item-desc-name">
+											<a href="{{ item.url }}">{{ item.product.title }}</a>
+											<p class="varoant-info-abc">
+													{{item.variant.title }}
+											</p>
+										</div>
+										<div class="variant-info">
+										
+										</div>
+										<div class="remove-item">
+											<a href="/cart/change?line={{ forloop.index }}&quantity=0" class="cart"><b>delete</b></a>
+										</div>
+									</div>
+								</td>
+
+								<td class="qty quantity">
+									<div class="cart-info-quantity">
+										<label>quantity</label>
+										<input type="number" size="4" name="updates[]" min="1" id="updates_{{ item.id }}" value="{{ item.quantity }}" onfocus="this.select();" class="tc item-quantity" />
+										<div class="cooldown hidden">•</div>
+									</div>
+									<div class="cart-info-price">
+										<span>price</span>
+										<span class="sqs-money-native">{{ item.line_price|money}}</span>
+									</div>
+								</td>
+
+
+							</tr>
+							{% endfor %}
+							<tr>
+
+								<td>
+								</td>
+								<td></td>
+								<td>
+									<div class="subtotal">
+										<span class="label">Tổng tiền</span>
+										<span class="price"><span class="sqs-money-native">{{cart.total_price|money}}</span></span>
+									</div>
+
+
+								</td>
+							</tr>
+
+						</tbody>
+
+					</table>
+
+
+
+					</div>{% endcomment %}
+					<div class="cart-container-title">
+						<h5 class="cart-title">
+							SHOPPING BAG
+						</h5></div>
+					<div class="cart-container">							
+						{% for item in cart.items %}
+						<div class="wrap-cart-container" data-chosen-variant-sku="SQ3771489" id="yui_3_17_2_1_1430892589245_414">
+							<div class="item">
+								<div class="item-image"><img src="{{ item | img_url: 'small' }}"></div>
+							</div>
+							<div class="item-desc">
+								<div class="wrap-item-desc">
+									<div class="item-desc-name"><a href="{{ item.url }}">{{ item.product.title }}</a>
+										
+										<p class="varoant-info-abc"><span class="variant-info-type"></span><strong>{{item.variant.title}}</strong>]</p>
+									</div>
+									<div class="variant-info">
+										
+									</div>
+									<div class="remove-item">
+										<a class="cart-item-delete-button-text" href="/cart/change?line={{ forloop.index }}&quantity=0" class="cart">delete</a>
+									</div>
+								</div>
+							</div>
+							<div class="qty quantity">
+								<div class="cart-info-quantity">
+									<label class="cart-quantity-title">quantity</label>
+									<input type="number" size="4" name="updates[]" min="1" id="updates_{{ item.id }}" value="{{ item.quantity }}" onfocus="this.select();" class="tc item-quantity" />
+									<div class="cooldown hidden">•</div>
+								</div>
+								<div class="cart-info-price">
+									<span class="cart-price-title">price</span>
+									<span class="sqs-money-native">{{ item.line_price|money}}</span>
+								</div>
+							</div>
+						</div>
+						{% endfor %}
+						<div class="subtotal">
+							<span class="label cart-total-money-title">Tổng tiền</span>
+							<span class="price"><span class="sqs-money-native">{{cart.total_price|money}}</span></span>
+						</div>
+
+					</div>
+				</div>
+				<div class="checkout cart-buttons">						
+					<div class="buttons">
+						<button type="submit" id="update-cart" class="cart-update-button-text checkout-button sqs-system-button sqs-editable-button" name="update"  value="" >Cập nhật</button>
+						<button type="submit" id="checkout" class="cart-checkout-button-text checkout-button sqs-system-button sqs-editable-button" name="checkout" value="" >Thanh toán</button>
+
+					</div>
+
+				</div>
+
+			</div>
+			{% endif %}
+
+		</form>
+
+		<footer id="footer"><div class="sqs-layout sqs-grid-12 columns-12" data-layout-label="Footer Content" data-type="block-field" data-updated-on="1385049770914" id="pageFooter"><div class="row sqs-row"><div class="col sqs-col-12 span-12"><div class="sqs-block html-block sqs-block-html" data-block-type="2" id="block-44308fdc07882be6746e"><div class="sqs-block-content"><p class="text-align-center">{{settings.footer_contact}}</p></div></div></div></div></div></footer>
+	</div>
+</main>
+
+<script>
+	jQuery(function($) {
+		const cartTitle = $(".cart-title");
+		const variantInfoType = $(".variant-info-type");
+		const cartQuantityTitle = $(".cart-quantity-title");
+		const cartPriceTitle = $(".cart-price-title");
+		const cartTotalMoneyTitle = $(".cart-total-money-title");
+		const cartItemDeleteButtonText = $(".cart-item-delete-button-text");
+		const cartUpdateButtonText = $(".cart-update-button-text");
+		const cartCheckoutButtonText = $(".cart-checkout-button-text");
+
+		validLocaleAndLangFromLocalStorage
+			.then((lastModifiedLang) => {
+				if (!langFetchTime || !storedLang || fileIsModified(langFetchTime, lastModifiedLang)) {
+					return setMultiLangToLocalStorage;
+				} else {
+					translateText();
+				}
+			})
+			.then((response) => {
+				if (response !== undefined) {
+					response.lang.then((lang) => {
+						localStorage.setItem("lang", JSON.stringify(lang));
+						localStorage.setItem("langFetchTime", response.lastModified);
+						translateText();
+					});
+				}
+			});
+
+		const translateText = () => {
+		let currentLocale = localStorage.getItem("locale");
+		let lang = JSON.parse(localStorage.getItem("lang"));
+		let varitantOptionText = "[" + lang["languages"][currentLocale]["Option"] + ": ";
+		variantInfoType.text(varitantOptionText);
+		cartTitle.text(lang["languages"][currentLocale]["Cart"])
+		cartQuantityTitle.text(lang["languages"][currentLocale]["Quantity"])
+		cartPriceTitle.text(lang["languages"][currentLocale]["Price"])
+		cartTotalMoneyTitle.text(lang["languages"][currentLocale]["Total"])
+		cartItemDeleteButtonText.text(lang["languages"][currentLocale]["Delete"])
+		cartUpdateButtonText.text(lang["languages"][currentLocale]["Update"])
+		cartCheckoutButtonText.text(lang["languages"][currentLocale]["Check out"])
+		};
+
+		languageToggleCheckbox.addEventListener("change", translateText);
+		languageToggleCheckboxMobile.addEventListener("change", translateText);
+
+	});
+</script>
+
+
+
+
+

@@ -1,0 +1,243 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js ie6 oldie" lang="en"><![endif]-->
+<!--[if IE 7]><html class="no-js ie7 oldie" lang="en"><![endif]-->
+<!--[if IE 8]><html class="no-js ie8 oldie" lang="en"><![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="en">
+  <!--<![endif]-->
+  <head>
+    <link rel="shortcut icon" href="{{ 'favicon.png' | asset_url }}" type="image/png" />
+    <meta charset="utf-8" />
+    <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1' /><![endif]-->
+    <title>
+      {{ page_title }}{% if current_tags %} &ndash; tagged "{{ current_tags | join: ', ' }}"{% endif %}{% if current_page != 1 %} &ndash; Page {{ current_page }}{% endif %}{% unless page_title contains shop.name %} &ndash; {{ shop.name }}{% endunless %}
+    </title>
+    {% if page_description %}
+    <meta name="description" content="{{ page_description | strip_html | strip_newlines }}" />
+    {% endif %}
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=2.0, user-scalable=0' name='viewport' />
+    <link rel="canonical" href="{{ canonical_url }}" />
+    {{ content_for_header }}
+    {%include 'master-include'%}
+
+    {% if settings.base_font %}
+    <link rel="stylesheet" type="text/css" href="//hstatic.net/0/global/design/member/fonts/{{settings.base_font | replace: ' ', '' | downcase}}.css">
+		{% endif %}
+
+	</head>
+
+  <body>
+    <!-- Begin: wrapper -->
+    <div class="wrapper">
+      <header class="container clearfix">
+        <div class="col-md-12 clearfix">
+          <div class="logo col-md-3 col-xs-12">
+
+            <!-- LOGO -->
+            {% if settings.use_logo %}
+            <h1>
+              <a href="{{shop.url}}">
+                <img src="{{ 'logo.png' | asset_url }}" alt="{{ shop.name }}" class="img-responsive"/>
+              </a>
+            </h1>
+            {% if template == 'index' %}
+            <h1 style="display:none">
+              <a href="/">{{ shop.name }}</a>
+            </h1>
+            {% endif %}
+            {% else %}
+            <h1>
+              <a href="/">{{ shop.name }}</a>
+            </h1>
+            {% endif %}
+          </div>
+          <div class="col-md-9 col-xs-12">
+            <!-- BANNER -->
+            <div class="banner">
+              {% if settings.use_ad_banners %}
+              <a href="{{ settings.ad_banner_1_link }}">
+                <img width="100%" src="{{ 'banner-top.png' | asset_url }}" alt="{{ settings.ad_banner_top_text }}" class="img-responsive" />
+              </a>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <nav class="navbar-main navbar navbar-default cl-pri">
+        {% include 'menu' %}
+      </nav>
+
+      <section id="content" class="clearfix container">
+
+        {% if template == "list-collections" %}
+        <script>
+          window.location = "/collections/all";
+        </script>
+        <div id="collection" class="row">
+          <div class="col-md-12">
+            <h1>
+              <span>Danh mục sản phẩm</span>
+            </h1>
+          </div>
+          <!-- /.span12 -->
+        </div> <!-- /.row -->
+
+        <div class="row products masonry">
+          {% for collection in collections %}
+          {% unless collection.all_products_count == 0 or collection.handle == "frontpage" %}
+          {% include 'collection-loop' %}
+          {% endunless %}
+          {% endfor %}
+        </div> <!-- /#collection.row -->
+        {% else %}
+        {% unless template == 'blog' or template == 'article' %}
+        <aside class="col-md-3 col-sm-12 col-xs-12 hidden-sm hidden-xs">
+          {% include 'sidebar-left' %}
+        </aside>
+        {% endunless %}
+        {{ content_for_layout }}
+        {% else %}
+
+        {% endif %}
+
+      </section>
+      <footer>
+        <!--footer-->
+        <div id="footer-info">
+          <div class="footer-link">
+            {%for link in linklists[settings.footer_link].links%}
+            <a href="{{link.url}}">{{link.title}}</a>{%unless forloop.last%}<span> | </span>{%endunless%}
+            {%endfor%}
+          </div>
+          <p>{{settings.footer_contact}}</p>
+          <hr>
+            <h5>
+              <p>Copyright &copy; {{ "now" | date: "%Y" }} {{ shop.name }}. {{ powered_by_link }}.</p>
+            </h5>
+          </div>
+      </footer>
+
+    </div>
+
+    <!--Scroll to Top-->
+    {% if settings.scroll_top_show %}
+    <a href="#" class="scrollToTop">
+      <i class="fa fa-chevron-up"></i>
+    </a>
+    {% endif %}
+
+    <script>
+      $(document).ready(function() {
+
+      //Check to see if the window is top if not then display button
+      $(window).scroll(function() {
+      if ($(this).scrollTop() > 100) {
+      $('.scrollToTop').fadeIn();
+      } else {
+      $('.scrollToTop').fadeOut();
+      }
+      });
+
+      //Click event to scroll to top
+      $('.scrollToTop').click(function() {
+      $('html, body').animate({
+      scrollTop: 0
+      }, 600);
+      return false;
+      });
+
+      });
+    </script>
+
+    <div id="myCart" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title" id="exampleModalLabel">
+              Bạn có <b></b> sản phẩm trong giỏ hàng
+            </h4>
+
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <a aria-hidden="true"></a>
+            </button>
+
+          </div>
+          <form action="/cart" method="post" id="cartform">
+            <div class="modal-body">
+              <table style="width:100%;" id="cart-table">
+                <tr>
+                  <th></th>
+                  <th>Tên sản phẩm</th>
+                  <th>Số lượng</th>
+                  <th>Giá tiền</th>
+                  <th></th>
+                </tr>
+                <tr class="line-item original">
+                  <td class="item-image"></td>
+                  <td class="item-title">
+                    <a></a>
+                  </td>
+                  <td class="item-quantity"></td>
+                  <td class="item-price"></td>
+                  <td class="item-delete"></td>
+                </tr>
+              </table>
+            </div>
+            <div class="modal-footer">
+              <div class="row">
+                <div class="col-lg-3">
+                  <div class="modal-title-note">
+                    Ghi chú đơn hàng :
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="modal-note">
+                    <textarea placeholder="Viết ghi chú" id="note" name="note" rows="5" cols="50">{{ cart.note }}</textarea>
+                  </div>
+                </div>
+                <div class="col-lg-5">
+                  <div class="total-price-modal">
+                    Tổng cộng : <span class="item-total"></span>
+                  </div>
+                </div>
+              </div>
+              <div class="row" style="margin-top:10px;">
+                <div class="col-lg-6">
+                  <div class="comeback">
+                    <a href="/">
+                      <img src="//hstatic.net/0/0/global/design/theme-default/icon-tieptuc.png" />Tiếp tục mua hàng
+                    </a>
+                  </div>
+                </div>
+                <div class="col-lg-6 text-right">
+                  <div class="buttons btn-modal-cart">
+                    <button type="submit" class="button-default" id="checkout" name="checkout">
+                      Đặt hàng
+                    </button>
+                  </div>
+
+                  <div class="buttons btn-modal-cart">
+                    <button type="submit" class="button-default"  id="update-cart-modal" name="">
+                      Cập nhật
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- Quick view -->
+    {% include 'quick-view' %}
+    <!-- Quick view -->
+
+  </body>
+
+</html>
+
+
+

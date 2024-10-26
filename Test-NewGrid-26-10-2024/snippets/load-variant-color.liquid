@@ -1,0 +1,69 @@
+  const loadAllVariantColor = async (currentVariantUrl, variantColors, colorContainerDiv) => {
+    try {
+      if (!variantColors || variantColors.length === 0) return;
+
+      const colorList = await waitForColorStorage();
+  
+      const currentVariantColor = variantColors[0];
+      
+      variantColors.forEach((variantColor) => {
+        const variantColorLowerCase = variantColor.toLowerCase();
+        loadEachVariantColor(colorList, variantColorLowerCase, currentVariantUrl, currentVariantColor, colorContainerDiv);
+      });
+    } catch (error) {
+      console.error("Error while waiting for color data:", error);
+    }
+  };
+  
+  const waitForColorStorage = () => {
+    return new Promise((resolve) => {
+      const checkStorage = () => {
+        const colorStorage = JSON.parse(localStorage.getItem("color"));
+        colorStorage?.colors ? resolve(colorStorage.colors) : setTimeout(checkStorage, 100);
+      };
+      checkStorage();
+    });
+  };
+  
+  const loadEachVariantColor = (colorList, variantColor, currentVariantUrl, currentVariantColor, colorContainerDiv) => {
+    const variantColorBlock = createVariantColorBlock(colorList[variantColor]);
+    colorContainerDiv.append(variantColorBlock.get(0));
+  
+    variantColorBlock.click(() =>
+      handleVariantColorBlockClick(variantColor, currentVariantColor, currentVariantUrl)
+    );
+  };
+  
+  const createVariantColorBlock = (color) => {
+    return $("<div>")
+      .addClass("color-child")
+      .css("background-color", color);
+  };
+  
+  const handleVariantColorBlockClick = (clickedColor, currentVariantColor, currentVariantUrl) => {
+    clickedColor = formatClickedColor(clickedColor);
+    const modifiedUrl = generateModifiedUrl(currentVariantUrl, clickedColor, currentVariantColor);
+  
+    if (currentVariantUrl !== modifiedUrl) {
+      window.location = modifiedUrl;
+    }
+  }; 
+  
+  const formatClickedColor = (clickedColor) => {
+    return clickedColor.split(" ").length > 1 ? clickedColor.split(" ").join("-") : clickedColor;
+  };
+  
+  const generateModifiedUrl = (currentVariantUrl, clickedColor, currentVariantColor) => {
+    const urlSegments = currentVariantUrl.split("/");
+    const lastSegment = urlSegments.pop();
+    const lastSegmentWithoutColor = splitColorInLastSegment(lastSegment, currentVariantColor);
+  
+    return `/products/${lastSegmentWithoutColor}-${clickedColor}`;
+  };
+  
+  const splitColorInLastSegment = (lastSegment, currentVariantColor) => {
+    const colorWordCount = currentVariantColor.split(" ").length;
+    const lastSegmentArray = lastSegment.split("-");
+    return lastSegmentArray.slice(0, -colorWordCount).join("-");
+  };
+  

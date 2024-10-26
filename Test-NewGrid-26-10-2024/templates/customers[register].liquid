@@ -1,0 +1,128 @@
+{% layout settings.customer_layout %}
+<div  class="content-login">
+	<span class="header-contact header-page clearfix">
+		<h3>REGISTER</h3>
+	</span>
+	<div class="userbox">
+
+
+
+
+		{% form 'create_customer' %}
+
+		{{ form.errors | default_errors }}
+
+		<div id="first_name" class="clearfix large_form">
+			<!--<label for="first_name" class="label icon-field"><i class="icon-login icon-user "></i></label>
+			<input required type="text" value="" name="customer[first_name]" placeholder="First Name" id="first_name" class="text" size="30" />-->
+			<div class="title-input">FIRST NAME</div>
+			<input required type="text" value="" name="customer[first_name]" placeholder="First Name" id="first_name" class="text" size="30" />
+		</div>
+		<div id="last_name" class="clearfix large_form">
+			<!--<label for="last_name" class="label icon-field"><i class="icon-login icon-user "></i></label>
+			<input required type="text" value="" name="customer[last_name]" placeholder="Last Name" id="last_name" class="text" size="30" />-->
+			<div class="title-input">LAST NAME</div>
+			<input required type="text" value="" name="customer[last_name]" placeholder="Last Name" id="last_name" class="text" size="30" />
+		</div>
+
+		<div id="email" class="clearfix large_form">
+			<!--<label for="email" class="label icon-field"><i class="icon-login icon-envelope "></i></label>
+			<input required type="email" value="" placeholder="Email" name="customer[email]" id="Email Address" class="text" size="30" />-->
+				<div class="title-input">EMAIL ADDRESS</div>
+				<input required type="email" value="" placeholder="Email" name="customer[email]" id="Email Address" class="text" size="30" />
+		</div>
+
+		<div id="password" class="clearfix large_form">
+			<!--<label for="password" class="label icon-field"><i class="icon-login icon-shield "></i></label>
+			<input required type="password" value="" placeholder="Password" name="customer[password]" id="password" class="password text" size="30" />-->
+			<div class="title-input">PASSWORD</div>
+			<input required type="password" value="" placeholder="Password" name="customer[password]" id="password" class="password text" size="30" />
+		</div>
+
+		<div class="action_bottom">
+			<input class="btn" type="submit" value="REGISTER" />			
+		</div>
+		<div class="req_pass">
+			<a class="come-back" href="/account/login">Back to Login</a>
+		</div>
+
+		{% endform %}
+	</div>
+
+</div><!-- #register -->
+<!-- #customer-register -->
+<style>
+	.content-login {
+	
+	text-align: center;
+	margin-top: 10%;
+	}
+	.userbox {
+	max-width: 40%;
+	min-width: 120px;
+	padding: 15px;
+	background-color: #fff;
+	margin: auto;
+	margin-bottom: 20px;
+	}
+	.icon-field {
+	display: inline-block !important;
+	background-color: #F8F8F8 !important;
+	color: white;
+	border: solid 1px #E7E7E7;
+	text-align: center;
+	height: 39px;
+	vertical-align: middle;
+	line-height: 33px;
+	width: 35px;
+	margin-top: 10px;
+	float: left;
+	}
+	.userbox input[type=email], .userbox input[type=password], .userbox input[type=text] {
+	max-width: 100%;
+	min-width: 125px !important;
+	height: 39px;
+	display: inline-block !important;
+	background-color: #fff;
+	border: solid 1px #E7E7E7;
+	margin-left: 0px;
+	margin-top: 5px;
+	float: left;
+	padding-left: 10px;
+	outline: none;
+	margin-bottom: 0px !important;
+	}
+	.icon-envelope:after {
+	content: url(//hstatic.net/0/0/global/design/theme-default/email.png);
+	}
+	.icon-shield:after {
+	content: url(//hstatic.net/0/0/global/design/theme-default/pass.png);
+	margin-top: 8px;
+	display: block;
+	}
+	.action_bottom .btn {
+	font-size: 14px;
+	font-weight: 600;
+	color: white;
+	display: inline-block;
+	text-decoration: none;
+	padding: 0px 20px !important;
+	height: 35px;
+	margin-bottom: 10px;
+	background: #28303e;
+	text-align: center;
+	border: none;
+	margin-top: 15px;
+	}
+	.icon-user:after {
+	content: url(//hstatic.net/0/0/global/design/theme-default/userico.png);
+	}
+	@media screen and (max-width:767px){
+	.content-login {
+	width: initial !important;
+	margin-left: 0px !important;
+	text-align: center;
+	margin-top: 10%;
+	}
+	}
+</style>

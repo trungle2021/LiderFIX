@@ -1,0 +1,126 @@
+<!--<h1 class="hidden">{{collection.title}}</h1>-->
+<style>
+	#productList{
+		margin-top: 50px;
+	}
+</style>
+<script>
+    const productColors = {};
+   {% include 'load-variant-color' %}
+	</script>
+
+<main id="main" role="main" class="main-collection" style="background:{{settings.collection_back_color}}">
+	{%- if collection.image != blank -%}
+  	<div class="{% if collection.id == 1003003274  %} hidden  {% endif %} banner-collection-header">
+		<img src="{{ collection.image.src }}" alt="{{collection.title}}"/>
+	</div>
+	{%- endif -%}
+	<div class="wrapper wrapper-collection">
+		{%- paginate collection.products by settings.pagination_limit -%}
+  		<div id="productList" class="row">
+  			<div class="col-md-12">
+				{%if collection.products.size == 0%}
+  				<div style="white-space: nowrap; text-align:center">Chưa có sản phẩm nào trong danh mục này</div>
+				{%else%}
+  				<div class="row ">
+					{%for product in collection.products limit: settings.pagination_limit%}
+    				<div id="{{product.handle}}" class="card-product-collection myani col-md-3 col-xs-6 {% if product.available and  product.compare_at_price > product.price %}block-info{%endif%} " style="overflow:hidden; display:inline-block;">
+  				<div class="col-odl">
+    				<a href="{{product.url}}" style="{%unless product.available%} opacity: .25;{%endunless%}">
+            <picture>
+              <source 
+                media="(max-width: 480px)" 
+                srcset="{% if product.images.size > 0 %}{{ product.featured_image.src | product_img_url: 'large' }}{%else%}{{ 'no_image.jpg' | asset_url }}{% endif %}">
+              
+              <source 
+                media="(min-width: 481px) and (max-width: 767px)" 
+                srcset="{% if product.images.size > 0 %}{{ product.featured_image.src | product_img_url: 'large' }}{%else%}{{ 'no_image.jpg' | asset_url }}{% endif %}">
+              
+              <source 
+                media="(min-width: 768px)" 
+                srcset="{% if product.images.size > 0 %}{{ product.featured_image.src | product_img_url: 'master' }}{%else%}{{ 'no_image.jpg' | asset_url }}{% endif %}">
+            
+              <img 
+                src="{% if product.images.size > 0 %}{{ product.featured_image.src | product_img_url: 'master' }}{%else%}{{ 'no_image.jpg' | asset_url }}{% endif %}" 
+                alt="{% if product.featured_image.alt.size > 0 %}{{ product.featured_image.alt | escape }}{%else%}{{ product.title }}{%endif%}"
+                loading="lazy"
+                width="auto"
+                height="auto"
+                />
+        </picture>
+            
+				{%assign check = product.images.size | minus:1%}
+							<picture>
+								<source media="(max-width: 480px)"srcset="{% if product.images.size > 1 %}{{ product.images[check] | product_img_url: 'large' }}{%else%}{%if product.images.size > 0%}{{ product.featured_image.src | product_img_url: 'medium' }}{%else%}{{'no_image.jpg' | asset_url}}{%endif%}{%endif%}">
+								<source media="(min-width: 481px) and (max-width: 767px)" srcset="{% if product.images.size > 1 %}{{ product.images[check] | product_img_url: 'large' }}{%else%}{%if product.images.size > 0%}{{ product.featured_image.src | product_img_url: 'large' }}{%else%}{{'no_image.jpg' | asset_url}}{%endif%}{%endif%}">
+                <source media="(min-width: 768px)" data-srcset="{% if product.images.size > 1 %}{{ product.images[check] | product_img_url: 'master' }}{%else%}{%if product.images.size > 0%}{{ product.featured_image.src | product_img_url: 'master' }}{%else%}{{'no_image.jpg' | asset_url}}{%endif%}{%endif%}">
+								<img src="{% if product.images.size > 1 %}{{ product.images[check] | product_img_url: 'master' }}{%else%}{{ product.featured_image.src | product_img_url: 'master' }}{%endif%}" 
+										 class="" 
+										 alt="{% if product.featured_image.alt.size > 1 %}{{ product.featured_image.alt | escape }}{% else%} {{product.title}} {% endif %}"/>
+							</picture>
+						</a>
+            <div style="padding: 0 15px">
+    					 {% include 'color-container' with section: {{collection.title}} %}
+            </div>
+    				<a style="{%unless product.available%} opacity: .25;{%endunless%}" href="{{product.url}}">
+						<div class="ani ">
+								<h1 class="product-title">{{product.title | strip_html| truncatewords: 10}}</h1>
+								<div class="product-price">
+									<span class="sqs-money-native">
+										{% if product.available and product.compare_at_price > product.price %} 
+										<del>{{product.compare_at_price|money}}</del>
+										{%endif%}
+										<span class="price-cost">
+											{{product.price|money}} 
+										</span>
+										<div class="wrap-sold-out">
+											{%if product.available %}
+											{%comment%}
+											<div class="sale-now">SALE</div>
+											{%endcomment%}
+											{%else%}		
+											<div class="sold-out">(soldout)</div>  
+											{%endif%}
+										</div>
+									</span>
+								</div>
+							</div>
+					</a>
+					</div>
+				</div>
+					{%endfor%}
+				</div>
+				{%endif%}
+			</div>
+  		</div>
+  		<div id="cus-pagination" class="col-md-12 col-xs-12">
+			<div class="sortpagibar pagi clearfix text-center">
+				{%include 'pagination-default'%}
+			</div>
+		</div>
+		{%- endpaginate -%}
+		<footer id="footer">
+			<div class="sqs-layout sqs-grid-12 columns-12" data-layout-label="Footer Content" data-type="block-field" data-updated-on="1385049770914" id="pageFooter">
+				<div class="row sqs-row">
+					<div class="col sqs-col-12 span-12"><div class="sqs-block html-block sqs-block-html" data-block-type="2" id="block-44308fdc07882be6746e">
+						<div class="sqs-block-content"><p class="text-align-center" style="color:#AAA">{{settings.footer_contact}}</p>
+						</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+</main>
+
+<!--XVNet-->
+<script>
+	$(document).ready(function(){
+		$("body").removeClass().addClass("site-vertical-alignment-middle full-width-homepage  use-site-title-in-mobile-header folder-links-always-show index-links-parent-link-only product-category-links-parent-link-only show-social-icons social-icon-style-square product-list-style-showroom product-aspect-ratio-auto product-item-single-image-fill  index-list-title-style-overlay index-aspect-ratio-auto gallery-single-image-fill  hide-blog-author  event-show-past-events event-thumbnails event-thumbnail-size-32-standard event-date-label  event-list-show-cats event-list-date event-list-time event-list-address   event-icalgcal-links  event-excerpts    event-list-compact-view   hide-opentable-icons opentable-style-dark newsletter-style-dark small-button-style-solid small-button-shape-square medium-button-style-solid medium-button-shape-square large-button-style-solid large-button-shape-square button-style-default button-corner-style-square native-currency-code-usd collection-526597cde4b0bc5cd29c55a2 collection-layout-default collection-type-products view-list mobile-style-available logo-image");
+	});
+</script>
+<!--COLOR VARIANT-->
+
+
+
+

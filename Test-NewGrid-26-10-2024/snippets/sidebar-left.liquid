@@ -1,0 +1,153 @@
+<!-- Sidebar menu-->
+<div class="list-group" id="list-group-l">
+  {% if settings.show_side_main_menu %}
+  <ul class="nav navs sidebar menu" id='cssmenu'>
+    {% for link in linklists.[settings.side_main_menu].links %}
+    {% assign has_sub_menu = false %}
+    {% assign parent_link_active = false %}
+    {% if linklists[link.handle] == empty %}
+    <li class="item {% if link.active %}current active {% endif %} {% if forloop.first %}first{% endif %}{% if forloop.last %}last{% endif %}">
+      <a href="{{ link.url }}">
+        <span>{{ link.title }}</span>
+      </a>
+    </li>
+    {% else %}
+    {% assign has_sub_menu = true %}
+    {% for l in linklists[link.handle].links %}
+    {% if l.active %}
+    {% assign parent_link_active = true %}
+    {% endif %}
+    {% endfor %}
+    <li class='item has-sub {% if link.active or parent_link_active %}active{% endif %} {% if forloop.first %}first{% endif %}{% if forloop.last %}last{% endif %}'>
+      <a href='{{ link.url }}'>
+        <span class="lbl">{{ link.title }}</span>
+        <span data-toggle="collapse" data-parent="#cssmenu" href="#sub-item-{{forloop.index}}" class="sign">
+          <img src="//hstatic.net/0/0/global/design/theme-default/arrow-down.png" >
+        </span>
+      </a>
+      <ul class="nav children collapse" id="sub-item-{{forloop.index}}">
+        {% for l in linklists[link.handle].links %}
+        <li class="{% if forloop.first %}first{% endif %}{% if forloop.last %}last{% endif %}{% if l.active %} current active{% endif %}">
+          <a href="{{ l.url }}" title="{{ l.title }}">
+            <span>{{ l.title }}</span>
+          </a>
+        </li>
+        {% endfor %}
+      </ul>
+    </li>
+    {% endif %}
+    {% endfor %}
+  </ul>
+  {% endif %}
+</div>
+
+
+<script>
+
+  $(document).ready(function(){
+  //$('ul li:has(ul)').addClass('hassub');
+  $('#cssmenu ul ul li:odd').addClass('odd');
+  $('#cssmenu ul ul li:even').addClass('even');
+  $('#cssmenu > ul > li > a').click(function() {
+  $('#cssmenu li').removeClass('active');
+  $(this).closest('li').addClass('active');
+  var checkElement = $(this).nextS();
+  if((checkElement.is('ul')) && (checkElement.is(':visible'))) {
+  $(this).closest('li').removeClass('active');
+  checkElement.slideUp('normal');
+  }
+  if((checkElement.is('ul')) && (!checkElement.is(':visible'))) {
+  $('#cssmenu ul ul:visible').slideUp('normal');
+  checkElement.slideDown('normal');
+  }
+  if($(this).closest('li').find('ul').children().length == 0) {
+  return true;
+  } else {
+  return false;
+  }
+  });
+  });
+
+  $("#list-group-l ul.navs li.active").parents('ul.children').addClass("in");
+</script>
+
+
+<!-- Sidebar menu-->
+<!-- Support-->
+<div class="sidebar-support list-group">
+  <span href="#" class="list-group-item active">
+    {% if settings.use_avatar-answ %}
+    <img src="//hstatic.net/0/0/global/design/theme-default/avatar-answ.png" class="img-responsive" />
+    {% endif %}
+  </span>
+  <h3> {{settings.avatar-answ_title }}</h3>
+  <div class="support">
+    <div class="text-center">
+      <p>
+        <span class="supp-name">{{ settings.admin_name }}</span>
+        <br>
+          <span class="phone">{{ settings.admin_phone}}</span>
+        </p>
+      <a href="skype:{{ settings.id_skype }}?chat" class="skype">
+        <img src="//hstatic.net/0/0/global/design/theme-default/skype-icon.png" class="img-responsive"/>
+      </a>
+      <a href="ymsgr:sendim?{{ settings.id_yahoo }}" class="yahoo">
+        <img src="//hstatic.net/0/0/global/design/theme-default/yahoo-icon.png"  class="img-responsive" />
+      </a>
+    </div>
+    <div class="text-center">
+      {% if settings.hotline_title != ''%}
+      <span class="supp-name" >{{ settings.hotline_title }}	</span>
+      {% endif %}
+      {% if settings.hotline_phone != '' %}
+      <br>
+        <p>
+          {{ settings.hotline_phone }}
+        </p>
+        {% endif %}
+      </div>
+    <div class="text-center">
+      {% if settings.time_title != ''%}
+      <span class="supp-name" >{{ settings.time_title }}	</span>
+      {% endif %}
+      <p>
+        {{ settings.time_text }}
+      </p>
+    </div>
+  </div>
+</div>
+<!-- Support-->
+<!-- Facebook -->
+<!-- Facebook widget -->
+{% if settings.show_fanpage_faceook %}
+<div class="sidebar-facebook list-group">
+  <div class="face-title list-group-item active">
+    <span>{{ settings.facebook_widget_title }}</span>
+  </div>
+  <div class="face-content">
+    <div class="fb-like-box small--hide" data-href="{{ settings.fanpage_faceook }}" data-height="300" data-width="100%" data-colorscheme="light" data-show-faces="true" data-header="false" data-stream="false" data-show-border="false"></div>
+  </div>
+</div>
+{% endif %}
+<!-- #Facebook widget -->
+<script>
+  (function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=263266547210244&version=v2.0";
+  fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+</script>
+
+
+<!-- Facebook-->
+<!-- Banner quảng cáo -->
+<div class="list-group_l banner-left">
+  {% if settings.show_left_ad %}
+  <a href="{{ settings.promo_link_left }}">
+    <img src="{{ 'left_image_ad.png' | asset_url }}" >
+  </a>
+  {% endif %}
+</div>
+<!-- Banner quảng cáo -->

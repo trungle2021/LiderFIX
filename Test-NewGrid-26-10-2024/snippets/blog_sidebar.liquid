@@ -1,0 +1,55 @@
+<div class="sidebar">
+    {% if settings.blog_recent_show %}
+    <!-- Begin: Danh mục tin tức -->
+    <div class="news-menu list-group">
+        <span class="list-group-item active">{{ settings.blog_recent_title}}</span>
+        <ul class="nav sidebar">
+            {% for bl in linklists[settings.blog_recent_menu].links limit:10 %}
+            <li class="{%if blog and blog.handle == bl.object.handle%}active{%endif%}"><a href="{{ bl.url }}">{{ bl.title }}</a></li>
+            {%else%}
+            <li class="active"><a href="/blogs/news/">Tin tức</a></li>
+            {% endfor %}
+        </ul>
+    </div>
+    <!-- End: Danh mục tin tức -->
+    {% endif %}
+
+    {% if settings.news_recent_show and blogs[blog.handle].articles.size > 1 %}
+    <!--Begin: Bài viết mới nhất-->
+    <div class="news-latest list-group">
+        <span class="list-group-item active">
+            {{ settings.news_recent_title  }}
+        </span>
+        {% for a in blogs[blog.handle].articles limit:10 %}
+        {%if article %}
+        {%unless a.id == article.id%}
+        <div class="article">
+            {%if  a.excerpt != null and article.excerpt != ''  %}
+            <div class="col-ld-3 col-md-3 col-sm-4 col-xs-4">
+                {{a.excerpt}}
+            </div>
+            {%endif%}
+            <div class="post-content {%if a.excerpt !=null and a.excerpt !='' %}col-lg-9 col-md-9 col-sm-8 col-xs-8 {%else%} col-sm-12 {%endif%}">
+                <a href="{{ a.url }}">{{ a.title }}</a><span class="date"> <i class="time-date"></i>{{ a.published_at | date: '%d/%m/%Y' }}</span>
+            </div>
+        </div>
+        {%endunless%}
+        {%else%}
+        <div class="article">
+            {%if  a.excerpt != null and a.excerpt != ''  %}
+            <div class="col-ld-3 col-md-3 col-sm-4 col-xs-4">
+                {{a.excerpt}} 
+            </div>
+            {%endif%}
+            <div class="post-content {%if a.excerpt !=null and a.excerpt !='' %}col-lg-9 col-md-9 col-sm-8 col-xs-8 {%else%} col-sm-12 {%endif%}">
+                <a href="{{ a.url }}">{{ a.title }}</a><span class="date"> <i class="time-date"></i>{{ a.published_at | date: '%d/%m/%Y' }}</span>
+            </div>
+        </div>
+        {%endif%}
+
+        {% endfor %}
+    </div>
+    <!--End: Bài viết mới nhất-->
+    {% endif %}
+
+</div>

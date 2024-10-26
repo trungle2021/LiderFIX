@@ -1,0 +1,158 @@
+
+<!-- MENU MAIN -->
+<div class="container nav-wrapper">
+	<div class="row">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<div class="pull-right mobile-menu-icon-wrapper">
+				<ul class="mobile-menu-icon">
+					<li class="search">
+						<div class="btn-group">
+							<button type="button" class="btn btn-default dropdown-toggle icon-search" data-toggle="dropdown" aria-expanded="false">
+							</button>
+							<div class="dropdown-menu" role="menu">
+								<div class="search-bar">
+									<div class="">
+										<form class="col-md-12" action="/search">
+											<input type="hidden" name="type" value="product" />
+											<input type="text" name="q" placeholder="Tìm kiếm..." />
+										</form>
+									</div>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li id="cart-target" class="cart">
+						<a href="/cart" class="cart " title="Giỏ hàng">
+							<span class="fa fa-shopping-cart"></span>							
+							<span id="cart-count">{{ cart.item_count }}</span>
+						</a>
+					</li>
+					{%if customer %}
+					<li class="user">Hi<a href="/account" title="Tài khoản">{{customer.name}}</a></li>
+					{%elseif shop.customer_accounts_enabled %}
+					<li class="user"><a href="/account/login" title="Đăng nhập" class="fa fa-user"></a></li>
+					{%endif%}
+				</ul>
+			</div>
+		</div>
+		<div id="navbar" class="navbar-collapse collapse">
+			<ul class="nav navbar-nav clearfix">
+				{% for link in linklists.main-menu.links %}
+				{% if linklists[link.handle] == empty %}
+				<li>
+					<a href="{{ link.url }}" class="{% if link.active %} current{% endif %}" title="{{link.title}}">
+						<span>{{ link.title }}</span>
+					</a>
+				</li>
+				{% else %}
+				<li class="dropdown">
+					<a href="{{ link.url }}" title="{{link.title}}" class="{% if link.active  %} current{% endif %}">
+						<span>{{ link.title }}</span>
+					</a>
+					<ul class="dropdown-menu" role="menu">
+						{% for l in linklists[link.handle].links %}
+						<li>
+							<a href="{{ l.url }}"{% if l.active %} class="current"{% endif %} title="{{l.title}}">{{ l.title }}</a>
+							{%if linklists[l.handle].links.size > 0%}
+							<ul class="dropdown-menu">
+								{% for ll in linklists[l.handle].links %}
+								<li>
+									<a href="{{ ll.url }}"{% if ll.active %} class="current"{% endif %} title="{{ll.title}}">{{ ll.title }}</a>
+								</li>
+								{%endfor%}
+							</ul>
+							{%endif%}
+						</li>
+						{% endfor %}
+					</ul>
+				</li>
+				{% endif %}
+				{% endfor %}
+			</ul>
+		</div>
+		<div  class="hidden-xs pull-right right-menu">
+			<ul class="nav navbar-nav pull-right">
+				{% if shop.customer_accounts_enabled or shop.customer_accounts_optional %}
+				<li id="user-icon">
+					<ul>
+						{% if customer  %}
+						<li><a class="acc" href="/account" title="Tài khoản">Tài khoản của bạn</a></li>
+						{% else %}
+
+						{% if shop.customer_accounts_optional %}
+						<li><a class="reg" href="/account/register" title="Đăng ký">ĐĂNG KÝ</a></li>
+						<li>hay <a class="log" href="/account/login" title="Đăng nhập">Đăng nhập</a></li>
+						{%else%}
+						<li> <a class="log-only" href="/account/login" title="Đăng nhập">Đăng nhập</a></li>
+						{% endif %}
+
+
+						{% endif %}
+					</ul>
+				</li>
+				{% endif %}
+				<li class=""> 
+					<ul class="nodrop">
+						<li id="search-icon" class="drop-control">
+							<div class="btn-group">
+								<button type="button" class="btn btn-default dropdown-toggle icon-search" data-toggle="dropdown" aria-expanded="false">
+
+								</button>
+								<div class="dropdown-menu" role="menu">
+									<div class="search-bar">
+										<div class="">
+											<form class="col-md-12" action="/search">
+												<input type="hidden" name="type" value="product" />
+												<input type="text" name="q" placeholder="Tìm kiếm..." />
+											</form>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</li>
+				<!-- Card --> 
+
+				<li class=""> 
+					<ul class="nodrop" >
+						<li id="cart-target" class="toolbar-cart ">
+							<a href="/cart" title="Giỏ hàng" class="cart">
+								<span class="icon-cart"></span>
+								<span>
+									<span id="cart-count">{{ cart.item_count }}</span>
+								</span>
+							</a>
+						</li>
+					</ul>
+				</li> <!-- Card --> 
+
+
+			</ul>
+		</div><!--/.nav-collapse -->
+	</div>
+</div><!-- End container  -->
+
+<script>
+$(document).ready(function(){
+	$('li.dropdown li.active').parents('.dropdown').addClass('active')
+	if($('.right-menu').width() + $('#navbar').width() > $('.nav-wrapper').width() - 40)
+	{
+		$('.nav-wrapper').addClass('responsive-menu');
+	}
+	else{
+		$('.nav-wrapper').removeClass('responsive-menu');
+	}
+})
+
+
+$(document).on("click", "ul.mobile-menu-icon .dropdown-menu ,.drop-control .dropdown-menu, .drop-control .input-dropdown", function (e) {
+	e.stopPropagation();
+});
+</script>

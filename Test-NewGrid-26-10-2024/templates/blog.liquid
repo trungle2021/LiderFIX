@@ -1,0 +1,36 @@
+<main id="main" role="main" class="" style="background:{{settings.blog_backcolor}}">
+	<div class="wrapper" data-content-field="main-content">
+		<section class="blog-list">
+			{% for article in blog.articles %}
+			<article class="entry hentry author-george-zhang post-type-text " >
+				<p class="entry-categories">
+
+				</p>
+				<h1 data-content-field="title" class="entry-title">
+
+					<a style="color:{{settings.blog_title_color}};font-size={{settings.blog_title_fontsize}}px" href="{{ article.url }}">{{article.title}}</a>
+
+				</h1>
+
+				<p class="entry-date-author">
+					<span class="entry-author">
+						<a href="{{artical.url|asset_url}}">{{article.author}}</a>
+					</span>
+					<time class="published" datetime="{{article.published_at| date: '%d/%m/%Y' }}">		
+						<a src="#">{{article.published_at| date: '%d/%m/%Y' }}
+						</a>			
+					</time>
+				</p>
+
+				<div class="entry-content">
+					<p style="color:{{settings.blog_content_color}};font-size={{settings.blog_content_fontsize}}px">
+						{{article.content}}
+					</p>
+				</div>
+
+			</article>
+			{% endfor %}
+		</section>	
+		<footer id="footer"><div class="sqs-layout sqs-grid-12 columns-12" data-layout-label="Footer Content" data-type="block-field" data-updated-on="1385049770914" id="pageFooter"><div class="row sqs-row"><div class="col sqs-col-12 span-12"><div class="sqs-block html-block sqs-block-html" data-block-type="2" id="block-44308fdc07882be6746e"><div class="sqs-block-content"><p class="text-align-center">{{settings.footer_contact}}</p></div></div></div></div></div></footer>
+	</div>
+</main>

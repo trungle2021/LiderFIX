@@ -1,0 +1,741 @@
+{% assign lang_asset_url = 'languages.json' | asset_url %}
+{% assign color_asset_url = 'color.json' | asset_url %}	
+
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js ie6 oldie" lang="en"><![endif]-->
+<!--[if IE 7]><html class="no-js ie7 oldie" lang="en"><![endif]-->
+<!--[if IE 8]><html class="no-js ie8 oldie" lang="en"><![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="en" class="supports-fontface"> 
+	<!--<![endif]-->
+	<head>
+		<link rel="shortcut icon" href="{{ 'favicon.png' | asset_url }}" type="image/png" />
+		<meta charset="utf-8" />
+		<!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1' /><![endif]-->
+		<title>
+			{{ page_title }}{% if current_tags %} &ndash; tagged "{{ current_tags | join: ', ' }}"{% endif %}{% if current_page != 1 %} &ndash; Page {{ current_page }}{% endif %}{% unless page_title contains shop.name %} &ndash; {{ shop.name }}{% endunless %}
+		</title>
+		{% if page_description %}
+		<meta name="description" content="{{ page_description | strip_html | strip_newlines }}" />
+		{% endif %}
+
+		{% assign MenuUpper= {{settings.upper_case_menu}}%}
+
+		{% assign Main= linklists.main-menu.handle%}
+		{% assign isMainMenuUpper = true%} 
+
+		{%if MenuUpper != Main%} {% assign isMainMenuUpper = false%} 
+		{%endif%}
+
+		{% assign is_strong_menu1= {{settings.is_strong_menu1}}%}
+		{% assign is_strong_menu2= {{settings.is_strong_menu2}}%}
+
+		{% assign isAutoCol= {{settings.auto_column}}%}
+		{%if isAutoCol %}
+		{% assign col_num={{settings.auto_col_desktop}} %}
+		{% assign col_num_mobile={{settings.auto_col_mobile}} %}
+
+		{%else%}
+		{% assign col_num= {{settings.collection_col_num}}%} 
+		{% assign col_num_mobile= {{settings.collection_col_num_mobile}} %}
+		{%endif%}
+		<meta content='width=device-width, initial-scale=1.0, maximum-scale=2.0, user-scalable=0' name='viewport' />
+		<link rel="canonical" href="{{ canonical_url }}" />
+		{{ content_for_header }}
+		{%include 'master-include'%}
+
+		{% if settings.base_font %}
+		<link rel="stylesheet" type="text/css" href="//hstatic.net/0/global/design/member/fonts/{{settings.base_font | replace: ' ', '' | downcase}}.css">
+		{% endif %}
+	<!--<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500&display=swap" rel="stylesheet">-->
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		{% if template contains 'product' %}
+		{{ 'jquery.locker.js'  | asset_url | script_tag }}
+		<script>
+			$(window).load(function() {
+				// lockfixed 
+				var height1 = $('#haravan-section-footer').outerHeight();
+				//console.log(height3);
+				var windowsize = $(window).width();
+				/*	if (windowsize > 992) {
+					(function($) {
+						$.lockfixed(".fix-div",{offset: {top:10, bottom: height1 + 650}});
+					})(jQuery);
+				}
+				else {}*/
+			});
+		</script>
+		{% endif %}
+	</head>
+
+	<body id="{%- if template contains 'search' -%}body-page-search{%- endif -%}" class="site-vertical-alignment-middle full-width-homepage tem-index fsb-on swym-no-touch swym-ready use-site-title-in-mobile-header folder-links-always-show index-links-parent-link-only product-category-links-parent-link-only show-social-icons social-icon-style-square product-list-style-showroom product-aspect-ratio-auto product-item-single-image-fill  index-list-title-style-overlay index-aspect-ratio-auto gallery-single-image-fill  hide-blog-author  event-show-past-events event-thumbnails event-thumbnail-size-32-standard event-date-label  event-list-show-cats event-list-date event-list-time event-list-address   event-icalgcal-links  event-excerpts    event-list-compact-view   hide-opentable-icons opentable-style-dark newsletter-style-dark small-button-style-solid small-button-shape-square medium-button-style-solid medium-button-shape-square large-button-style-solid large-button-shape-square button-style-default button-corner-style-square native-currency-code-usd collection-52682dc9e4b063b6d7e57c3e collection-type-page collection-layout-default homepage mobile-style-available logo-image" >
+		{% comment %}
+		{%if cart.item_count >0%}
+		<div class="sqs-cart-dropzone">
+			<a href="/cart">
+				<div id="yui_3_17_2_1_1430877300393_207" class="yui3-widget sqs-widget sqs-pill-shopping-cart" style="visibility: visible; opacity: 1;">
+					<div id="cart-target" class="sqs-pill-shopping-cart-content ">
+						<div class="icon"></div>
+						<div class="details">
+							Giỏ&nbsp;-&nbsp;
+							<span id="cart-count" class="total-quantity">{{cart.item_count}}</span>
+							<span class="suffix">SP</span>
+						</div>
+						<span class="subtotal">
+							<span class="price"><span id="cart-price" class="sqs-money-native">{{ cart.total_price|money}}</span></span>
+						</span>
+					</div>
+				</div>
+			</a>
+		</div>
+		{%endif%}
+
+		<div id="cart-animation">1</div>
+		<div id="under">
+			<a href="#" id="navClose"><img src="{{"close-icon.png" | asset_url}}" alt=""/></a>
+			<nav class="navigation">
+				<ul data-content-field="navigation" style="{%if isMainMenuUpper%}text-transform: uppercase;{%endif%}; " >
+					{%for link in linklists[{{settings.menu1_link}}].links%}
+					<li class="products-collection">
+
+						<a aria-haspopup="true" class="products-parent" href="{{link.url}}" style=" {%if is_strong_menu1%}color: #242628; {%else%}color: rgba(17,17,17,.4);{%endif%}" >{{link.title}}</a>
+						<ul class="level1 ul-child" role="menu" style="display:none">
+
+							{% for l in linklists[link.handle].links %}
+							<li style="padding-left:10px;">
+								<a style="font-size:13px" href="{{ l.url }}"{% if l.active %} class="currentcon"{% endif %} title="{{l.title}}">{{ l.title }}</a>
+								{%if linklists[l.handle].links.size > 0%}
+								<ul class="level2 ul-child">
+									{% for ll in linklists[l.handle].links %}
+									<li>
+										<a href="{{ ll.url }}"{% if ll.active %} class="current"{% endif %} title="{{ll.title}}">{{ ll.title }}</a>
+									</li>
+									{%endfor%}
+								</ul>
+								{%endif%}
+							</li>
+							{% endfor %}
+						</ul>
+
+
+					</li>
+					{%endfor%}
+				</ul>
+			</nav>
+			<div class="lower-header">
+				<nav class="navigation-secondary">
+					<ul data-content-field="navigation" style="{%unless isMainMenuUpper%}text-transform: uppercase;{%endunless%}" >
+						{%for link in linklists[{{settings.menu2_link}}].links%}
+
+						<li class="page-collection ">
+							<a href="{{link.url}}" style=" {%if is_strong_menu2%}color: #242628; {%else%}color: rgba(17,17,17,.4);{%endif%}" >{{link.title}}</a>
+
+
+						</li>
+						{%endfor%}
+					</ul>
+				</nav>
+			</div>
+		</div>
+		{% endcomment %}
+
+		<div id="haravan-section-header" class="haravan-section">
+			<style>
+				.site-header__logo a {
+					max-width: 450px;
+				}
+				@media screen and (min-width: 769px) {
+					.site-nav {
+						text-align: right!important;
+					}
+				}
+
+			</style>
+			<div id="over_y"></div>
+			<div id="MobileNav" class="mobile-nav post-large--hide">
+				<div class="s_over"></div>
+				<header id="CusMobileNav">
+				<div id="mobile_nv">
+					<ul class="s_list">
+					{%- include 'submenu-mobile' -%}
+						{% comment %}
+							{% for link in linklists.main-menu.links %}
+							{% if linklists[link.handle] == empty %}
+							<li>
+								<a href="{{ link.url }}" target="_blank" class="cate"><span>{{link.title}}</span></a>
+							</li>
+							{% else %}
+							<li>
+								<a href="#" class="cate" id="sp_btn"><span>{{link.title}}</span></a>
+								<ul class="sub_list" id="main_nv">
+									{% for l in linklists[link.handle].links %}
+									<li class="mobile-nav__link" aria-haspopup="true">
+										<a href="{{ l.url }}" class="{%if linklists[l.handle].links.size > 0%} mobile-nav__sublist-trigger {%endif%}">
+											{{l.title}}
+											{%if linklists[l.handle].links.size > 0%}
+											<span class="icon-fallback-text mobile-nav__sublist-expand">
+												<span class="icon icon-plus" aria-hidden="true"></span>
+												<span class="fallback-text">+</span>
+											</span>
+											<span class="icon-fallback-text mobile-nav__sublist-contract">
+												<span class="icon icon-minus" aria-hidden="true"></span>
+												<span class="fallback-text">-</span>
+											</span>
+											{%endif%}
+										</a>
+										{%if linklists[l.handle].links.size > 0%}
+										<ul class="mobile-nav__sublist">
+											{% for ll in linklists[l.handle].links %}
+											<li class="mobile-nav__sublist-link">
+												<a href="{{ ll.url }}">{{ ll.title }}</a>
+											</li>
+											{%endfor%}
+										</ul>
+										{%endif%}
+									</li>
+									{% endfor %}
+
+								</ul>
+							</li>
+							{% endif %}
+							{% endfor %}
+						{% endcomment %}
+					</ul>
+				</div>
+				</header>
+			</div>
+			<div id="i_zm"><img alt="" /></div>
+			<div data-section-id="header" data-section-type="header-section" id="header">
+				<div class="header-bar">
+					<div class="wrapper medium-down--hide">
+						<div class="post-large--display-table">
+							<div class="header-bar__right post-large--display-table-cell">
+								<ul class="header-bar__module header-bar__module--list">
+									<li>
+										<a href="/account/login" id="customer_login_link">Log in</a>
+									</li>
+									<li>or</li>
+									<li>
+										<a href="/account/register" id="customer_register_link">Create account</a>
+									</li>
+								</ul>
+								<div class="header-bar__module">
+									<span class="header-bar__sep" aria-hidden="true"></span>
+									<a href="/cart" class="cart-page-link">
+										<span class="icon icon-cart header-bar__cart-icon" aria-hidden="true"></span>
+									</a>
+								</div>
+								<div class="header-bar__module">
+									<a href="/cart" class="cart-page-link">
+										Cart
+										<span class="cart-count header-bar__cart-count hidden-count">
+											<span>{{cart.item_count}}</span></span>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="wrapper post-large--hide">
+						<button type="button" class="mobile-nav-trigger" id="MobileNavTrigger" data-menu-state="close">
+							<span class="icon icon-hamburger" aria-hidden="true"></span>
+							Menu
+						</button>
+						<a href="/cart" class="cart-page-link mobile-cart-page-link">
+							<span class="icon icon-cart header-bar__cart-icon" aria-hidden="true"></span>
+							Cart <span class="cart-count hidden-count">{{cart.item_count}}</span>
+						</a>
+					</div>
+				</div> <!-- header-bar -->
+				<header id="CusDesktopHeader" class="site-header" role="banner">
+         
+
+				
+					<div class="wrapper">
+						<div class="over"></div>
+						<!-- menu-toggler: for_narrow_width -->
+						<button class="nv_btn">
+							<span class="vr b1"></span>
+							<span class="vr b2"></span>
+							<span class="vr b3"></span>
+						</button>
+						<!-- menu-toggler: end -->
+						
+						<div class="s-logo">
+							<a href="/" itemprop="url"><img src="{{ 'logo.png' | asset_url }}" alt="logo" /></a>
+						</div>
+						<div class="post-large--display-table-cell medium-down--hide test" id="nv">		
+										
+						</div>
+						<div class="st_1">
+							<div class="switch-language" style="position:relative">
+                  <input id="language-toggle" class="check-toggle check-toggle-round-flat" checked type="checkbox">
+                  <label for="language-toggle"></label>
+                  <span class="on">VIE</span>
+                  <span class="off">ENG</span>
+              </div>
+							<a href="/search" id="sc_btn"><img src="{{'ico-search-header.svg'| asset_url }}" alt="search" /></a>
+							<a href="/cart" class="cart-page-link">
+								
+								<span id="sb_1" class="sb_btn"><img src="{{'ico-cart.svg'| asset_url }}" alt="search" /></span><span class="cart-count header-bar__cart-count hidden-count">({{cart.item_count}})</span>
+							</a>
+							<a href="{% if customer %}/account{% else %}/account/login{% endif %}" id="sc_btn-account"><img src="{{'ico-login2.svg'| asset_url }}" alt="cart" /></a>
+						</div>
+            
+          
+            
+            <!-- st-1 -->
+						<div id="scbtn">
+							<a href="#" id="sc-clos"><img src="{{'clos.svg' | asset_url }}" alt="" /></a>
+							<form action="/search" method="get" class="header-bar__search-form clearfix" role="search">
+								<button type="submit" class="btn icon-fallback-text header-bar__search-submit">
+									<!--<span class="icon icon-search" aria-hidden="true"></span>-->
+									<span>search</span>
+									<span class="fallback-text"></span>
+								</button>
+								<input type="search" name="q" value="" aria-label="Search" class="header-bar__search-input" placeholder="Search...">
+							</form>
+						</div>
+						<button type="button" class="mobile-nav-trigger" id="MobileNavTrigger" data-menu-state="close">
+							<span class="icon icon-hamburger" aria-hidden="true"></span>
+							Menu
+						</button>
+					</div>
+					<a id="btn_nl_top">Subscribe to <span class="">{{ shop.name }}®</span> newsletter</a>
+					{%- include 'submenu-desktop' -%}
+				</header>
+			
+			</div>
+		</div>
+
+		<main class="mainContainer_theme" id="{%- if template contains 'cart' -%}{{template | split: '.' | first | replace: ''}}theme-cart{% elsif template contains 'search' %}{{template | split: '.' | first | replace: ''}}theme-search{% endif%}">{{ content_for_layout }}</main>
+
+		{% comment %}
+		<a href="/" id="logo" class="has-img destop">
+			<img src="{{ 'logo.png' |asset_url }}" alt="Supply" />
+			<h1 id="siteTitle" style="display:none;">Supply</h1>
+
+		</a>
+		<div id="canvas">
+			<div id="canvasOverlay"></div>
+			<header id="header" style="overflow:hidden;">
+
+				<div class="wrapper" >
+					<div id="siteHeader" data-content-field="site-title">
+						<a href="/" id="logo" class="has-img hidden-md hidden-lg">
+
+							<h1 id="siteTitle" style="display:none;">Supply</h1>
+							<img id="logo_mobile" src="{{"logo_mobile.png"|asset_url}}" alt="Supply" />
+						</a>
+
+					</div>
+
+					<nav class="navigation">
+						<ul data-content-field="navigation" style="{%if isMainMenuUpper%}text-transform: uppercase;{%endif%}">
+							{%for link in linklists[{{settings.menu1_link}}].links%}
+							<li class="products-collection {%if link.active%}active-link{%endif%} "> 
+								<a aria-haspopup="true" class="products-parent" href="{{link.url}}" style=" {%if is_strong_menu1%}color: #242628; {%else%}color: rgba(17,17,17,.4);{%endif%}">{{link.title}}
+								</a>
+
+								<ul class="level1 ul-child" role="menu" style="display:none">
+
+									{% for l in linklists[link.handle].links %}
+									<li style="padding-left:10px;">
+										<a style="font-size:13px" href="{{ l.url }}"{% if l.active %} class="currentcon"{% endif %} title="{{l.title}}">{{ l.title }}</a>
+										{%if linklists[l.handle].links.size > 0%}
+										<ul class="level2 ul-child">
+											{% for ll in linklists[l.handle].links %}
+											<li>
+												<a href="{{ ll.url }}"{% if ll.active %} class="current"{% endif %} title="{{ll.title}}">{{ ll.title }}</a>
+											</li>
+											{%endfor%}
+										</ul>
+										{%endif%}
+									</li>
+									{% endfor %}
+								</ul>
+
+
+
+
+							</li>
+							{%endfor%}
+
+						</ul>
+					</nav>
+					<div class="lower-header loading">
+						<nav class="navigation-secondary">
+							<ul data-content-field="navigation" style="{%unless isMainMenuUpper%}text-transform: uppercase;{%endunless%}" >
+								{%for link in linklists[{{settings.menu2_link}}].links%}
+								<li class="page-collection  {%if link.active%}active-link{%endif%}">
+									<a href="{{link.url}}" style=" {%if is_strong_menu2%}color: #242628; {%else%}color: rgba(17,17,17,.4);{%endif%}">{{link.title}}</a>
+
+								</li>
+								{%endfor%}
+								<li class="page-collection">
+									<a target="_blank" href="{{settings.linkfacebook}}" style="display: inline-block"><img src="{{'icon_face.png' | asset_url}}" alt=""></a>
+									<a target="_blank" href="{{settings.linkin}}" style="width:22px;display: inline-block;margin-left: 10px;" ><img style="width:22px;" src="{{'icon_in.png' | asset_url}}" alt=""></a>
+								</li>
+
+							</ul>
+						</nav>
+					</div>
+				</div>
+				<a href="#" id="navOpen"><img src="{{"menu.png" | asset_url}}" alt=""/></a>
+			</header>
+
+			{{ content_for_layout }}
+		</div>
+
+		<script>
+			$(document).ready(function(){
+				
+				
+				 $("#CusDesktopHeader .has-submenu").mouseout(function () {
+						$(this).css("border", "3px solid red");
+					 alert('aaaa');
+				});
+
+				$(".currentcon").parent().parent().show();
+
+
+
+				var ele = $(".navigation ul li.products-collection");
+				$.each( ele, function( key, value ) {
+					var check = $(value).children().children("li").length;
+
+					if(check != '0'){			
+						$(value).children("a.products-parent").removeAttr("href");
+
+					}
+
+				});
+
+				var kun = $(".currentcon").parent().parent().parent().children("a").children();
+
+
+
+				var element = $(".products-collection");
+				var c =1;
+				var img1 = "{{'cong.png'|asset_url}}";
+				var img2 = "{{'tru.png'|asset_url}}";
+				$.each( element, function( key, value ) {
+					$(value).click(function(){
+						var aa = $(this).find(".currentcon").parent().parent().is(":visible")
+						var cc=$(value).children("a").children("img").attr("src");
+
+						if(cc==img1){
+							$(value).children("a").children("img").attr("src",img2);
+
+						}else{
+							$(value).children("a").children("img").attr("src",img1);
+
+
+						}
+
+						$(value).children(".level1.ul-child").slideToggle();
+						c=c+1;
+					})
+
+				})
+
+
+
+
+				$("#navOpen").click(function(){
+					$("body").addClass("nav-opened");
+
+				});
+				$("#navClose").click(function(){
+					$("body").removeClass("nav-opened");
+
+				});
+
+			})
+		</script>
+
+		<div class="sqs-cart-dropzone " style="opacity:0">
+			<a href="/cart">
+				<div id="yui_3_17_2_1_1430877300393_207" class="yui3-widget sqs-widget sqs-pill-shopping-cart" style="visibility: visible; opacity: 1;">
+					<div id="cart-target" class="sqs-pill-shopping-cart-content ">
+						<div class="icon"></div>
+						<div class="details">
+							Giỏ&nbsp;-&nbsp;
+							<span id="cart-count" class="total-quantity">0</span>
+							<span class="suffix">SP</span>
+						</div>
+						<span class="subtotal">
+							<span class="price"><span id="cart-price" class="sqs-money-native">0</span></span>
+						</span></div></div>
+			</a>
+		</div>
+
+		{% include 'facebook-inbox' %}
+		{% endcomment %}
+
+		{% include 'footer_scripts' %}
+		<script>
+			$(document).ready(function(){
+				$('.header-bar__search-form').submit(function(e){
+					e.preventDefault();
+					window.location = '/search?q=filter=('+'(collectionid:product>=0)'+'&&(title:product**' + $(this).find('input[name="q"]').val() + '))';
+				})
+			})
+		</script>
+		
+			{% comment %} block snipper loading khi loading trang
+			{%- if template contains 'index' -%}
+			<div class="lazy-loading_page">
+				<div class='loadings'>
+						<img src='https://file.hstatic.net/200000264467/file/logo_overlay_ea55703f77fb44eabeba8be907645d1a.png' width= '100px' height= '100px'/>
+					<span class='loading'></span>
+							</div>
+			</div>
+			{%- endif -%}
+			{% endcomment %}
+		
+		
+		
+		<!--block footer here -->
+			<div id="haravan-section-footer" class="haravan-section">
+			{% comment %}<footer class="site-footer" role="contentinfo">
+				<div class="wrapper">
+					<div class="grid-uniform">
+					</div>
+					<div class="in-f">
+						<div id="i-sc_btn">
+							{% if settings.linkin  %}
+							<a href="{{ settings.linkin }}" target="_blank"><img src="{{'i_ins_bl.png' | asset_url }}" alt="instagram" class="i_bl"></a>
+							{% endif %}
+							{% if settings.linkfacebook  %}
+							<a href="{{ settings.linkfacebook }}" target="_blank"><img src="{{'i_fb.png' | asset_url }}" alt="fb" class="i_bl"></a>
+							{% endif %}
+							{% if settings.linkyt  %}
+							<a href="{{ settings.linkyt }}" target="_blank"><img src="{{ 'i_vimeo.png' | asset_url }}" alt="vimeo" class="i_bl"></a>
+							{% endif %}
+						</div>
+						<div id="legal">
+							<div class="ft-list">
+								<ul>
+									{% for link in linklists[settings.footer_link_1].links %}
+									<li><a href="{{ link.url }}">{{link.title}}</a></li>
+									{% endfor %}
+								</ul>
+							</div>
+							<div class="ft-list">
+								<ul>
+									{% for link in linklists[settings.footer_link_2].links %}
+									<li><a href="{{ link.url }}">{{link.title}}</a></li>
+									{% endfor %}
+								</ul>
+							</div>
+							<div class="ft-list w-100 visible-xs visible-sm">
+								<ul>
+									{{settings.textarea_footer}}
+								</ul>
+							</div>
+						</div>
+						<div id="nl" style="display: none;">
+							<h4><span class="">{{ shop.name }}®</span> newsletter</h4>
+							<a id="nl_clos"><img src="{{'clos.svg' | asset_url }}"></a>
+							<p class="subs">Get exclusive deals and more!</p>
+							<div id="xx">
+								{% form 'customer' %}
+								<div id="ctt">
+									<div class="i_data">
+										<h5>email</h5>
+										<label for="email">your e-mail</label>
+										<input type="hidden" id="contact_tags" name="contact[tags]" value="khách hàng tiềm năng, bản tin" />     
+										<input required type="email" id="email" value="" placeholder="" name="contact[email]"  aria-label="Email Address">
+									</div>
+									<div class="i_data">
+										<input type="checkbox" id="chk" name="chk" required="" class="chk"><p>Subscribe to receive emails<br>
+										about <span class="">{{ shop.name }}®</span></p>
+									</div>
+									<div class="btn_area">
+										<button type="submit" name="submit">subscribe</button>
+									</div>
+								</div>
+								{% if form.posted_successfully? %}
+								<p class="success feedback accent-text">Cám ơn bạn đã đăng ký email theo dõi!</p>
+								{% endif %}
+								{% if form.errors %}
+								<div class="error-box">
+									{% for field in form.errors %}
+									{{ field }} {{ form.errors.messages[field] }}
+									{% endfor %} 
+								</div>
+								{% endif %}
+								{% endform%}
+							</div>
+						</div>
+						<div class="ft-list absoulte-right hidden-xs hidden-sm">
+							{{settings.textarea_footer}}
+						</div>
+					</div>
+					{% if settings.link_logo_bct != '' %}
+					<a href="{{settings.link_logo_bct}}" class="logo_bct_mobile visible-xs">
+						<img src="{{'bct.png' | asset_url }}" alt="Bộ công thương" width="100"/>
+					</a>
+					{% endif %}
+					<div class="pay_info">
+						<p class="site-footer__links">{{ "now" | date: "%Y" }} © <a href="{{ shop.url }}" title="">{{ shop.name }}</a>®</p>
+						<ul>
+							{% if settings.link_logo_bct != '' %}
+							<li class="hidden-xs">
+								<a href="{{settings.link_logo_bct}}">
+									<img style="width:100px!important;height:auto;margin-top: -5px;" src="{{'bct.png' | asset_url }}"/>
+								</a>
+							</li>
+							{% endif %}
+							<li><img src="{{ 'paypal.png' | asset_url }}" alt="Paypal"></li>
+							<li><img src="{{ 'visa.png' | asset_url }}" alt="Visa"></li>
+							<li><img src="{{ 'mastercard.png' | asset_url }}" alt="Mastercard"></li>
+						</ul>
+					</div>
+					<div class="credit">
+
+					</div>
+				</div><!-- wrapper -->
+			</footer>{% endcomment %}
+			{%- include 'custome-footer' -%}
+		</div>
+		
+		<!-- add font noto-sans-cjk-kr -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js" integrity="sha512-57oZ/vW8ANMjR/KQ6Be9v/+/h6bq9/l3f0Oc7vn6qMqyhvPd1cvKBRWWpzu0QoneImqr2SkmO4MSqU+RpHom3Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+		<script>
+			(function(d) {
+				var config = {
+					kitId: 'isj1yjy',
+					scriptTimeout: 3000,
+					async: true
+				},
+				h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+			})(document);
+		</script>
+		
+				<script>
+			const languageToggleCheckbox = document.getElementById("language-toggle");
+			const languageToggleCheckboxMobile = document.getElementById("language-toggle-mobile");
+			const currentLocale = localStorage.getItem("locale");
+			const storedLang = localStorage.getItem("lang");
+			const langFetchTime = localStorage.getItem("langFetchTime");
+			const langURLInAsset = "{{lang_asset_url}}";
+
+			const fileIsModified =  (lastFetchTime, lastModifiedFile) => {
+				const result = new Date(lastFetchTime).getTime() !== new Date(lastModifiedFile).getTime()
+				 return result
+			}
+			const setMultiLangToLocalStorage = new Promise((resolve, reject) => {
+          fetch(langURLInAsset)
+					.then((response) => {
+						if (response.ok) {
+							resolve({
+								lang:response.json(),
+								lastModified: response.headers.get('last-modified')
+							});
+						} else {
+							reject("Failed to fetch lang json");
+						}
+					})
+					.catch((error) => {
+						reject(error)
+					});
+			});
+			
+			const setLocaleToLocalStorage = () => {
+				localStorage.setItem("locale", "vi");
+			};
+			const handleLanguageToggleClick = () => {
+				if (languageToggleCheckbox.checked) {
+					localStorage.setItem("locale", "vi");
+				} else {
+					localStorage.setItem("locale", "en");
+				}
+			};
+			const handleLanguageToggleClickMobile = () => {
+				if (languageToggleCheckboxMobile.checked) {
+					localStorage.setItem("locale", "vi");
+				} else {
+					localStorage.setItem("locale", "en");
+				}
+			};
+			const getLastModified = (url) => {
+ 				 return new Promise((resolve, reject) => {
+				fetch(url, { method: 'HEAD' })
+					.then(response => {
+						const lastModified = response.headers.get('last-modified');
+						resolve(lastModified);
+					})
+					.catch(error => {
+						reject(error);
+					});
+			});
+		};
+			
+			//check "locale" and "lang" key in localStorage
+			const validLocaleAndLangFromLocalStorage = new Promise((resolve,reject) => {
+        if (!currentLocale){
+          setLocaleToLocalStorage(); 
+        }
+				
+        getLastModified(langURLInAsset)
+					.then(data => resolve(data))
+					.catch(error => reject(error))
+			})
+
+			if(localStorage.getItem("locale") === 'en'){
+					languageToggleCheckbox.checked = false;
+					languageToggleCheckboxMobile.checked = false;
+			}
+		
+			languageToggleCheckbox.addEventListener("change", handleLanguageToggleClick);
+			languageToggleCheckboxMobile.addEventListener("change", handleLanguageToggleClickMobile);
+		
+		</script>
+		
+		<script>
+			const colorFromLocalStorage = JSON.parse(localStorage.getItem("color"));
+			const colorsData = colorFromLocalStorage ? colorFromLocalStorage.colors : undefined;
+			const colorFetchTime = colorFromLocalStorage ? colorFromLocalStorage.last_modified : undefined;
+			const colorURLInAsset = "{{color_asset_url}}";
+			const setColorToLocalStorage = () => {
+				fetch(colorURLInAsset)
+					.then((response) => {
+						return response.json().then((colors) => {
+							return {
+								colors: colors,
+								last_modified: response.headers.get("last-modified"),
+							};
+						});
+					})
+					.then(data => {
+            console.log("Fetching product colors");
+						localStorage.setItem("color", JSON.stringify(data));
+					})
+					.catch(error => {
+						console.error(error);
+					});
+			};
+			const validColorObjectFromLocalStorage = new Promise((resolve,reject) => {
+					if (!colorFromLocalStorage){
+							setColorToLocalStorage();
+					}
+					getLastModified(colorURLInAsset)
+											.then(data => resolve(data))
+											.catch(error => reject(error))
+							})
+			validColorObjectFromLocalStorage.then((lastModified) => {
+				if (fileIsModified(colorFetchTime, lastModified)) {
+					setColorToLocalStorage();
+				}
+			});
+		</script>
+	</body>
+</html>
+
+
+
+
+
+
+

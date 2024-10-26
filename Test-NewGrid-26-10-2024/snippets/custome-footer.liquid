@@ -1,0 +1,165 @@
+
+<footer class="mainFooter footer">
+	{% comment %}<div class="title-expand visible-xs text-center">
+	<a class="btn-fter" data-toggle="collapse" href="#fter-content" role="button" aria-expanded="false" aria-controls="fter-content">
+		Thông tin khác<span class="fa fa-angle-down"> </span>
+	</a>
+	</div>
+	{% endcomment %}
+	<div class="main-footer collapse" id="fter-content">
+			<div  id="footer_colOne-one" class="col-xs-12 col-sm-6 col-md-2 col-2 item-footer">
+					<div class="footer-col footer-block">
+						<h4 class="footer-title in">
+							Menu
+							<span class="plus-button"></span>
+						</h4>
+						<div class="footer-content toggle-footer">
+							<div class="in-f">
+							<div id="legal">
+								<div class="ft-list">
+								<ul>
+									{% for link in linklists[settings.footer_link_1].links %}
+									<li><a href="{{ link.url }}">{{link.title}}</a></li>
+									{% endfor %}
+								</ul>
+							</div>
+						
+							</div>
+					</div>
+						</div>
+					</div>
+				</div>
+			<div  id="footer_colOne-two" class="col-xs-12 col-sm-6 col-md-2 col-2 item-footer">
+					<div class="footer-col footer-block">
+						<h4 class="footer-title in">
+							Policy
+							<span class="plus-button"></span>
+						</h4>
+						<div class="footer-content toggle-footer">
+							<div class="in-f">
+							<div id="legal">
+								<div class="ft-list">
+								<ul>
+									{% for link in linklists[settings.footer_link_2].links %}
+									<li><a href="{{ link.url }}">{{link.title}}</a></li>
+									{% endfor %}
+								</ul>
+							</div>
+							</div>
+					</div>
+						</div>
+					</div>
+				</div>
+		  <div  id="footer_colOne-three" class="col-xs-12 col-sm-6 col-md-2 col-2 item-footer">
+					<div class="footer-col footer-block">
+						<h4 class="footer-title in">
+							Social
+							<span class="plus-button"></span>
+						</h4>
+						<div class="footer-content toggle-footer">
+							{% comment %}
+							<div class="in-f">
+							<div id="legal">
+								<div class="ft-list">
+									<div id="i-sc_btn">
+										{% comment %}
+											{% if settings.linkin  %}
+											<a href="{{ settings.linkin }}" target="_blank"><img src="{{'i_ins_bl.png' | asset_url }}" alt="instagram" class="i_bl"></a>
+											{% endif %}
+											{% if settings.linkfacebook  %}
+											<a href="{{ settings.linkfacebook }}" target="_blank"><img src="{{'i_fb.png' | asset_url }}" alt="fb" class="i_bl"></a>
+											{% endif %}
+											{% if settings.linkyt  %}
+											<a href="{{ settings.linkyt }}" target="_blank"><img src="{{ 'i_vimeo.png' | asset_url }}" alt="vimeo" class="i_bl"></a>
+											{% endif %}
+										{% endcomment %}
+										
+										
+											{% if settings.linkin  %}
+											<a style="width:40px;height:40px;" class="icon-social" href="{{ settings.linkin }}" target="_blank"><img src="{{'i_ins_bl.png' | asset_url }}" alt="instagram" class="i_bl"></a>
+											{% endif %}
+											<a style="width:40px;height:40px;" class="icon-social" href="#" target="_blank"><img src="{{'ico-social-wechat.png' | asset_url }}" alt="instagram" class="wechat"></a>
+											{% if settings.linkfacebook  %}
+											<a style="width:40px;height:40px;" class="icon-social" href="{{ settings.linkfacebook }}" target="_blank"><img src="{{'ico-social-facebook.png' | asset_url }}" alt="fb" class="i_bl"></a>
+											{% endif %}
+											{% if settings.linkyt  %}
+											<a style="width:40px;height:40px;" class="icon-social" href="{{ settings.linkyt }}" target="_blank"><img src="{{ 'i_vimeo.png' | asset_url }}" alt="vimeo" class="i_bl"></a>
+											{% endif %}
+									</div>
+							</div>
+							</div>
+					</div>
+							{% endcomment %}
+								<ul>
+									{% for link in linklists[settings.footer_social].links %}
+									<li><a href="{{ link.url }}">{{link.title}}</a></li>
+									{% endfor %}
+								</ul>
+						</div>
+					</div>
+				</div>
+			<div id="footer_colOne-four" class="col-xs-12 col-sm-6 col-md-2 col-2 item-footer">
+					<div class="footer-col footer-block">
+						<h4 class="footer-title in">
+							
+							{{settings.textarea_footer_title_4}}
+							<span class="plus-button"></span>
+						</h4>
+						<div class="footer-content toggle-footer">
+							<div class="in-f">
+							<div id="legal">
+								<div class="ft-list">
+									<ul>
+										{{settings.textarea_footer_4}}
+									</ul>
+								</div>
+							</div>
+					</div>
+						</div>
+					</div>
+				</div>
+			<div id="footer_colOne-five" class="col-xs-12 col-sm-6 col-md-2 col-2 item-footer">
+					<div class="footer-col footer-block">
+						<h4 class="footer-title in">
+							{{settings.textarea_footer_title_5}}
+							<span class="plus-button"></span>
+						</h4>
+						<div class="footer-content toggle-footer">
+							<div class="in-f">
+							<div id="legal">
+								<div class="ft-list">
+									<ul>
+										{{settings.textarea_footer_5}}
+									</ul>
+								</div>
+							</div>
+					</div>
+						</div>
+					</div>
+				</div>
+			<div id="footer_colOne-six" class="col-xs-12 col-sm-6 col-md-2 col-2 item-footer">
+					<div class="footer-col footer-block">
+						<h4 class="footer-title in">
+								{{settings.textarea_footer_title_6}}
+							<span class="plus-button"></span>
+						</h4>
+						<div class="footer-content toggle-footer">
+							<div class="in-f">
+							<div id="legal">
+								<div class="ft-list">
+									<ul>
+										{{settings.textarea_footer_6}}
+									</ul>
+								</div>
+							</div>
+					</div>
+						</div>
+					</div>
+				</div>
+	</div>
+	<div class="bottom-footer-copyright">
+			<p style=" margin-bottom: 10px;">
+				{{settings.text-bottom-copyright}}
+			</p>
+	</div>
+</footer>
