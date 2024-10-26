@@ -22,74 +22,78 @@
 				{%if collection.products.size == 0%}
   				<div style="white-space: nowrap; text-align:center">Chưa có sản phẩm nào trong danh mục này</div>
 				{%else%}
-  				<div class="row ">
-					{%for product in collection.products limit: settings.pagination_limit%}
-    				<div id="{{product.handle}}" class="card-product-collection myani col-md-3 col-xs-6 {% if product.available and  product.compare_at_price > product.price %}block-info{%endif%} " style="overflow:hidden; display:inline-block;">
-  				<div class="col-odl">
-    				<a href="{{product.url}}" style="{%unless product.available%} opacity: .25;{%endunless%}">
-            <picture>
-              <source 
-                media="(max-width: 480px)" 
-                srcset="{% if product.images.size > 0 %}{{ product.featured_image.src | product_img_url: 'large' }}{%else%}{{ 'no_image.jpg' | asset_url }}{% endif %}">
-              
-              <source 
-                media="(min-width: 481px) and (max-width: 767px)" 
-                srcset="{% if product.images.size > 0 %}{{ product.featured_image.src | product_img_url: 'large' }}{%else%}{{ 'no_image.jpg' | asset_url }}{% endif %}">
-              
-              <source 
-                media="(min-width: 768px)" 
-                srcset="{% if product.images.size > 0 %}{{ product.featured_image.src | product_img_url: 'master' }}{%else%}{{ 'no_image.jpg' | asset_url }}{% endif %}">
-            
-              <img 
-                src="{% if product.images.size > 0 %}{{ product.featured_image.src | product_img_url: 'master' }}{%else%}{{ 'no_image.jpg' | asset_url }}{% endif %}" 
-                alt="{% if product.featured_image.alt.size > 0 %}{{ product.featured_image.alt | escape }}{%else%}{{ product.title }}{%endif%}"
-                loading="lazy"
-                width="auto"
-                height="auto"
-                />
-        </picture>
-            
-				{%assign check = product.images.size | minus:1%}
+					<div class="row ">
+						{%for product in collection.products limit: settings.pagination_limit%}
+						<div id="{{product.handle}}" class="card-product-collection myani col-md-3 col-xs-6 {% if product.available and  product.compare_at_price > product.price %}block-info{%endif%} " style="overflow:hidden; display:inline-block;">
+					<div class="col-odl">
+						<a href="{{product.url}}" style="{%unless product.available%} opacity: .25;{%endunless%}">
+							
+							<picture>
+								<source 
+									media="(max-width: 480px)" 
+									srcset="{% if product.images.size > 0 %}{{ product.featured_image.src | product_img_url: 'large' }}{%else%}{{ 'no_image.jpg' | asset_url }}{% endif %}">
+							
+								<source 
+									media="(min-width: 481px) and (max-width: 767px)" 
+									srcset="{% if product.images.size > 0 %}{{ product.featured_image.src | product_img_url: 'large' }}{%else%}{{ 'no_image.jpg' | asset_url }}{% endif %}">
+							
+								<source 
+									media="(min-width: 768px)" 
+									srcset="{% if product.images.size > 0 %}{{ product.featured_image.src | product_img_url: 'master' }}{%else%}{{ 'no_image.jpg' | asset_url }}{% endif %}">
+							
+								<img 
+									src="{% if product.images.size > 0 %}{{ product.featured_image.src | product_img_url: 'master' }}{%else%}{{ 'no_image.jpg' | asset_url }}{% endif %}" 
+									alt="{% if product.featured_image.alt.size > 0 %}{{ product.featured_image.alt | escape }}{%else%}{{ product.title }}{%endif%}"
+									loading="lazy"
+									width="auto"
+									height="auto"
+								/>
+							</picture>
+							
+							{%assign check = product.images.size | minus:1%}
+							
 							<picture>
 								<source media="(max-width: 480px)"srcset="{% if product.images.size > 1 %}{{ product.images[check] | product_img_url: 'large' }}{%else%}{%if product.images.size > 0%}{{ product.featured_image.src | product_img_url: 'medium' }}{%else%}{{'no_image.jpg' | asset_url}}{%endif%}{%endif%}">
 								<source media="(min-width: 481px) and (max-width: 767px)" srcset="{% if product.images.size > 1 %}{{ product.images[check] | product_img_url: 'large' }}{%else%}{%if product.images.size > 0%}{{ product.featured_image.src | product_img_url: 'large' }}{%else%}{{'no_image.jpg' | asset_url}}{%endif%}{%endif%}">
-                <source media="(min-width: 768px)" data-srcset="{% if product.images.size > 1 %}{{ product.images[check] | product_img_url: 'master' }}{%else%}{%if product.images.size > 0%}{{ product.featured_image.src | product_img_url: 'master' }}{%else%}{{'no_image.jpg' | asset_url}}{%endif%}{%endif%}">
-								<img src="{% if product.images.size > 1 %}{{ product.images[check] | product_img_url: 'master' }}{%else%}{{ product.featured_image.src | product_img_url: 'master' }}{%endif%}" 
-										 class="" 
-										 alt="{% if product.featured_image.alt.size > 1 %}{{ product.featured_image.alt | escape }}{% else%} {{product.title}} {% endif %}"/>
+								<source media="(min-width: 768px)" data-srcset="{% if product.images.size > 1 %}{{ product.images[check] | product_img_url: 'master' }}{%else%}{%if product.images.size > 0%}{{ product.featured_image.src | product_img_url: 'master' }}{%else%}{{'no_image.jpg' | asset_url}}{%endif%}{%endif%}">
+								<img 
+									src="{% if product.images.size > 1 %}{{ product.images[check] | product_img_url: 'master' }}{%else%}{{ product.featured_image.src | product_img_url: 'master' }}{%endif%}" 
+									class="" 
+									alt="{% if product.featured_image.alt.size > 1 %}{{ product.featured_image.alt | escape }}{% else%} {{product.title}} {% endif %}"/>
 							</picture>
+						
 						</a>
-            <div style="padding: 0 15px">
-    					 {% include 'color-container' with section: {{collection.title}} %}
-            </div>
-    				<a style="{%unless product.available%} opacity: .25;{%endunless%}" href="{{product.url}}">
-						<div class="ani ">
-								<h1 class="product-title">{{product.title | strip_html| truncatewords: 10}}</h1>
-								<div class="product-price">
-									<span class="sqs-money-native">
-										{% if product.available and product.compare_at_price > product.price %} 
-										<del>{{product.compare_at_price|money}}</del>
-										{%endif%}
-										<span class="price-cost">
-											{{product.price|money}} 
-										</span>
-										<div class="wrap-sold-out">
-											{%if product.available %}
-											{%comment%}
-											<div class="sale-now">SALE</div>
-											{%endcomment%}
-											{%else%}		
-											<div class="sold-out">(soldout)</div>  
+				<div style="padding: 0 15px">
+							{% include 'color-container' with section: {{collection.title}} %}
+				</div>
+						<a style="{%unless product.available%} opacity: .25;{%endunless%}" href="{{product.url}}">
+							<div class="ani ">
+									<h1 class="product-title">{{product.title | strip_html| truncatewords: 10}}</h1>
+									<div class="product-price">
+										<span class="sqs-money-native">
+											{% if product.available and product.compare_at_price > product.price %} 
+											<del>{{product.compare_at_price|money}}</del>
 											{%endif%}
-										</div>
-									</span>
+											<span class="price-cost">
+												{{product.price|money}} 
+											</span>
+											<div class="wrap-sold-out">
+												{%if product.available %}
+												{%comment%}
+												<div class="sale-now">SALE</div>
+												{%endcomment%}
+												{%else%}		
+												<div class="sold-out">(soldout)</div>  
+												{%endif%}
+											</div>
+										</span>
+									</div>
 								</div>
-							</div>
-					</a>
+						</a>
+						</div>
 					</div>
-				</div>
-					{%endfor%}
-				</div>
+						{%endfor%}
+					</div>
 				{%endif%}
 			</div>
   		</div>

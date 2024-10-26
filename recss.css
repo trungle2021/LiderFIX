@@ -1,0 +1,25 @@
+{% if product.featured_image != blank %}
+<picture>
+   <source media="(min-width: 1024px)" srcset="{{ product.featured_image.src | product_img_url: 'master' }}">
+   <source media="(min-width: 768px) and (max-width: 1023px)" srcset="{{ product.featured_image.src | product_img_url: 'large' }}">
+   <source media="(max-width: 767px)" srcset="{{ product.featured_image.src | product_img_url: 'medium' }}">
+   <img src="{{ product.featured_image.src | product_img_url: 'master' }}" 
+        alt="{{ product.featured_image.alt | escape }}" class="image1">
+ </picture>
+{% endif %}
+{% if product.images[1] != blank %}
+<picture>
+   <source media="(min-width: 1024px)" 
+           srcset="{{ product.images[1] | product_img_url: 'master' }}">
+
+   <source media="(min-width: 768px) and (max-width: 1023px)" 
+           srcset="{{ product.images[1] | product_img_url: 'large' }}">
+
+   <source media="(max-width: 767px)" 
+           srcset="{{ product.images[1] | product_img_url: 'medium' }}">
+
+   <img src="{{ product.images[1] | product_img_url: 'master' }}" 
+        alt="{{ product.images[1].alt | escape }}" 
+        class="image2">
+</picture>
+{% endif %}
