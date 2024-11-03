@@ -1,0 +1,80 @@
+<!-- Container for product tags -->
+<div class="product_related-tags" id="product_related-tags"></div>
+
+<!-- Main related products section -->
+<div class="recomment product-related">
+    <!-- Section title in Vietnamese -->
+    <h3 class="related-product-title">SẢN PHẨM LIÊN QUAN</h3>
+
+    {%- assign cp = product -%} <!-- Store current product in cp variable -->
+    {%- assign number_of_related_products_to_show = settings.productspg_featured_quantity -%} <!-- Get display quantity from settings -->
+    {%- assign number_of_related_products_to_fetch = number_of_related_products_to_show -%}
+
+    {%- if collection == null or collection.handle == 'frontpage' or collection.handle == 'all' -%}
+        <!-- If no specific collection or on generic pages, find a suitable collection -->
+        {%- assign found_a_collection = false -%}
+        {%- for c in product.collections -%}
+            <!-- Look for first valid collection that isn't generic and has multiple products -->
+            {%- if found_a_collection == false and c.handle != 'frontpage' and c.handle != 'all' and c.all_products_count > 1 -%}
+                {%- assign found_a_collection = true -%}
+                {%- assign collection = c -%}
+            {%- endif -%}
+        {%- endfor -%}
+    {%- endif -%}
+
+    <!-- Only proceed if there are products to show -->
+    {%- if collections.all.products.size > 0 -%}
+        <div class="row">
+            <div class="col-md-12">
+                <!-- Swiper slider container -->
+                    <div class="swiper-wrapper">
+                        {%- for product in collection.products -%}
+                            <!-- Stop if we've shown enough products -->
+                            {%- if counter_p >= number_of_related_products_to_show -%}
+                                {%- break -%}
+                            {%- endif -%}
+
+                            <!-- Skip if this is the current product -->
+                            {%- if cp.handle != product.handle -%}
+                            <div class="swiper-slide">
+                                <div class="pro-loop">
+                                    <!-- Product image container -->
+                                    <div class="wrapper-loop-item">
+                                        <a href="{{product.url}}" title="{{product.title}}">
+                                            <!-- Product image with fallback for no image -->
+                                            <img class="{%if product.images.size == 0 %}no-image {%- endif -%}"
+                                                style="max-width:100%" 
+                                                alt="{{product.title}}"
+                                                src="{%if product.images.size > 0%}{{ product.featured_image.src | product_img_url: 'large' }}{%else%}//hstatic.net/0/0/global/design/theme-default/no-image.png{%endif%}"
+                                                alt="{{ product.featured_image.alt | escape }}" />
+                                        </a>
+                                    </div>
+
+                                    <!-- Product details section -->
+                                    <div class="product-detail">
+                                        <h3 class="pro-name" style="margin:0px !important">
+                                            <!-- Include color options -->
+                                            {% include 'color-container' with section: 'recommend' %}
+
+                                            <a href="{{ product.url | within: collection }}" title="{{product.title}}">
+                                                {{ product.title }}
+                                            </a>
+                                        </h3>
+                                        <!-- Price display with sale handling -->
+                                        {% if on_sale %}
+                                        <del class="compare-price">{{ product.compare_at_price | money }}</del>
+                                        {% endif %}
+                                        <span class="pro-price">{{ product.price | money }}</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Increment counter for shown products -->
+                            {%- assign counter_p =counter_p | plus : 1 -%}
+                            {%- endif -%}
+                        {%- endfor -%}
+                    </div>
+                    <!-- Pagination placeholder -->
+            </div>
+        </div>
+    {%- endif -%}
+</div>
